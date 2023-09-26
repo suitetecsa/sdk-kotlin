@@ -1,0 +1,22 @@
+[versions]
+detekt = "1.23.1"
+jsoup = "1.15.4"
+gson = "2.10.1"
+mockito-core = "5.5.0"
+mockito-kotlin = "5.1.0"
+mockk = "1.13.4"
+rx-java = "3.1.7"
+
+[libraries]
+jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito-core" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockito-kotlin" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+rx-java = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rx-java" }
+
+[plugins]
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+
+[bundles]
+
