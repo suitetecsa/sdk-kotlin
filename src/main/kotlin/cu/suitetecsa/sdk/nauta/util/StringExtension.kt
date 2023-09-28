@@ -1,5 +1,6 @@
 package cu.suitetecsa.sdk.nauta.util
 
+import cu.suitetecsa.sdk.nauta.exception.InvalidSessionException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -37,7 +38,10 @@ fun String.toPriceFloat(): Float = this
     .replace(" ", "")
     .toFloatOrNull() ?: throw IllegalArgumentException("El formato de la cadena no es correcto")
 
-fun String.toSeconds() = this.split(":").fold(0L) { acc, s -> acc * SECONDS_PER_MINUTE + s.toLong() }
+fun String.toSeconds(): Long {
+    if (this == "errorop") throw InvalidSessionException("La sesión ya no es válida")
+    return this.split(":").fold(0L) { acc, s -> acc * SECONDS_PER_MINUTE + s.toLong() }
+}
 
 private fun convertToBytes(sizeValue: String, sizeUnit: String): Double {
     return sizeValue.replace(",", ".").toDouble() * when (sizeUnit) {
