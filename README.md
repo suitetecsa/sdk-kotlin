@@ -33,12 +33,7 @@ Importa `SuitEtecsa SDK` en tu proyecto
 
 [![](https://jitpack.io/v/suitetecsa/sdk-kotlin.svg)](https://jitpack.io/#suitetecsa/sdk-kotlin)
 
-**Groovy**
-```groovy
-implementation 'com.github.suitetecsa:sdk-kotlin:{last-version}'
-```
 
-**Kotlin DSL**
 ```kotlin
 implementation("com.github.suitetecsa:sdk-kotlin:{last-version}")
 ```
@@ -64,6 +59,7 @@ connectApi.connect()
 **Java**
 ```java 
 import cu.suitetecsa.sdk.nauta.rxjava.ConnectApi;
+
 ConnectApi connectApi = new ConnectApi.Builder().build();
 connectApi.setCredentials("user.name@nauta.com.cu", "userPassword.123");
 connectApi.connect().observeOn(AndroidSchedulers.mainThread())
