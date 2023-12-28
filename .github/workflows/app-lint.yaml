@@ -1,4 +1,4 @@
-name: App / Lint
+name: Library / Lint
 
 on:
   push:
