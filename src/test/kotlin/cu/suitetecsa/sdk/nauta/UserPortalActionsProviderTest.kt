@@ -50,9 +50,9 @@ class UserPortalActionsProviderTest {
         val csrfToken = "csrf_token"
         val connectionsSummary = ConnectionsSummary(5, "", 0L, 0f, 0.0, 0.0, 0.0)
 
-        whenever(communicator.performAction(eq("https://www.portal.nauta.cu$actionUrl"), any<(AnyTransform)>()))
+        whenever(communicator.performRequest(eq("https://www.portal.nauta.cu$actionUrl"), any<(AnyTransform)>()))
             .thenReturn(Result.success(csrfToken))
-        whenever(communicator.performAction(any<GetSummary>(), any<(AnyTransform)>())).thenReturn(
+        whenever(communicator.performRequest(any<GetSummary>(), any<(AnyTransform)>())).thenReturn(
             Result.success(connectionsSummary)
         )
         whenever(tokenParser.parseCsrfToken(any())).thenReturn(csrfToken)
@@ -61,7 +61,7 @@ class UserPortalActionsProviderTest {
         val result = provider.getConnectionsSummary(year, month)
 
         // Verify the expected method calls and responses
-        verify(communicator).performAction(eq("https://www.portal.nauta.cu$actionUrl"), any<(AnyTransform)>())
+        verify(communicator).performRequest(eq("https://www.portal.nauta.cu$actionUrl"), any<(AnyTransform)>())
 
         // Assert the result
         assertTrue(result.isSuccess)
@@ -92,14 +92,17 @@ class UserPortalActionsProviderTest {
         val csrfToken = "csrf_token"
         val connections = listOf<Connection>()
 
-        whenever(communicator.performAction(any<String>(), any<AnyTransform>())).thenReturn(Result.success(csrfToken))
+        whenever(communicator.performRequest(any<String>(), any<AnyTransform>())).thenReturn(Result.success(csrfToken))
 
         // Call the method under test
         val result = provider.getConnections(summary)
 
         // Verify the expected method calls and responses
         verify(communicator)
-            .performAction(eq("https://www.portal.nauta.cu/useraaa/service_detail_list/2023-09/5"), any<AnyTransform>())
+            .performRequest(
+                eq("https://www.portal.nauta.cu/useraaa/service_detail_list/2023-09/5"),
+                any<AnyTransform>()
+            )
 
         // Assert the result
         assertTrue(result.isSuccess)
@@ -132,10 +135,10 @@ class UserPortalActionsProviderTest {
         val csrfToken = "csrf_token"
         val rechargesSummary = RechargesSummary(5, "", 0f)
 
-        whenever(communicator.performAction(any<String>(), any<AnyTransform>())).thenReturn(
+        whenever(communicator.performRequest(any<String>(), any<AnyTransform>())).thenReturn(
             Result.success(csrfToken)
         )
-        whenever(communicator.performAction(any<GetSummary>(), any<AnyTransform>())).thenReturn(
+        whenever(communicator.performRequest(any<GetSummary>(), any<AnyTransform>())).thenReturn(
             Result.success(rechargesSummary)
         )
 
@@ -143,7 +146,7 @@ class UserPortalActionsProviderTest {
         val result = provider.getRechargesSummary(year, month)
 
         // Verify the expected method calls and responses
-        verify(communicator).performAction(eq("https://www.portal.nauta.cu$actionUrl"), any<AnyTransform>())
+        verify(communicator).performRequest(eq("https://www.portal.nauta.cu$actionUrl"), any<AnyTransform>())
 
         // Assert the result
         assertTrue(result.isSuccess)
@@ -176,10 +179,10 @@ class UserPortalActionsProviderTest {
         val csrfToken = "csrf_token"
         val rechargesSummary = RechargesSummary(5, "", 0f)
 
-        whenever(communicator.performAction(any<String>(), any<AnyTransform>())).thenReturn(
+        whenever(communicator.performRequest(any<String>(), any<AnyTransform>())).thenReturn(
             Result.success(csrfToken)
         )
-        whenever(communicator.performAction(any<GetSummary>(), any<AnyTransform>())).thenReturn(
+        whenever(communicator.performRequest(any<GetSummary>(), any<AnyTransform>())).thenReturn(
             Result.success(rechargesSummary)
         )
 
@@ -187,7 +190,7 @@ class UserPortalActionsProviderTest {
         val result = provider.getRechargesSummary(year, month)
 
         // Verify the expected method calls and responses
-        verify(communicator).performAction(eq("https://www.portal.nauta.cu$actionUrl"), any<AnyTransform>())
+        verify(communicator).performRequest(eq("https://www.portal.nauta.cu$actionUrl"), any<AnyTransform>())
 
         // Assert the result
         assertTrue(result.isSuccess)
@@ -220,16 +223,16 @@ class UserPortalActionsProviderTest {
         val csrfToken = "csrf_token"
         val transfersSummary = TransfersSummary(5, "", 0f)
 
-        whenever(communicator.performAction(any<String>(), any<AnyTransform>()))
+        whenever(communicator.performRequest(any<String>(), any<AnyTransform>()))
             .thenReturn(Result.success(csrfToken))
-        whenever(communicator.performAction(any<GetSummary>(), any<AnyTransform>()))
+        whenever(communicator.performRequest(any<GetSummary>(), any<AnyTransform>()))
             .thenReturn(Result.success(transfersSummary))
 
         // Call the method under test
         val result = provider.getTransfersSummary(year, month)
 
         // Verify the expected method calls and responses
-        verify(communicator).performAction(eq("https://www.portal.nauta.cu$actionUrl"), any<AnyTransform>())
+        verify(communicator).performRequest(eq("https://www.portal.nauta.cu$actionUrl"), any<AnyTransform>())
 
         // Assert the result
         assertTrue(result.isSuccess)

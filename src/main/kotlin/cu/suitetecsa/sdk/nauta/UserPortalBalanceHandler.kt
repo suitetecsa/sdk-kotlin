@@ -24,7 +24,7 @@ class UserPortalBalanceHandler private constructor(
     private val tokenParser: TokenParser
 ) {
     private fun loadCsrfToken(action: Action) =
-        communicator.performAction("https://www.portal.nauta.cu${action.csrfUrl ?: action.url}") {
+        communicator.performRequest("https://www.portal.nauta.cu${action.csrfUrl ?: action.url}") {
             tokenParser.parseCsrfToken(errorParser.parseErrors(it.text, "Fail to load csrf token").getOrThrow())
         }.getOrThrow()
 
@@ -37,7 +37,7 @@ class UserPortalBalanceHandler private constructor(
         val action = TopUpBalance(rechargeCode = rechargeCode, method = HttpMethod.GET)
         val topUpExceptionHandle = ExceptionHandler.Builder(TopUpBalanceException::class.java).build()
 
-        communicator.performAction(action.copy(csrf = loadCsrfToken(action), method = HttpMethod.POST)) {
+        communicator.performRequest(action.copy(csrf = loadCsrfToken(action), method = HttpMethod.POST)) {
             errorParser.parseErrors(it.text, "Fail to top up balance", topUpExceptionHandle).getOrThrow()
         }.getOrThrow()
         Unit
@@ -59,7 +59,7 @@ class UserPortalBalanceHandler private constructor(
         )
         val transferFundsExceptionHandle = ExceptionHandler.Builder(TransferFundsException::class.java).build()
 
-        communicator.performAction(action.copy(csrf = loadCsrfToken(action), method = HttpMethod.POST)) {
+        communicator.performRequest(action.copy(csrf = loadCsrfToken(action), method = HttpMethod.POST)) {
             errorParser.parseErrors(it.text, "Fail to transfer funds", transferFundsExceptionHandle).getOrThrow()
         }.getOrThrow()
         Unit

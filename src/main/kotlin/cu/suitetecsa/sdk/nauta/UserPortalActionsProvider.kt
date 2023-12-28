@@ -35,7 +35,7 @@ class UserPortalActionsProvider private constructor(
 ) {
     private val getInfoExceptionHandler = ExceptionHandler.Builder(NautaGetInfoException::class.java).build()
     private fun loadCsrfToken(actionUrl: String) =
-        communicator.performAction(actionUrl) {
+        communicator.performRequest(actionUrl) {
             tokenParser.parseCsrfToken(errorParser.parseErrors(it.text, "Fail to load csrf token").getOrThrow())
         }.getOrThrow()
 
@@ -43,7 +43,7 @@ class UserPortalActionsProvider private constructor(
         val action = GetSummary(year = year, month = month, type = ActionType.Connections)
         val csrf = loadCsrfToken(action.csrfUrl)
 
-        communicator.performAction(action.copy(csrf = csrf)) {
+        communicator.performRequest(action.copy(csrf = csrf)) {
             summaryParser.parseConnectionsSummary(
                 errorParser.parseErrors(
                     it.text,
@@ -88,7 +88,7 @@ class UserPortalActionsProvider private constructor(
         val action = GetSummary(year = year, month = month, type = ActionType.Recharges)
         val csrf = loadCsrfToken(action.csrfUrl)
 
-        communicator.performAction(action.copy(csrf = csrf)) {
+        communicator.performRequest(action.copy(csrf = csrf)) {
             summaryParser.parseRechargesSummary(
                 errorParser.parseErrors(
                     it.text,
@@ -133,7 +133,7 @@ class UserPortalActionsProvider private constructor(
         val action = GetSummary(year = year, month = month, type = ActionType.Transfers)
         val csrf = loadCsrfToken(action.csrfUrl)
 
-        communicator.performAction(action.copy(csrf = csrf)) {
+        communicator.performRequest(action.copy(csrf = csrf)) {
             summaryParser.parseTransfersSummary(
                 errorParser.parseErrors(
                     it.text,
@@ -178,7 +178,7 @@ class UserPortalActionsProvider private constructor(
         val action = GetSummary(year = year, month = month, type = ActionType.QuotesPaid)
         val csrf = loadCsrfToken(action.csrfUrl)
 
-        communicator.performAction(action.copy(csrf = csrf)) {
+        communicator.performRequest(action.copy(csrf = csrf)) {
             summaryParser.parseQuotesPaidSummary(
                 errorParser.parseErrors(
                     it.text,
@@ -219,13 +219,13 @@ class UserPortalActionsProvider private constructor(
     private fun <T> getActions(action: Action, pageTo: Int, transform: (HttpResponse) -> List<T>) =
         runCatching {
             if (pageTo != 0) {
-                communicator.performAction("${action.url}${action.yearMonthSelected}/${action.count}/$pageTo") {
+                communicator.performRequest("${action.url}${action.yearMonthSelected}/${action.count}/$pageTo") {
                     transform(it)
                 }.getOrThrow()
             } else {
                 val list = mutableListOf<T>()
                 repeat(action.pagesCount) { page ->
-                    communicator.performAction(
+                    communicator.performRequest(
                         "${action.url}${action.yearMonthSelected}/" +
                             "${action.count}${if (page > 0) "/${page + 1}" else ""}"
                     ) {
