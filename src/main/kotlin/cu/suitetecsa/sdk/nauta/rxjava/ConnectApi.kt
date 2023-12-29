@@ -3,63 +3,33 @@ package cu.suitetecsa.sdk.nauta.rxjava
 import cu.suitetecsa.sdk.nauta.model.DataSession
 import cu.suitetecsa.sdk.nauta.model.NautaConnectInformation
 import cu.suitetecsa.sdk.nauta.scraper.ConnectPortalScraper
-import cu.suitetecsa.sdk.nauta.scraper.JsoupConnectPortalScraper
-import cu.suitetecsa.sdk.network.JsoupPortalCommunicator
 import cu.suitetecsa.sdk.network.PortalCommunicator
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import cu.suitetecsa.sdk.nauta.ConnectApi as NautaConnectApi
 
-class ConnectApi private constructor(
-    communicator: PortalCommunicator,
-    scraper: ConnectPortalScraper
-) {
-    private val api = NautaConnectApi.Builder()
-        .withCommunicator(communicator)
-        .withScraper(scraper).build()
+object ConnectApi {
 
-    val username: String? = api.username
-    val password: String? = api.password
+    fun withPortalCommunicator(portalCommunicator: PortalCommunicator) =
+        NautaConnectApi.withPortalCommunicator(portalCommunicator)
 
-    var dataSession: DataSession?
-        get() = api.dataSession
-        set(value) {
-            api.dataSession = value
-        }
+    fun withPortalScraper(portalScraper: ConnectPortalScraper) =
+        NautaConnectApi.withPortalScraper(portalScraper)
 
-    val remainingTime: Observable<Long> = Observable.fromCallable { api.remainingTime.getOrThrow() }
-        .subscribeOn(Schedulers.io())
+    fun getRemainingTime(dataSession: DataSession): Observable<Long> = Observable.fromCallable {
+        NautaConnectApi.getRemainingTime(dataSession).getOrThrow()
+    }.subscribeOn(Schedulers.io())
 
-    val connectInformation: Observable<NautaConnectInformation> =
-        Observable.fromCallable { api.connectInformation.getOrThrow() }.subscribeOn(Schedulers.io())
+    fun getUserInformation(username: String, password: String): Observable<NautaConnectInformation> =
+        Observable.fromCallable {
+            NautaConnectApi.getUserInformation(username, password).getOrThrow()
+        }.subscribeOn(Schedulers.io())
 
-    fun setCredentials(username: String, password: String) = api.setCredentials(username, password)
+    fun connect(username: String, password: String): Observable<DataSession> = Observable.fromCallable {
+        NautaConnectApi.connect(username, password).getOrThrow()
+    }.subscribeOn(Schedulers.io())
 
-    fun connect(): Observable<String> = Observable.fromCallable { api.connect().getOrThrow() }
-        .subscribeOn(Schedulers.io())
-
-    fun disconnect(): Observable<String> = Observable.fromCallable { api.disconnect().getOrThrow() }
-        .subscribeOn(Schedulers.io())
-
-    class Builder {
-        private var communicator: PortalCommunicator? = null
-        private var scraper: ConnectPortalScraper? = null
-
-        fun withCommunicator(communicator: PortalCommunicator): Builder {
-            this.communicator = communicator
-            return this
-        }
-
-        fun withScraper(scraper: ConnectPortalScraper): Builder {
-            this.scraper = scraper
-            return this
-        }
-
-        fun build(): ConnectApi {
-            return ConnectApi(
-                communicator ?: JsoupPortalCommunicator.Builder().build(),
-                scraper ?: JsoupConnectPortalScraper.Builder().build()
-            )
-        }
-    }
+    fun disconnect(dataSession: DataSession): Observable<Unit> =
+        Observable.fromCallable { NautaConnectApi.disconnect(dataSession).getOrThrow() }
+            .subscribeOn(Schedulers.io())
 }

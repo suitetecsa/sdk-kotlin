@@ -33,10 +33,10 @@ class UserPortalBalanceHandlerTest {
 
         // Mock the necessary behavior of the dependencies
         whenever(
-            communicator.performAction(any<TopUpBalance>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<TopUpBalance>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success(Unit))
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success("csrf_token"))
 
         // Call the method under test
@@ -61,10 +61,10 @@ class UserPortalBalanceHandlerTest {
             .build()
 
         whenever(
-            communicator.performAction(any<TransferFunds>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<TransferFunds>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success(Unit))
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success("csrf_token"))
 
         // Call the method under test
@@ -91,10 +91,10 @@ class UserPortalBalanceHandlerTest {
 
         // Mock the necessary behavior of the dependencies
         whenever(
-            communicator.performAction(any<TransferFunds>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<TransferFunds>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success(Unit))
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success("csrf_token"))
 
         // Call the method under test
@@ -121,10 +121,10 @@ class UserPortalBalanceHandlerTest {
 
         // Mock the necessary behavior of the dependencies
         whenever(
-            communicator.performAction(any<TopUpBalance>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<TopUpBalance>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.failure(TopUpBalanceException("Invalid recharge code")))
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success("csrf_token"))
 
         // Call the method under test
@@ -152,10 +152,10 @@ class UserPortalBalanceHandlerTest {
 
         // Mock the necessary behavior of the dependencies
         whenever(
-            communicator.performAction(any<TransferFunds>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<TransferFunds>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.failure(TransferFundsException("Invalid parameters")))
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success("csrf_token"))
 
         // Call the method under test
@@ -183,10 +183,10 @@ class UserPortalBalanceHandlerTest {
 
         // Mock the necessary behavior of the dependencies
         whenever(
-            communicator.performAction(any<TransferFunds>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<TransferFunds>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.failure(TransferFundsException("Insufficient balance")))
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success("csrf_token"))
 
         // Call the method under test

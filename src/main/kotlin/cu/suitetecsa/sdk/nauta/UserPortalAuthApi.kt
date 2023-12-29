@@ -57,7 +57,7 @@ class UserPortalAuthApi private constructor(
      * @return the captcha image
      */
     val captchaImage: Result<ByteArray>
-        get() = communicator.performAction(GetCaptcha) { it.content }
+        get() = communicator.performRequest(GetCaptcha) { it.content }
 
     /**
      * Load the user information for the user portal authentication API
@@ -67,13 +67,13 @@ class UserPortalAuthApi private constructor(
     val userInformation: Result<NautaUser>
         get() = runCatching {
             if (csrf.isBlank()) throw NotLoggedInException("Failed to get user information :: You are not logged in")
-            communicator.performAction(LoadUserInformation(portal = PortalManager.User)) {
+            communicator.performRequest(LoadUserInformation(portal = PortalManager.User)) {
                 scraper.parseNautaUser(it.text)
             }.getOrThrow().apply { isNautaHome = !offer.isNullOrEmpty() }
         }
 
     private fun loadCsrf(action: Action) {
-        csrf = communicator.performAction(action.url) {
+        csrf = communicator.performRequest(action.url) {
             scraper.parseCsrfToken(it.text)
         }.getOrThrow()
     }
@@ -92,7 +92,7 @@ class UserPortalAuthApi private constructor(
             method = HttpMethod.GET
         )
         if (csrf.isBlank()) loadCsrf(action)
-        communicator.performAction(action.copy(csrf = csrf, method = HttpMethod.POST)) {
+        communicator.performRequest(action.copy(csrf = csrf, method = HttpMethod.POST)) {
             scraper.parseNautaUser(it.text, ExceptionHandler.Builder(LoginException::class.java).build())
         }.getOrThrow().apply { isNautaHome = !offer.isNullOrEmpty() }
     }

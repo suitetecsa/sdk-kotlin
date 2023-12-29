@@ -12,7 +12,7 @@ interface PortalCommunicator {
      * @param transform La función de transformación que se aplicará a la respuesta del portal.
      * @return Objeto `ResultType` que encapsula el resultado de la acción realizada y transformada.
      */
-    fun <T> performAction(action: Action, transform: (HttpResponse) -> T): Result<T>
+    fun <T> performRequest(action: Action, transform: (HttpResponse) -> T): Result<T>
 
     /**
      * Realiza una acción en el portal de conexión y transforma la respuesta según la función dada.
@@ -21,5 +21,5 @@ interface PortalCommunicator {
      * @param transform La función de transformación que se aplicará a la respuesta del portal.
      * @return Objeto `ResultType` que encapsula el resultado de la acción realizada y transformada.
      */
-    fun <T> performAction(url: String, transform: (HttpResponse) -> T): Result<T>
+    fun <T> performRequest(url: String, transform: (HttpResponse) -> T): Result<T>
 }

@@ -21,7 +21,7 @@ class UserPortalPasswordManager private constructor(
     private val tokenParser: TokenParser
 ) {
     private fun loadCsrfToken(action: Action) =
-        communicator.performAction(action.url) {
+        communicator.performRequest(action.url) {
             tokenParser.parseCsrfToken(errorParser.parseErrors(it.text, "Fail to load csrf token").getOrThrow())
         }.getOrThrow()
 
@@ -35,7 +35,7 @@ class UserPortalPasswordManager private constructor(
         val action = ChangePassword(oldPassword = oldPassword, newPassword = newPassword)
         val changePasswordExceptionHandler = ExceptionHandler.Builder(NautaChangePasswordException::class.java).build()
 
-        communicator.performAction(action.copy(csrf = loadCsrfToken(action))) {
+        communicator.performRequest(action.copy(csrf = loadCsrfToken(action))) {
             errorParser.parseErrors(it.text, "Fail to change password", changePasswordExceptionHandler).getOrThrow()
         }.getOrThrow()
         Unit
@@ -51,7 +51,7 @@ class UserPortalPasswordManager private constructor(
         val action = ChangePassword(oldPassword = oldPassword, newPassword = newPassword, changeMail = true)
         val changePasswordExceptionHandler = ExceptionHandler.Builder(NautaChangePasswordException::class.java).build()
 
-        communicator.performAction(action.copy(csrf = loadCsrfToken(action))) {
+        communicator.performRequest(action.copy(csrf = loadCsrfToken(action))) {
             errorParser.parseErrors(it.text, "Fail to change password", changePasswordExceptionHandler).getOrThrow()
         }.getOrThrow()
         Unit

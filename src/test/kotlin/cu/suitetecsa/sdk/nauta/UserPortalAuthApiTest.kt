@@ -41,10 +41,10 @@ class UserPortalAuthApiTest {
         authApi.setCredentials("username", "password")
 
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success(""))
         whenever(
-            communicator.performAction(any<Login>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<Login>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success(userResult))
 
         // Mock the parseNautaUser function
@@ -73,7 +73,7 @@ class UserPortalAuthApiTest {
             .build()
 
         // Mock the GetCaptcha action
-        whenever(communicator.performAction(any<GetCaptcha>(), any<(HttpResponse) -> Any>())).thenReturn(
+        whenever(communicator.performRequest(any<GetCaptcha>(), any<(HttpResponse) -> Any>())).thenReturn(
             Result.success(ByteArray(0))
         )
 
@@ -102,12 +102,12 @@ class UserPortalAuthApiTest {
         // Set the CSRF token
         authApi.setCredentials("username", "password")
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success("csrf"))
         authApi.login("captcha")
 
         whenever(
-            communicator.performAction(
+            communicator.performRequest(
                 any<LoadUserInformation>(),
                 any<(HttpResponse) -> Any>()
             )
@@ -169,10 +169,10 @@ class UserPortalAuthApiTest {
         // Set the credentials
         authApi.setCredentials("username", "password")
         whenever(
-            communicator.performAction(any<String>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<String>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.success("csrf"))
         whenever(
-            communicator.performAction(any<Login>(), any<(HttpResponse) -> Any>())
+            communicator.performRequest(any<Login>(), any<(HttpResponse) -> Any>())
         ).thenReturn(Result.failure(LoginException("Invalid credentials")))
 
         // Call the login function and assert the exception

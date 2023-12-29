@@ -39,7 +39,7 @@ class JsoupPortalCommunicator(private val session: Session) : PortalCommunicator
      * @param transform La función de transformación que se aplicará a la respuesta del portal.
      * @return Objeto `ResultType` que encapsula el resultado de la acción realizada y transformada.
      */
-    override fun <T> performAction(action: Action, transform: (HttpResponse) -> T): Result<T> =
+    override fun <T> performRequest(action: Action, transform: (HttpResponse) -> T): Result<T> =
         handleResponse(
             url = action.url,
             data = action.data,
@@ -56,7 +56,7 @@ class JsoupPortalCommunicator(private val session: Session) : PortalCommunicator
      * @param transform La función de transformación que se aplicará a la respuesta del portal.
      * @return Objeto `ResultType` que encapsula el resultado de la acción realizada y transformada.
      */
-    override fun <T> performAction(url: String, transform: (HttpResponse) -> T): Result<T> =
+    override fun <T> performRequest(url: String, transform: (HttpResponse) -> T): Result<T> =
         handleResponse(url = url, transform = transform)
 
     /**
