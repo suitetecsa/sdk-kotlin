@@ -6,44 +6,33 @@ import cu.suitetecsa.sdk.nauta.model.ConnectionsSummary
 import cu.suitetecsa.sdk.nauta.model.QuotesPaidSummary
 import cu.suitetecsa.sdk.nauta.model.RechargesSummary
 import cu.suitetecsa.sdk.nauta.model.TransfersSummary
-import cu.suitetecsa.sdk.nauta.network.UserPortalSession
 import cu.suitetecsa.sdk.nauta.scraper.ActionsParser
 import cu.suitetecsa.sdk.nauta.scraper.ActionsSummaryParser
 import cu.suitetecsa.sdk.nauta.scraper.ErrorParser
 import cu.suitetecsa.sdk.nauta.scraper.JsoupActionsParser
 import cu.suitetecsa.sdk.nauta.scraper.JsoupActionsSummaryParser
 import cu.suitetecsa.sdk.nauta.scraper.JsoupErrorParser
-import cu.suitetecsa.sdk.nauta.scraper.JsoupTokenParser
-import cu.suitetecsa.sdk.nauta.scraper.TokenParser
 import cu.suitetecsa.sdk.nauta.util.action.GetActions
 import cu.suitetecsa.sdk.nauta.util.action.GetSummary
 import cu.suitetecsa.sdk.nauta.util.pagesCount
 import cu.suitetecsa.sdk.network.Action
 import cu.suitetecsa.sdk.network.ActionType
 import cu.suitetecsa.sdk.network.HttpResponse
-import cu.suitetecsa.sdk.network.JsoupPortalCommunicator
-import cu.suitetecsa.sdk.network.PortalCommunicator
 import cu.suitetecsa.sdk.util.ExceptionHandler
 
 @Suppress("TooManyFunctions")
 class UserPortalActionsProvider private constructor(
-    private val communicator: PortalCommunicator,
+    private val sessionManager: UserPortalSessionManager,
     private val errorParser: ErrorParser,
-    private val tokenParser: TokenParser,
     private val actionsParser: ActionsParser,
     private val summaryParser: ActionsSummaryParser
 ) {
     private val getInfoExceptionHandler = ExceptionHandler.Builder(NautaGetInfoException::class.java).build()
-    private fun loadCsrfToken(actionUrl: String) =
-        communicator.performRequest(actionUrl) {
-            tokenParser.parseCsrfToken(errorParser.parseErrors(it.text, "Fail to load csrf token").getOrThrow())
-        }.getOrThrow()
-
     fun getConnectionsSummary(year: Int, month: Int) = runCatching {
         val action = GetSummary(year = year, month = month, type = ActionType.Connections)
-        val csrf = loadCsrfToken(action.csrfUrl)
+        val csrf = sessionManager.loadCsrf(action)
 
-        communicator.performRequest(action.copy(csrf = csrf)) {
+        sessionManager.communicator.performRequest(action.copy(csrf = csrf)) {
             summaryParser.parseConnectionsSummary(
                 errorParser.parseErrors(
                     it.text,
@@ -86,9 +75,9 @@ class UserPortalActionsProvider private constructor(
 
     fun getRechargesSummary(year: Int, month: Int) = runCatching {
         val action = GetSummary(year = year, month = month, type = ActionType.Recharges)
-        val csrf = loadCsrfToken(action.csrfUrl)
+        val csrf = sessionManager.loadCsrf(action)
 
-        communicator.performRequest(action.copy(csrf = csrf)) {
+        sessionManager.communicator.performRequest(action.copy(csrf = csrf)) {
             summaryParser.parseRechargesSummary(
                 errorParser.parseErrors(
                     it.text,
@@ -131,9 +120,9 @@ class UserPortalActionsProvider private constructor(
 
     fun getTransfersSummary(year: Int, month: Int) = runCatching {
         val action = GetSummary(year = year, month = month, type = ActionType.Transfers)
-        val csrf = loadCsrfToken(action.csrfUrl)
+        val csrf = sessionManager.loadCsrf(action)
 
-        communicator.performRequest(action.copy(csrf = csrf)) {
+        sessionManager.communicator.performRequest(action.copy(csrf = csrf)) {
             summaryParser.parseTransfersSummary(
                 errorParser.parseErrors(
                     it.text,
@@ -176,9 +165,9 @@ class UserPortalActionsProvider private constructor(
 
     fun getQuotesPaidSummary(year: Int, month: Int) = runCatching {
         val action = GetSummary(year = year, month = month, type = ActionType.QuotesPaid)
-        val csrf = loadCsrfToken(action.csrfUrl)
+        val csrf = sessionManager.loadCsrf(action)
 
-        communicator.performRequest(action.copy(csrf = csrf)) {
+        sessionManager.communicator.performRequest(action.copy(csrf = csrf)) {
             summaryParser.parseQuotesPaidSummary(
                 errorParser.parseErrors(
                     it.text,
@@ -219,13 +208,14 @@ class UserPortalActionsProvider private constructor(
     private fun <T> getActions(action: Action, pageTo: Int, transform: (HttpResponse) -> List<T>) =
         runCatching {
             if (pageTo != 0) {
-                communicator.performRequest("${action.url}${action.yearMonthSelected}/${action.count}/$pageTo") {
-                    transform(it)
-                }.getOrThrow()
+                sessionManager.communicator
+                    .performRequest("${action.url}${action.yearMonthSelected}/${action.count}/$pageTo") {
+                        transform(it)
+                    }.getOrThrow()
             } else {
                 val list = mutableListOf<T>()
                 repeat(action.pagesCount) { page ->
-                    communicator.performRequest(
+                    sessionManager.communicator.performRequest(
                         "${action.url}${action.yearMonthSelected}/" +
                             "${action.count}${if (page > 0) "/${page + 1}" else ""}"
                     ) {
@@ -237,21 +227,21 @@ class UserPortalActionsProvider private constructor(
         }
 
     class Builder {
-        private var communicator: PortalCommunicator? = null
+        private var sessionManager: UserPortalSessionManager? = null
         private var errorParser: ErrorParser? = null
-        private var tokenParser: TokenParser? = null
         private var actionsParser: ActionsParser? = null
         private var summaryParser: ActionsSummaryParser? = null
 
-        fun withCommunicator(communicator: PortalCommunicator) = apply { this.communicator = communicator }
+        fun withSessionManager(sessionManager: UserPortalSessionManager) =
+            apply { this.sessionManager = sessionManager }
         fun withErrorParser(errorParser: ErrorParser) = apply { this.errorParser = errorParser }
-        fun withTokenParser(tokenParser: TokenParser) = apply { this.tokenParser = tokenParser }
         fun withActionsParser(actionsParser: ActionsParser) = apply { this.actionsParser = actionsParser }
         fun withSummaryParser(summaryParser: ActionsSummaryParser) = apply { this.summaryParser = summaryParser }
         fun build() = UserPortalActionsProvider(
-            communicator = communicator ?: JsoupPortalCommunicator.Builder().withSession(UserPortalSession).build(),
+            sessionManager = sessionManager ?: DefaultUserPortalSessionManager
+                .Builder()
+                .build(),
             errorParser = errorParser ?: JsoupErrorParser,
-            tokenParser = tokenParser ?: JsoupTokenParser,
             actionsParser = actionsParser ?: JsoupActionsParser,
             summaryParser = summaryParser ?: JsoupActionsSummaryParser
         )

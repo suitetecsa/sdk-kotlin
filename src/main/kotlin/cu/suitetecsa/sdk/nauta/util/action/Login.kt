@@ -16,7 +16,7 @@ internal data class Login(
 ) : Action {
     override val url: String = when (portal) {
         PortalManager.Connect -> "${PortalManager.Connect.baseUrl}//LoginServlet"
-        PortalManager.User -> "${PortalManager.User.baseUrl}/user/login/es-es"
+        PortalManager.User -> "/user/login/es-es"
     }
     override val data: Map<String, String> = when (portal) {
         PortalManager.Connect -> mapOf(

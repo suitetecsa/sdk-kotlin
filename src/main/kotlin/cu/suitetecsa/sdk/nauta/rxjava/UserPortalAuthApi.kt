@@ -1,28 +1,22 @@
 package cu.suitetecsa.sdk.nauta.rxjava
 
+import cu.suitetecsa.sdk.nauta.DefaultUserPortalSessionManager
 import cu.suitetecsa.sdk.nauta.UserPortalAuthApi
+import cu.suitetecsa.sdk.nauta.UserPortalSessionManager
 import cu.suitetecsa.sdk.nauta.model.NautaUser
-import cu.suitetecsa.sdk.nauta.network.UserPortalSession
 import cu.suitetecsa.sdk.nauta.scraper.AuthUserPortalScraper
 import cu.suitetecsa.sdk.nauta.scraper.JsoupAuthUserPortalScrapper
-import cu.suitetecsa.sdk.network.JsoupPortalCommunicator
-import cu.suitetecsa.sdk.network.PortalCommunicator
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
 
 class UserPortalAuthApi private constructor(
-    communicator: PortalCommunicator,
+    sessionManager: UserPortalSessionManager,
     scraper: AuthUserPortalScraper
 ) {
     private val api = UserPortalAuthApi.Builder()
-        .withCommunicator(communicator)
+        .withSessionManager(sessionManager)
         .withScraper(scraper)
         .build()
-
-    val isNautaHome: Boolean
-        get() = api.isNautaHome
-
-    fun setCredentials(username: String, password: String) = api.setCredentials(username, password)
 
     val captchaImage: Observable<ByteArray> = Observable.fromCallable { api.captchaImage.getOrThrow() }
         .subscribeOn(Schedulers.io())
@@ -30,20 +24,19 @@ class UserPortalAuthApi private constructor(
     val userInformation: Observable<NautaUser> = Observable.fromCallable { api.userInformation.getOrThrow() }
         .subscribeOn(Schedulers.io())
 
-    fun login(captchaCode: String): Observable<NautaUser> =
-        Observable.fromCallable { api.login(captchaCode).getOrThrow() }.subscribeOn(Schedulers.io())
+    fun login(username: String, password: String, captchaCode: String): Observable<NautaUser> =
+        Observable.fromCallable { api.login(username, password, captchaCode).getOrThrow() }.subscribeOn(Schedulers.io())
 
     class Builder {
-        private var communicator: PortalCommunicator? = null
+        private var sessionManager: UserPortalSessionManager? = null
         private var scraper: AuthUserPortalScraper? = null
 
-        fun withCommunicator(communicator: PortalCommunicator) = apply { this.communicator = communicator }
+        fun withCommunicator(sessionManager: UserPortalSessionManager) = apply { this.sessionManager = sessionManager }
         fun withScraper(scraper: AuthUserPortalScraper) = apply { this.scraper = scraper }
 
         fun build(): cu.suitetecsa.sdk.nauta.rxjava.UserPortalAuthApi = UserPortalAuthApi(
-            communicator ?: JsoupPortalCommunicator
+            sessionManager ?: DefaultUserPortalSessionManager
                 .Builder()
-                .withSession(UserPortalSession)
                 .build(),
             scraper ?: JsoupAuthUserPortalScrapper
         )

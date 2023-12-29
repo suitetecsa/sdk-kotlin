@@ -3,7 +3,6 @@ package cu.suitetecsa.sdk.nauta
 import cu.suitetecsa.sdk.nauta.exception.TopUpBalanceException
 import cu.suitetecsa.sdk.nauta.exception.TransferFundsException
 import cu.suitetecsa.sdk.nauta.scraper.ErrorParser
-import cu.suitetecsa.sdk.nauta.scraper.TokenParser
 import cu.suitetecsa.sdk.nauta.util.action.TopUpBalance
 import cu.suitetecsa.sdk.nauta.util.action.TransferFunds
 import cu.suitetecsa.sdk.network.HttpResponse
@@ -21,14 +20,17 @@ class UserPortalBalanceHandlerTest {
     fun test_top_up_balance_with_valid_recharge_code() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .build()
+        sessionManager.sessionOwner = "valid_user"
         val errorParser = mock<ErrorParser>()
-        val tokenParser = mock<TokenParser>()
 
         // Create an instance of UserPortalBalanceHandler with the mocked dependencies
         val balanceHandler = UserPortalBalanceHandler.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .build()
 
         // Mock the necessary behavior of the dependencies
@@ -50,14 +52,18 @@ class UserPortalBalanceHandlerTest {
     fun test_transfer_funds_to_another_account_with_valid_parameters() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .build()
+        sessionManager.sessionOwner = "valid_user"
+        sessionManager.isNautaHome = false
         val errorParser = mock<ErrorParser>()
-        val tokenParser = mock<TokenParser>()
 
         // Create an instance of UserPortalBalanceHandler with the mocked dependencies
         val balanceHandler = UserPortalBalanceHandler.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .build()
 
         whenever(
@@ -79,14 +85,18 @@ class UserPortalBalanceHandlerTest {
     fun test_transfer_funds_to_pay_nauta_home_service_with_valid_parameters() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .build()
+        sessionManager.sessionOwner = "valid_user"
+        sessionManager.isNautaHome = true
         val errorParser = mock<ErrorParser>()
-        val tokenParser = mock<TokenParser>()
 
         // Create an instance of UserPortalBalanceHandler with the mocked dependencies
         val balanceHandler = UserPortalBalanceHandler.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .build()
 
         // Mock the necessary behavior of the dependencies
@@ -109,14 +119,18 @@ class UserPortalBalanceHandlerTest {
     fun test_top_up_balance_with_invalid_recharge_code() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .build()
+        sessionManager.sessionOwner = "valid_user"
+        sessionManager.isNautaHome = false
         val errorParser = mock<ErrorParser>()
-        val tokenParser = mock<TokenParser>()
 
         // Create an instance of UserPortalBalanceHandler with the mocked dependencies
         val balanceHandler = UserPortalBalanceHandler.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .build()
 
         // Mock the necessary behavior of the dependencies
@@ -140,14 +154,18 @@ class UserPortalBalanceHandlerTest {
     fun test_transfer_funds_with_invalid_parameters() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .build()
+        sessionManager.sessionOwner = "valid_user"
+        sessionManager.isNautaHome = false
         val errorParser = mock<ErrorParser>()
-        val tokenParser = mock<TokenParser>()
 
         // Create an instance of UserPortalBalanceHandler with the mocked dependencies
         val balanceHandler = UserPortalBalanceHandler.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .build()
 
         // Mock the necessary behavior of the dependencies
@@ -171,14 +189,18 @@ class UserPortalBalanceHandlerTest {
     fun test_transfer_funds_with_insufficient_balance() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .build()
+        sessionManager.sessionOwner = "valid_user"
+        sessionManager.isNautaHome = false
         val errorParser = mock<ErrorParser>()
-        val tokenParser = mock<TokenParser>()
 
         // Create an instance of UserPortalBalanceHandler with the mocked dependencies
         val balanceHandler = UserPortalBalanceHandler.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .build()
 
         // Mock the necessary behavior of the dependencies

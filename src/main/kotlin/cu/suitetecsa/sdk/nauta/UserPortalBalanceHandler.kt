@@ -2,45 +2,40 @@ package cu.suitetecsa.sdk.nauta
 
 import cu.suitetecsa.sdk.nauta.exception.TopUpBalanceException
 import cu.suitetecsa.sdk.nauta.exception.TransferFundsException
-import cu.suitetecsa.sdk.nauta.network.UserPortalSession
 import cu.suitetecsa.sdk.nauta.scraper.ErrorParser
 import cu.suitetecsa.sdk.nauta.scraper.JsoupErrorParser
-import cu.suitetecsa.sdk.nauta.scraper.JsoupTokenParser
-import cu.suitetecsa.sdk.nauta.scraper.TokenParser
 import cu.suitetecsa.sdk.nauta.util.action.TopUpBalance
 import cu.suitetecsa.sdk.nauta.util.action.TransferFunds
-import cu.suitetecsa.sdk.network.Action
 import cu.suitetecsa.sdk.network.HttpMethod
-import cu.suitetecsa.sdk.network.JsoupPortalCommunicator
-import cu.suitetecsa.sdk.network.PortalCommunicator
 import cu.suitetecsa.sdk.util.ExceptionHandler
 
 /**
  * Handles the balance related actions on the user portal.
  */
 class UserPortalBalanceHandler private constructor(
-    private val communicator: PortalCommunicator,
+    private val sessionManager: UserPortalSessionManager,
     private val errorParser: ErrorParser,
-    private val tokenParser: TokenParser
 ) {
-    private fun loadCsrfToken(action: Action) =
-        communicator.performRequest("https://www.portal.nauta.cu${action.csrfUrl ?: action.url}") {
-            tokenParser.parseCsrfToken(errorParser.parseErrors(it.text, "Fail to load csrf token").getOrThrow())
-        }.getOrThrow()
 
     /**
      * Top up the balance with the given recharge code.
      * @param rechargeCode The recharge code to use.
      * @return Result<Unit>
      */
-    fun topUpBalance(rechargeCode: String) = runCatching {
+    fun topUpBalance(rechargeCode: String): Result<Unit> = runCatching {
         val action = TopUpBalance(rechargeCode = rechargeCode, method = HttpMethod.GET)
         val topUpExceptionHandle = ExceptionHandler.Builder(TopUpBalanceException::class.java).build()
 
-        communicator.performRequest(action.copy(csrf = loadCsrfToken(action), method = HttpMethod.POST)) {
+        if (sessionManager.sessionOwner.isNullOrEmpty()) {
+            throw topUpExceptionHandle
+                .handleException("you are not logged in", listOf())
+        }
+
+        sessionManager.communicator.performRequest(
+            action.copy(csrf = sessionManager.loadCsrf(action), method = HttpMethod.POST)
+        ) {
             errorParser.parseErrors(it.text, "Fail to top up balance", topUpExceptionHandle).getOrThrow()
         }.getOrThrow()
-        Unit
     }
 
     /**
@@ -50,7 +45,7 @@ class UserPortalBalanceHandler private constructor(
      * @param destinationAccount The account to transfer to.
      * @return Result<Unit>
      */
-    fun transferFunds(amount: Float, password: String, destinationAccount: String? = null) = runCatching {
+    fun transferFunds(amount: Float, password: String, destinationAccount: String? = null): Result<Unit> = runCatching {
         val action = TransferFunds(
             amount = amount,
             destinationAccount = destinationAccount,
@@ -58,27 +53,36 @@ class UserPortalBalanceHandler private constructor(
             method = HttpMethod.GET
         )
         val transferFundsExceptionHandle = ExceptionHandler.Builder(TransferFundsException::class.java).build()
+        sessionManager.isNautaHome?.let {
+            if (!it && destinationAccount == null) {
+                throw transferFundsExceptionHandle
+                    .handleException("this account is not Nauta Home", listOf())
+            }
+        } ?: run {
+            throw transferFundsExceptionHandle.handleException("you are not logged in", listOf())
+        }
 
-        communicator.performRequest(action.copy(csrf = loadCsrfToken(action), method = HttpMethod.POST)) {
+        sessionManager.communicator.performRequest(
+            action.copy(csrf = sessionManager.loadCsrf(action), method = HttpMethod.POST)
+        ) {
             errorParser.parseErrors(it.text, "Fail to transfer funds", transferFundsExceptionHandle).getOrThrow()
         }.getOrThrow()
-        Unit
     }
 
     /**
      * Builder for the UserPortalBalanceHandler.
      */
     class Builder {
-        private var communicator: PortalCommunicator? = null
+        private var sessionManager: UserPortalSessionManager? = null
         private var errorParser: ErrorParser? = null
-        private var tokenParser: TokenParser? = null
 
         /**
          * Sets the communicator to use.
-         * @param communicator The communicator to use.
+         * @param sessionManager The communicator to use.
          * @return Builder
          */
-        fun withCommunicator(communicator: PortalCommunicator) = apply { this.communicator = communicator }
+        fun withSessionManager(sessionManager: UserPortalSessionManager) =
+            apply { this.sessionManager = sessionManager }
 
         /**
          * Sets the error parser to use.
@@ -88,23 +92,14 @@ class UserPortalBalanceHandler private constructor(
         fun withErrorParser(errorParser: ErrorParser) = apply { this.errorParser = errorParser }
 
         /**
-         * Sets the token parser to use.
-         * @param tokenParser The token parser to use.
-         * @return Builder
-         */
-        fun withTokenParser(tokenParser: TokenParser) = apply { this.tokenParser = tokenParser }
-
-        /**
          * Builds the UserPortalBalanceHandler.
          * @return UserPortalBalanceHandler
          */
         fun build() = UserPortalBalanceHandler(
-            communicator = communicator ?: JsoupPortalCommunicator
+            sessionManager = sessionManager ?: DefaultUserPortalSessionManager
                 .Builder()
-                .withSession(UserPortalSession)
                 .build(),
             errorParser = errorParser ?: JsoupErrorParser,
-            tokenParser = tokenParser ?: JsoupTokenParser
         )
     }
 }

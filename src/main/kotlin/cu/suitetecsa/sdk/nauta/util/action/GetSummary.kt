@@ -1,6 +1,5 @@
 package cu.suitetecsa.sdk.nauta.util.action
 
-import cu.suitetecsa.sdk.nauta.util.PortalManager
 import cu.suitetecsa.sdk.network.Action
 import cu.suitetecsa.sdk.network.ActionType
 import cu.suitetecsa.sdk.network.HttpMethod
@@ -12,7 +11,7 @@ internal data class GetSummary(
     override val type: ActionType,
     override val method: HttpMethod = HttpMethod.POST
 ) : Action {
-    override val url: String = PortalManager.User.baseUrl + when (type) {
+    override val url: String = when (type) {
         ActionType.Connections -> "/useraaa/service_detail_summary/"
         ActionType.Recharges -> "/useraaa/recharge_detail_summary/"
         ActionType.Transfers -> "/useraaa/transfer_detail_summary/"
@@ -28,7 +27,7 @@ internal data class GetSummary(
             ActionType.QuotesPaid -> "nautahogarpaid_detail"
         }
     )
-    override val csrfUrl: String = PortalManager.User.baseUrl + when (type) {
+    override val csrfUrl: String = when (type) {
         ActionType.Connections -> "/useraaa/service_detail/"
         ActionType.Recharges -> "/useraaa/recharge_detail/"
         ActionType.Transfers -> "/useraaa/transfer_detail/"

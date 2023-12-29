@@ -29,16 +29,20 @@ class UserPortalActionsProviderTest {
     fun test_get_connections_summary_success() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
-        val errorParser = mock<ErrorParser>()
         val tokenParser = mock<TokenParser>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .withTokenParser(tokenParser)
+            .build()
+        val errorParser = mock<ErrorParser>()
         val actionsParser = mock<ActionsParser>()
         val summaryParser = mock<ActionsSummaryParser>()
 
         // Create an instance of UserPortalActionsProvider with the mocked dependencies
         val provider = UserPortalActionsProvider.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .withActionsParser(actionsParser)
             .withSummaryParser(summaryParser)
             .build()
@@ -73,16 +77,20 @@ class UserPortalActionsProviderTest {
     fun test_get_connections_success() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
-        val errorParser = mock<ErrorParser>()
         val tokenParser = mock<TokenParser>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .withTokenParser(tokenParser)
+            .build()
+        val errorParser = mock<ErrorParser>()
         val actionsParser = mock<ActionsParser>()
         val summaryParser = mock<ActionsSummaryParser>()
 
         // Create an instance of UserPortalActionsProvider with the mocked dependencies
         val provider = UserPortalActionsProvider.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .withActionsParser(actionsParser)
             .withSummaryParser(summaryParser)
             .build()
@@ -114,16 +122,20 @@ class UserPortalActionsProviderTest {
     fun test_get_recharges_summary_success() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
-        val errorParser = mock<ErrorParser>()
         val tokenParser = mock<TokenParser>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .withTokenParser(tokenParser)
+            .build()
+        val errorParser = mock<ErrorParser>()
         val actionsParser = mock<ActionsParser>()
         val summaryParser = mock<ActionsSummaryParser>()
 
         // Create an instance of UserPortalActionsProvider with the mocked dependencies
         val provider = UserPortalActionsProvider.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .withActionsParser(actionsParser)
             .withSummaryParser(summaryParser)
             .build()
@@ -158,16 +170,20 @@ class UserPortalActionsProviderTest {
     fun test_get_recharges_success() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
-        val errorParser = mock<ErrorParser>()
         val tokenParser = mock<TokenParser>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .withTokenParser(tokenParser)
+            .build()
+        val errorParser = mock<ErrorParser>()
         val actionsParser = mock<ActionsParser>()
         val summaryParser = mock<ActionsSummaryParser>()
 
         // Create an instance of UserPortalActionsProvider with the mocked dependencies
         val provider = UserPortalActionsProvider.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .withActionsParser(actionsParser)
             .withSummaryParser(summaryParser)
             .build()
@@ -202,16 +218,20 @@ class UserPortalActionsProviderTest {
     fun test_get_transfers_summary_success() {
         // Mock the dependencies
         val communicator = mock<PortalCommunicator>()
-        val errorParser = mock<ErrorParser>()
         val tokenParser = mock<TokenParser>()
+        val sessionManager = DefaultUserPortalSessionManager
+            .Builder()
+            .withCommunicator(communicator)
+            .withTokenParser(tokenParser)
+            .build()
+        val errorParser = mock<ErrorParser>()
         val actionsParser = mock<ActionsParser>()
         val summaryParser = mock<ActionsSummaryParser>()
 
         // Create an instance of UserPortalActionsProvider with the mocked dependencies
         val provider = UserPortalActionsProvider.Builder()
-            .withCommunicator(communicator)
+            .withSessionManager(sessionManager)
             .withErrorParser(errorParser)
-            .withTokenParser(tokenParser)
             .withActionsParser(actionsParser)
             .withSummaryParser(summaryParser)
             .build()
