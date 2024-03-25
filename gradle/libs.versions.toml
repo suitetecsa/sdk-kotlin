@@ -6,6 +6,8 @@ mockito-core = "5.5.0"
 mockito-kotlin = "5.1.0"
 mockk = "1.13.4"
 rx-java = "3.1.7"
+sonatype-central-upload = "1.0.2"
+devtools-ksp = "1.9.22-1.0.17"
 
 [libraries]
 jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
@@ -17,6 +19,8 @@ rx-java = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rx-j
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+sonatype-central-upload = { id = "cl.franciscosolis.sonatype-central-upload", version.ref = "sonatype-central-upload" }
+devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "devtools-ksp" }
 
 [bundles]
 
