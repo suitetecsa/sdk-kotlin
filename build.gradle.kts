@@ -1,28 +1,21 @@
+import cl.franciscosolis.sonatypecentralupload.SonatypeCentralUploadTask
 import io.gitlab.arturbosch.detekt.Detekt
 import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.9.23"
+    kotlin("jvm") version "1.9.22"
     alias(libs.plugins.detekt)
+    alias(libs.plugins.sonatype.central.upload)
+    alias(libs.plugins.devtools.ksp)
     `maven-publish`
 }
 
 group = "cu.suitetecsa"
 version = "1.0.0-alpha02"
 
-publishing {
-    // Configure el paquete de salida publicado, un proyecto puede tener múltiples salidas, pero solo una es
-    publications {
-        create<MavenPublication>("sdk-kotlin") {
-            from(components["java"])
-        }
-    }
-}
-
 repositories {
     mavenCentral()
-    mavenLocal()
-    maven { url = uri("https://jitpack.io") }
 }
 
 dependencies {
@@ -41,8 +34,72 @@ tasks.test {
     useJUnitPlatform()
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+    withSourcesJar()
+    withJavadocJar()
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions.jvmTarget = "17"
+}
+
 kotlin {
     jvmToolchain(17)
+}
+
+publishing {
+    // Configure el paquete de salida publicado, un proyecto puede tener múltiples salidas, pero solo una es
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+            pom {
+                name.set(project.name)
+                description.set("A tool designed to interact with ETECSA services.")
+                url.set("https://github.com/suitetecsa/sdk-kotlin")
+                licenses {
+                    license {
+                        name.set("MIT License")
+                        url.set("http://github.com/suitetecsa/sdk-kotlin/blob/master/LICENSE")
+                        distribution.set("repo")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("lesclaz")
+                        name.set("Lesly Cintra")
+                        email.set("lesclaz95@gmail.com")
+                    }
+                }
+                scm {
+                    url.set("http://github.com/suitetecsa/sdk-kotlin/tree/master")
+                    connection.set("scm:git:git://github.com/suitetecsa/sdk-kotlin.git")
+                    developerConnection.set("scm:git:ssh://github.com/suitetecsa/sdk-kotlin.git")
+                }
+            }
+        }
+    }
+}
+
+tasks.named<SonatypeCentralUploadTask>("sonatypeCentralUpload") {
+    dependsOn("jar", "sourcesJar", "javadocJar", "generatePomFileForMavenPublication")
+
+    username = System.getenv("SONATYPE_USERNAME")
+    password = System.getenv("SONATYPE_PASSWORD")
+
+    archives = files(
+        tasks.named("jar"),
+        tasks.named("sourcesJar"),
+        tasks.named("javadocJar"),
+    )
+    pom = file(
+        tasks.named("generatePomFileForMavenPublication").get().outputs.files.single()
+    )
+
+    signingKey = System.getenv("SIGNING_KEY")
+    signingKeyPassphrase = System.getenv("SIGNING_KEY_PASSPHRASE")
 }
 
 detekt {
