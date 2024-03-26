@@ -3,6 +3,9 @@ name: SDK / Publish
 on:
   push:
     tags:
+      - v*
+    branches:
+      - master
 
 jobs:
   publish:
