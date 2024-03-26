@@ -11,8 +11,8 @@ plugins {
     `maven-publish`
 }
 
-group = "cu.suitetecsa"
-version = "1.0.0-alpha02"
+group = "io.github.suitetecsa.sdk"
+version = "0.1.0-alpha01"
 
 repositories {
     mavenCentral()
@@ -28,6 +28,21 @@ dependencies {
     testImplementation(libs.mockk)
     testImplementation(libs.mockito.core)
     testImplementation(libs.mockito.kotlin)
+
+    implementation(libs.retrofit2)
+    implementation(libs.converter.moshi)
+    implementation(libs.moshi.kotlin)
+    // Adaptador de Coroutines para Retrofit
+    implementation(libs.retrofit2.kotlin.coroutines.adapter)
+    // Adaptador RxJava para Retrofit
+    implementation(libs.adapter.rxjava3)
+
+    implementation(libs.java.jwt)
+
+    ksp(libs.moshi.kotlin.codegen)
+
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.mockwebserver)
 }
 
 tasks.test {

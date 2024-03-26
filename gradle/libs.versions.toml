@@ -8,6 +8,13 @@ mockk = "1.13.4"
 rx-java = "3.1.7"
 sonatype-central-upload = "1.0.2"
 devtools-ksp = "1.9.22-1.0.17"
+retrofit2 = "2.9.0"
+moshi-kotlin = "1.15.1"
+retrofit2-kotlin-coroutines-adapter = "0.9.2"
+java-jwt = "3.18.2"
+moshi-kotlin-codegen = "1.15.0"
+kotlinx-coroutines-test = "1.6.1"
+mockwebserver = "4.9.1"
 
 [libraries]
 jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
@@ -16,6 +23,17 @@ mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mo
 mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockito-kotlin" }
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 rx-java = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rx-java" }
+
+retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2" }
+converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit2" }
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi-kotlin" }
+retrofit2-kotlin-coroutines-adapter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlin-coroutines-adapter", version.ref = "retrofit2-kotlin-coroutines-adapter" }
+adapter-rxjava3 = { group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref = "retrofit2" }
+java-jwt = { group = "com.auth0", name = "java-jwt", version.ref = "java-jwt" }
+moshi-kotlin-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi-kotlin-codegen" }
+
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
+mockwebserver = { group = "com.squareup.okhttp3", name = "mockwebserver", version.ref = "mockwebserver" }
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
