@@ -1,9 +1,11 @@
 package io.github.suitetecsa.sdk.access.network
 
 import io.github.suitetecsa.sdk.access.exception.LoadInfoException
-import io.github.suitetecsa.sdk.exception.NautaException
 import io.github.suitetecsa.sdk.exception.NautaAttributeException
+import io.github.suitetecsa.sdk.exception.NautaException
 import java.util.function.Function
+
+private const val DEFAULT_TIMEOUT = 30000
 
 /**
  * Clase que implementa el comunicador del portal utilizando Jsoup.
@@ -61,6 +63,6 @@ internal class PortalCommunicatorImpl(private val session: Session) : PortalComm
      */
     @Throws(NautaException::class, LoadInfoException::class)
     override fun <T> performRequest(url: String, transform: Function<HttpResponse, T>): T {
-        return handleResponse(url, null, HttpMethod.GET, 30000, transform)
+        return handleResponse(url, null, HttpMethod.GET, DEFAULT_TIMEOUT, transform)
     }
 }

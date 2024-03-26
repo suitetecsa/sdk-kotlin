@@ -3,8 +3,8 @@ package io.github.suitetecsa.sdk.access.scraper
 import io.github.suitetecsa.sdk.access.exception.LoadInfoException
 import io.github.suitetecsa.sdk.access.model.ConnectInformation
 import io.github.suitetecsa.sdk.access.network.HttpResponse
-import io.github.suitetecsa.sdk.exception.NautaException
 import io.github.suitetecsa.sdk.exception.InvalidSessionException
+import io.github.suitetecsa.sdk.exception.NautaException
 
 /**
  * Interfaz que define un scraper para analizar contenido HTML en el portal de conexión.
@@ -31,7 +31,7 @@ interface ConnectionInfoParser {
     /**
      * Analiza el HTML para extraer el tiempo restante de la conexión.
      *
-     * @param html El contenido HTML a analizar.
+     * @param httpResponse El contenido dela respuesta HTTP a analizar.
      * @return El tiempo restante de la conexión en segundos.
      */
     @Throws(InvalidSessionException::class)
