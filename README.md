@@ -1,6 +1,6 @@
 # SuitEtecsa SDK Kotlin
 
-`SuitEtecsa SDK` es una herramienta diseñada para interactuar con los servicios de [ETECSA](https://www.etecsa.cu/). La librería utiliza técnicas de scrapping para acceder a los portales de [acceso a internet ](https://secure.etecsa.net:8443/)y de [usuario](https://www.portal.nauta.cu/) de Nauta. Implementa funciones para todas las operaciones disponibles en ambos portales, y ofrece soporte para Nauta Hogar.
+`SuitEtecsa SDK` es una herramienta diseñada para interactuar con los servicios de [ETECSA](https://www.etecsa.cu/). La librería utiliza técnicas de scrapping para acceder al portal de [acceso a internet ](https://secure.etecsa.net:8443/) de Nauta.
 
 Al ser un proyecto open-source, se valoran y se reciben contribuciones de la comunidad de desarrolladores/as.
 
@@ -13,25 +13,25 @@ Al ser un proyecto open-source, se valoran y se reciben contribuciones de la com
     - [x] Obtener el tiempo disponible en la cuenta.
     - [x] Obtener la información de la cuenta.
 
-- [x] [Portal de Usuario](https://www.portal.nauta.cu/)
+- [x] [Portal de Usuario Nauta](https://www.nauta.cu/)
 
     - [x] Iniciar sesión.
-    - [x] Obtener información de la cuenta.
-    - [x] Recargar la cuenta.
-    - [x] Transferir saldo a otra cuenta nauta.
-    - [x] Transferir saldo para pago de cuota (`solo para cuentas Nauta Hogar`).
-    - [x] Cambiar la contraseña de la cuenta de acceso.
-    - [x] Cambiar la contraseña de la cuenta de correo asociada.
-    - [x] Obtener las conexiones realizadas en el periódo `año-mes` especificado.
-    - [x] Obtener las recargas realizadas en el periódo `año-mes` especificado.
-    - [x] Obtener las transferencias realizadas en el periódo `año-mes` especificado.
-    - [x] Obtener los pagos de cuotas realizados en el periódo `año-mes` especificado (`solo para cuentas Nauta Hogar`).
+    - [x] Obtener información de las cuentas a nombre del usuario (correo, navegación, telefonía móvil y telefonía fija).
+    - [ ] Recargar las cuentas de navegación.
+    - [ ] Transferir saldo a otra cuenta nauta.
+    - [ ] Transferir saldo para pago de cuota (`solo para cuentas Nauta Hogar`).
+    - [ ] Cambiar la contraseña de la cuenta de acceso.
+    - [ ] Cambiar la contraseña de las cuentas de correo o navegación asociadas.
+    - [ ] Obtener las conexiones realizadas en el mes especificado por las cuantas de navegación asociadas.
+    - [ ] Obtener las recargas realizadas en el mes especificado a las cuentas de navegación asociadas.
+    - [ ] Obtener las transferencias realizadas en el mes especificado por las cuantas de navegación asociadas.
+    - [ ] Obtener los pagos de cuotas realizados en el mes especificado por las cuantas de navegación asociadas (`solo para cuentas Nauta Hogar`).
 
 # Uso
 
 Importa `SuitEtecsa SDK` en tu proyecto
 
-[![](https://jitpack.io/v/suitetecsa/sdk-kotlin.svg)](https://jitpack.io/#suitetecsa/sdk-kotlin)
+[![](https://img.shields.io/maven-central/v/io.suitetecsa.sdk/sdk-kotlin.svg)](https://img.shields.io/maven-central/v/io.suitetecsa.sdk/sdk-kotlin.svg)
 
 
 ```kotlin
@@ -41,92 +41,39 @@ implementation("com.github.suitetecsa:sdk-kotlin:{last-version}")
 Conectate a internet desde la wifi o Nauta Hogar
 
 **Kotlin**
-```kotlin
-import cu.suitetecsa.sdk.nauta.ConnectApi
 
-val connectApi = ConnectApi.Builder().build()
-connectApi.setCredentials("user.name@nauta.com.cu", "userPassword.123")
-connectApi.connect()
-  .onSuccess { result ->
-      if (result == "Connected") {
-          // Todo bien
-      }
-  }. onFailure { exception: Throwable ->
-      throw exception
-  }
+```kotlin
+import io.github.suitetecsa.sdk.access.AccessClient
+
+val client = AccessClient.Builder().build()
+val dataSession = client.connect("user.name@nauta.com.cu", "userPassword.123")
 ```
 
 **Java**
 ```java 
-import cu.suitetecsa.sdk.nauta.rxjava.ConnectApi;
+import io.github.suitetecsa.sdk.access.AccessClientRx;
 
-ConnectApi connectApi = new ConnectApi.Builder().build();
-connectApi.setCredentials("user.name@nauta.com.cu", "userPassword.123");
-connectApi.connect().observeOn(AndroidSchedulers.mainThread())
-        .subscribe(result -> {
-            if (result == "Connected") {
-                // Todo bien
-            }
+AccessClientRx clientRx = new AccessClientRx.Builder().build();
+clientRx.connect("user.name@nauta.com.cu", "userPassword.123")
+.observeOn(AndroidSchedulers.mainThread()).subscribe(dataSession -> {
+            // use dataSession here
         }, error -> { throw error });
 ```
 
-## ConnectApi
+## AccessClient/AccessClientRx
 
-`ConnectApi` es la clase encargada de comunicarse con el portal de acceso a internet de [ETECSA](https://www.etecsa.cu). Por razones de compatibilidad, si usas Java como lenguaje para programar, debes importar la clase ubicada en el paquete `cu.suitetecsa.sdk.nauta.rxjava` (tanto para `ConnectApi`, como para las demás).
+`AccessClient` es la clase encargada de comunicarse con el portal de acceso a internet de [ETECSA](https://www.etecsa.cu).
 
-Funciones y variables de `ConnectApi`:
-- username (Nullable): nombre de usuario especificado con el cual se iniciará sesión en el portal.
-- password (Nullable): contraseña especificada con la cual se iniciará sesión en el portal.
+Funciones y variables de `AccessClient`:
 - isConnected: comprueba si se está bajo el portal cautivo de Nauta, en caso positivo devuelve `false`.
-- dataSession (Nullable): un objeto que, una vez iniciada la sesión, devuelve la información necesaria para restablecer la misma y poder cerrarla posteriormente.
-- remainingTime: devuelve el tiempo restante de la cuenta que ha iniciado sesión.
-- connectInformation: devuelve información relevante de la cuenta especificada con `setCredentials`.
-- setCredentials: se usa para especificar las credenciales con las que se iniciará sesión.
-- connect: conecta la cuenta especificada.
-- disconnect: desconecta la cuenta conectada.
+- getUserInformation: devuelve información relevante de la cuenta especificada.
+- connect: conecta la cuenta especificada. Devuelve un objeto DataSession que contiene la información necesaria para restablecer la sesión y poder cerrarla posteriormente.
+- getRemainingTime: devuelve el tiempo restante de la cuenta que ha iniciado sesión. Requiere del objeto DataSession devuelto por `connect`.
+- disconnect: desconecta la cuenta conectada. Requiere del objeto DataSession devuelto por `connect`.
 
-__Nota__: Tanto la clase del paquete `cu.suitetecsa.sdk.nauta` como la de `cu.suitetecsa.sdk.nauta.rxjava` se instancian de la misma manera y tienen las mismas funciones y variables.
+## NautaApi
 
-## UserPortalAuthApi
-
-`UserPortalAuthApi` es la clase encargada de manejar la sesión en el [portal de usuario de Nauta](https://www.portal.nauta.cu).
-
-Funciones y variables de `UserPortalAuthApi`:
-- isNautaHome: indica si la cuenta que inició sesión es una cuenta asociada al servicio de Nauta Hogar (devuelve `false` por defecto, solo debe tenerse en cuenta una vez que se haya iniciado sesión con una cuenta).
-- setCredentials: se usa para especificar las credenciales con las que se iniciará sesión.
-- captchaImage: devuelve la imagen captcha proporcionada por el portal como un arreglo de bytes.
-- userInformation: devuelve la información del usuario que ha iniciado sesión.
-- login: recibe el código captcha contenido en la imagen e inicia la sesión en el portal.
-
-## UserPortalBalanceHandler
-
-`UserPortalBalanceHandler` es la clase encargada de manejar el balance de la cuenta que ha iniciado sesión.
-
-Funciones y variables de `UserPortalBalanceHandler`:
-- topUpBalance: recarga el saldo de la cuenta que inició sesión usando un código de 12 o 16 dígitos.
-- transferFunds: si se establece un `destinationAccount`, transfiere saldo a la cuenta especificada; de lo contrario, intenta pagar una cuota del servicio Nauta Hogar (solo en cuentas asociadas a este servicio).
-
-## UserPortalPasswordManager
-
-`UserPortalPasswordManager` es la clase encargada de manejar la seguridad de la cuenta que ha iniciado sesión en el portal.
-
-Funciones y variables de `UserPortalPasswordManager`:
-- changePassword: cambia la contraseña de acceso a internet de la cuenta que ha iniciado sesión.
-- changeEmailPassword: cambia la contraseña del correo asociado a la cuenta que inició sesión.
-
-## UserPortalActionsProvider
-
-`UserPortalActionsProvider` es la clase encargada de recuperar la información de las acciones (conexiones, recargas, transferencias, fondos de cuota) llevadas a cabo por la cuenta que ha iniciado sesión.
-
-Funciones y variables de `UserPortalActionsProvider`:
-- getConnectionsSummary: devuelve el resumen de conexiones llevadas a cabo en un mes de un año especificado.
-- getConnections: devuelve las conexiones llevadas a cabo en un mes de un año especificado.
-- getRechargesSummary: devuelve el resumen de recargas llevadas a cabo en un mes de un año especificado.
-- getRecharges: devuelve las recargas llevadas a cabo en un mes de un año especificado.
-- getTransfersSummary: devuelve el resumen de transferencias llevadas a cabo en un mes de un año especificado.
-- getTransfers: devuelve las transferencias llevadas a cabo en un mes de un año especificado.
-- getQuotesPaidSummary: devuelve el resumen de fondos de cuotas en un mes de un año especificado.
-- getConnections: devuelve los fondos de cuotas en un mes de un año especificado.
+`NautaApi` es un objeto que proporciona instancias Retrofit configuradas listas para crear servicios API con o sin soporte RxJava. Esta están diseñadas para interactuar con el [portal Nauta](https://www.nauta.cu).
 
 # Contribución
 
