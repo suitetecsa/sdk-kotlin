@@ -31,7 +31,7 @@ Al ser un proyecto open-source, se valoran y se reciben contribuciones de la com
 
 Importa `SuitEtecsa SDK` en tu proyecto
 
-[![](https://img.shields.io/maven-central/v/io.suitetecsa.sdk/sdk-kotlin.svg)](https://img.shields.io/maven-central/v/io.suitetecsa.sdk/sdk-kotlin.svg)
+[![](https://img.shields.io/maven-central/v/io.github.suitetecsa.sdk/kotlin.svg)](https://img.shields.io/maven-central/v/io.github.suitetecsa.sdk/kotlin.svg)
 
 
 ```kotlin
