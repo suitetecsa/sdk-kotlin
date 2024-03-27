@@ -35,7 +35,7 @@ Importa `SuitEtecsa SDK` en tu proyecto
 
 
 ```kotlin
-implementation("com.github.suitetecsa:sdk-kotlin:{last-version}")
+implementation("io.github.suitetecsa.sdk:kotlin:{last-version}")
 ```
 
 Conectate a internet desde la wifi o Nauta Hogar
