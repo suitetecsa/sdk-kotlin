@@ -38,7 +38,7 @@ Importa `SuitEtecsa SDK` en tu proyecto
 implementation("io.github.suitetecsa.sdk:kotlin:{last-version}")
 ```
 
-Conectate a internet desde la wifi o Nauta Hogar
+### Conectate a internet desde la wifi o Nauta Hogar
 
 **Kotlin**
 
@@ -50,6 +50,7 @@ val dataSession = client.connect("user.name@nauta.com.cu", "userPassword.123")
 ```
 
 **Java**
+
 ```java 
 import io.github.suitetecsa.sdk.access.AccessClientRx;
 
@@ -58,6 +59,57 @@ clientRx.connect("user.name@nauta.com.cu", "userPassword.123")
 .observeOn(AndroidSchedulers.mainThread()).subscribe(dataSession -> {
             // use dataSession here
         }, error -> { throw error });
+```
+
+### Accede al Portal Nauta 
+
+**Java**
+
+```java
+import io.github.suitetecsa.sdk.nauta.model.login.LoginRequest;
+import io.github.suitetecsa.sdk.nauta.api.NautaApi;
+import io.github.suitetecsa.sdk.nauta.api.PortalAuthServiceRx;
+import io.reactivex.rxjava3.disposables.Disposable;
+
+public class Example....
+
+private PortalAuthServiceRx service;
+private Disposable disposable;
+private String idRequest;
+
+// Obtain captcha code in String format and then take it to Bitmap or Drawable
+disposable = service.getCaptcha()
+    .subscribe(response -> {
+     idRequest = response.getIdRequest();
+     String captchaContent = response.getData();
+
+   }, throwable -> {
+      if (throwable instanceof UnknownHostException) {
+     }
+});
+
+
+
+// connect after inserting user data
+LoginRequest request = new LoginRequest("usuario", " password", "USUARIO_PORTAL", idRequest, "captcha");
+disposable = service.login(request)
+    .subscribe(response -> {
+    if (response.getResult().equals("ok")) {
+       ((User) response.getUser())
+               .getServices()
+               .getNavServices()
+               .forEach(navServices -> {
+                     
+             });
+    // to obtain the other services it is the same procedure, 
+    // just change getNavServices() for the desired service
+         }
+     },error -> {
+       if (error instanceof Exception e) {
+          e.printStackTrace();
+        }
+ });
+
 ```
 
 ## AccessClient/AccessClientRx
