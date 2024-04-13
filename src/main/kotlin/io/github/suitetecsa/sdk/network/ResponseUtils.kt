@@ -1,4 +1,4 @@
-package io.github.suitetecsa.sdk.access.network
+package io.github.suitetecsa.sdk.network
 
 import io.github.suitetecsa.sdk.access.utils.ExceptionHandler
 import io.github.suitetecsa.sdk.exception.NautaException

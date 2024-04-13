@@ -2,7 +2,7 @@ package io.github.suitetecsa.sdk.access.scraper
 
 import io.github.suitetecsa.sdk.access.exception.LoadInfoException
 import io.github.suitetecsa.sdk.access.model.ConnectInformation
-import io.github.suitetecsa.sdk.access.network.HttpResponse
+import io.github.suitetecsa.sdk.network.HttpResponse
 import io.github.suitetecsa.sdk.exception.InvalidSessionException
 import io.github.suitetecsa.sdk.exception.NautaException
 
