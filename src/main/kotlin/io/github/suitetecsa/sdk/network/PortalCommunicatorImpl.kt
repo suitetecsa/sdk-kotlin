@@ -1,6 +1,7 @@
-package io.github.suitetecsa.sdk.access.network
+package io.github.suitetecsa.sdk.network
 
 import io.github.suitetecsa.sdk.access.exception.LoadInfoException
+import io.github.suitetecsa.sdk.access.network.AccessRoute
 import io.github.suitetecsa.sdk.exception.NautaAttributeException
 import io.github.suitetecsa.sdk.exception.NautaException
 import java.util.function.Function

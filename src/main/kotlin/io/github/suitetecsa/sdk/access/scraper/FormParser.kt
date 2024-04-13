@@ -1,6 +1,6 @@
 package io.github.suitetecsa.sdk.access.scraper
 
-import io.github.suitetecsa.sdk.access.network.HttpResponse
+import io.github.suitetecsa.sdk.network.HttpResponse
 import java.util.AbstractMap.SimpleEntry
 
 /**
