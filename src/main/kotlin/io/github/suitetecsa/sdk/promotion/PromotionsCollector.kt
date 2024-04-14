@@ -1,9 +1,10 @@
 package io.github.suitetecsa.sdk.promotion
 
-import io.github.suitetecsa.sdk.network.HttpResponse
-import io.github.suitetecsa.sdk.network.PortalCommunicator
 import io.github.suitetecsa.sdk.promotion.model.Promotion
 import org.jsoup.Jsoup
+import java.net.URL
+
+private const val DEFAULT_TIMEOUT = 30000
 
 object PromotionsCollector {
     /**
@@ -12,27 +13,17 @@ object PromotionsCollector {
      * @return Objeto `ResultType` que encapsula el resultado de la carga de promociones.
      */
     @JvmStatic
-    fun collect() = PortalCommunicator
-        .Builder()
-        .build()
-        .performRequest("https://www.etecsa.cu", ::parse)
-
-    /**
-     * Analiza las promociones a partir del HTML proporcionado y devuelve una lista de objetos `Promotion`.
-     *
-     * @param response La respuesta que contiene las promociones a analizar.
-     * @return Una lista de objetos `Promotion` que representan las promociones analizadas.
-     */
-    private fun parse(response: HttpResponse) = Jsoup.parse(response.text)
+    fun collect() = Jsoup.parse(URL("https://www.etecsa.cu"), DEFAULT_TIMEOUT)
             .select("div.carousel-inner")
             .select("div.carousel-item")
             .map { item ->
                 Promotion(
-                    svgUrl = parsePromotionLink(item.selectFirst("div[style]")?.attr("style")) ?: "",
-                    jpgUrl = item.selectFirst("div.mipromocion")?.selectFirst("div.mipromocion-contenido")
-                        ?.selectFirst("img")?.attr("src") ?: "",
-                    promotionUrl = item.selectFirst("div.mipromocion")?.selectFirst("div.mipromocion-contenido")
-                        ?.selectFirst("a")?.attr("href") ?: ""
+                    svgUrl =
+                    "https://www.etecsa.cu${parsePromotionLink(item.selectFirst("div[style]")?.attr("style"))}",
+                    jpgUrl = "https://www.etecsa.cu${item.selectFirst("div.mipromocion")?.selectFirst("div.mipromocion-contenido")
+                        ?.selectFirst("img")?.attr("src")}",
+                    promotionUrl = "https://www.etecsa.cu${item.selectFirst("div.mipromocion")?.selectFirst("div.mipromocion-contenido")
+                        ?.selectFirst("a")?.attr("href")}"
 
                 )
             }
