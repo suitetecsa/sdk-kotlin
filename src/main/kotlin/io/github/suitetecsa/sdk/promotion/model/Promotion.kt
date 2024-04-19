@@ -1,3 +1,3 @@
 package io.github.suitetecsa.sdk.promotion.model
 
-data class Promotion(val svgUrl: String, val jpgUrl: String, val promotionUrl: String)
+data class Promotion(val svg: String, val background: String, val url: String)

@@ -2,9 +2,11 @@ package io.github.suitetecsa.sdk.promotion
 
 import io.github.suitetecsa.sdk.promotion.model.Promotion
 import org.jsoup.Jsoup
+import org.jsoup.nodes.Element
 import java.net.URL
 
 private const val DEFAULT_TIMEOUT = 30000
+private const val BASE_URL = "https://www.etecsa.cu"
 
 object PromotionsCollector {
     /**
@@ -13,20 +15,25 @@ object PromotionsCollector {
      * @return Objeto `ResultType` que encapsula el resultado de la carga de promociones.
      */
     @JvmStatic
-    fun collect() = Jsoup.parse(URL("https://www.etecsa.cu"), DEFAULT_TIMEOUT)
-            .select("div.carousel-inner")
-            .select("div.carousel-item")
-            .map { item ->
-                Promotion(
-                    svgUrl =
-                    "https://www.etecsa.cu${parsePromotionLink(item.selectFirst("div[style]")?.attr("style"))}",
-                    jpgUrl = "https://www.etecsa.cu${item.selectFirst("div.mipromocion")?.selectFirst("div.mipromocion-contenido")
-                        ?.selectFirst("img")?.attr("src")}",
-                    promotionUrl = "https://www.etecsa.cu${item.selectFirst("div.mipromocion")?.selectFirst("div.mipromocion-contenido")
-                        ?.selectFirst("a")?.attr("href")}"
-
-                )
+    @JvmOverloads
+    fun collect(mobileAspect: Boolean = false) = Jsoup.parse(URL("https://www.etecsa.cu"), DEFAULT_TIMEOUT)
+        .let {
+            if (mobileAspect) {
+                it.select("div#carousel-dm>div").map(::parsePromotionMobile)
+            } else {
+                it.select("div.carousel-inner")
+                    .select("div.carousel-item")
+                    .map { item -> parsePromotion(item) }
             }
+        }
+
+    private fun parsePromotion(item: Element): Promotion {
+        val background = parsePromotionLink(item.selectFirst("div[style]")?.attr("style"))
+        val promotionContent = item.selectFirst("div.mipromocion")?.selectFirst("div.mipromocion-contenido")
+        val svg = promotionContent?.selectFirst("img")?.attr("src")
+        val url = promotionContent?.selectFirst("a")?.attr("href")
+        return Promotion("$BASE_URL$svg", "$BASE_URL$background", "$BASE_URL$url")
+    }
 
     /**
      * Analiza el enlace de la promoción a partir del texto proporcionado.
@@ -38,5 +45,14 @@ object PromotionsCollector {
         val regex = "url\\('(.+)'\\);".toRegex()
         val matchResult = text?.let { regex.find(it) }
         return matchResult?.groupValues?.get(1)
+    }
+
+    private fun parsePromotionMobile(element: Element): Promotion {
+        val background = element.selectFirst("img")!!.attr("src")
+        val svg = element.selectFirst("div.mipromocion-contenido-movil")!!
+            .selectFirst("img")!!.attr("src")
+        val url = element.selectFirst("div.mipromocion-contenido-movil-botones")!!
+            .selectFirst("a")!!.attr("href")
+        return Promotion("$BASE_URL$svg", "$BASE_URL$background", "$BASE_URL$url")
     }
 }
