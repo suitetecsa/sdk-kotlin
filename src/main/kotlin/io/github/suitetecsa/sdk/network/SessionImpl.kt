@@ -1,8 +1,8 @@
-package io.github.suitetecsa.sdk.access.network
+package io.github.suitetecsa.sdk.network
 
 import io.github.suitetecsa.sdk.access.exception.LoadInfoException
-import io.github.suitetecsa.sdk.access.network.ConnectionFactory.createConnection
 import io.github.suitetecsa.sdk.exception.NautaException
+import io.github.suitetecsa.sdk.network.ConnectionFactory.createConnection
 import org.jetbrains.annotations.Contract
 import org.jsoup.Connection
 import java.io.IOException

@@ -1,5 +1,7 @@
 package io.github.suitetecsa.sdk.access.network
 
+import io.github.suitetecsa.sdk.network.HttpMethod
+
 sealed class AccessRoute(
     val url: String,
     val data: Map<String, String>? = null,

@@ -5,8 +5,7 @@ import io.github.suitetecsa.sdk.access.exception.LogoutException
 import io.github.suitetecsa.sdk.access.model.ConnectInformation
 import io.github.suitetecsa.sdk.access.model.DataSession
 import io.github.suitetecsa.sdk.access.network.AccessRoute
-import io.github.suitetecsa.sdk.access.network.HttpResponse
-import io.github.suitetecsa.sdk.access.network.PortalCommunicator
+import io.github.suitetecsa.sdk.network.HttpResponse
 import io.github.suitetecsa.sdk.access.scraper.ConnectionInfoParser
 import io.github.suitetecsa.sdk.access.scraper.ErrorParser
 import io.github.suitetecsa.sdk.access.scraper.FormParser
@@ -14,6 +13,7 @@ import io.github.suitetecsa.sdk.access.utils.ExceptionHandler
 import io.github.suitetecsa.sdk.exception.LoginException
 import io.github.suitetecsa.sdk.exception.NautaAttributeException
 import io.github.suitetecsa.sdk.exception.NautaException
+import io.github.suitetecsa.sdk.network.PortalCommunicator
 import org.jetbrains.annotations.Contract
 
 class AccessClient private constructor(

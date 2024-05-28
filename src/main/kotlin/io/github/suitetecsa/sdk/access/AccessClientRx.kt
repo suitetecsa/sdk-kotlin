@@ -4,7 +4,7 @@ import io.github.suitetecsa.sdk.access.exception.LoadInfoException
 import io.github.suitetecsa.sdk.access.exception.LogoutException
 import io.github.suitetecsa.sdk.access.model.ConnectInformation
 import io.github.suitetecsa.sdk.access.model.DataSession
-import io.github.suitetecsa.sdk.access.network.PortalCommunicator
+import io.github.suitetecsa.sdk.network.PortalCommunicator
 import io.github.suitetecsa.sdk.access.scraper.ConnectionInfoParser
 import io.github.suitetecsa.sdk.exception.LoginException
 import io.github.suitetecsa.sdk.exception.NautaAttributeException

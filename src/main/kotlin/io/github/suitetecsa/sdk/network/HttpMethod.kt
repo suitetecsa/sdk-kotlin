@@ -1,4 +1,4 @@
-package io.github.suitetecsa.sdk.access.network
+package io.github.suitetecsa.sdk.network
 
 /**
  * Enumeración que representa los métodos HTTP utilizados en las solicitudes.

@@ -1,4 +1,4 @@
-package io.github.suitetecsa.sdk.access.network
+package io.github.suitetecsa.sdk.network
 
 import org.jetbrains.annotations.Contract
 import java.nio.charset.StandardCharsets

@@ -12,7 +12,7 @@ retrofit2 = "2.9.0"
 moshi-kotlin = "1.15.1"
 retrofit2-kotlin-coroutines-adapter = "0.9.2"
 java-jwt = "3.18.2"
-moshi-kotlin-codegen = "1.15.0"
+moshi-kotlin-codegen = "1.15.1"
 kotlinx-coroutines-test = "1.6.1"
 mockwebserver = "4.9.1"
 

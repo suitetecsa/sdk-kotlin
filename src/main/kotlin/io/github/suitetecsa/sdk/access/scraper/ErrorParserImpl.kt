@@ -1,6 +1,6 @@
 package io.github.suitetecsa.sdk.access.scraper
 
-import io.github.suitetecsa.sdk.access.network.HttpResponse
+import io.github.suitetecsa.sdk.network.HttpResponse
 import io.github.suitetecsa.sdk.access.utils.ExceptionHandler
 import io.github.suitetecsa.sdk.exception.NotLoggedInException
 import org.jsoup.Jsoup

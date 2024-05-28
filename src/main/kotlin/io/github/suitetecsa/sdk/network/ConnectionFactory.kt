@@ -1,4 +1,4 @@
-package io.github.suitetecsa.sdk.access.network
+package io.github.suitetecsa.sdk.network
 
 import org.jsoup.Connection
 import org.jsoup.Jsoup
