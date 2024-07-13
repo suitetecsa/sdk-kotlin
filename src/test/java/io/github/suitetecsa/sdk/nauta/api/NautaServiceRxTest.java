@@ -30,9 +30,9 @@ import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.moshi.MoshiConverterFactory;
 
 @RunWith(JUnit4.class)
-public class PortalAuthServiceRxTest {
+public class NautaServiceRxTest {
     private MockWebServer mockWebServer;
-    private PortalAuthServiceRx service;
+    private NautaServiceRx service;
 
     @Before
     public void setUp() throws Exception {
@@ -50,7 +50,7 @@ public class PortalAuthServiceRxTest {
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .build()
-                .create(PortalAuthServiceRx.class);
+                .create(NautaServiceRx.class);
     }
 
     @After
