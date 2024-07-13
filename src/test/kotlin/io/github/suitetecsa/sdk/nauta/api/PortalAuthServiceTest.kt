@@ -30,7 +30,7 @@ import kotlin.test.assertTrue
 @RunWith(JUnit4::class)
 class PortalAuthServiceTest {
     private lateinit var mockWebServer: MockWebServer
-    private lateinit var service: PortalAuthService
+    private lateinit var service: NautaService
 
     @BeforeTest
     fun createService() {
@@ -46,7 +46,7 @@ class PortalAuthServiceTest {
             .baseUrl(mockWebServer.url("/"))
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
-            .create(PortalAuthService::class.java)
+            .create(NautaService::class.java)
     }
 
     @AfterTest
