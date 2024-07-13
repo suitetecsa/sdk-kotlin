@@ -28,7 +28,7 @@ import kotlin.test.BeforeTest
 import kotlin.test.assertTrue
 
 @RunWith(JUnit4::class)
-class PortalAuthServiceTest {
+class NautaServiceTest {
     private lateinit var mockWebServer: MockWebServer
     private lateinit var service: NautaService
 
@@ -62,7 +62,7 @@ class PortalAuthServiceTest {
         val request = mockWebServer.takeRequest()
 
         MatcherAssert.assertThat(request.method, CoreMatchers.`is`("GET"))
-        MatcherAssert.assertThat(request.path, CoreMatchers.`is`("/captcha/captcha?"))
+        MatcherAssert.assertThat(request.path, CoreMatchers.`is`("/captcha/captcha"))
         MatcherAssert.assertThat(request.headers["User-Agent"], CoreMatchers.`is`("SuitETECSA/1.0.0"))
         MatcherAssert.assertThat(request.headers["Content-Type"], CoreMatchers.`is`("application/json"))
 
