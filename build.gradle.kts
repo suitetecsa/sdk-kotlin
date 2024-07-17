@@ -6,6 +6,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.9.22"
+    kotlin("plugin.serialization") version "1.8.0"
     alias(libs.plugins.detekt)
     alias(libs.plugins.sonatype.central.upload)
     alias(libs.plugins.devtools.ksp)
@@ -13,7 +14,7 @@ plugins {
 }
 
 group = "io.github.suitetecsa.sdk"
-version = "0.2.3"
+version = "1.0.0-alpha01"
 
 repositories {
     mavenCentral()
@@ -46,6 +47,8 @@ dependencies {
 
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.mockwebserver)
+
+    implementation("org.bouncycastle:bcprov-jdk15on:1.68")
 }
 
 tasks.test {

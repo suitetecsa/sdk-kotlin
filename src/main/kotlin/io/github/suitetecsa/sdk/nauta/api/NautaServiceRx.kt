@@ -13,7 +13,7 @@ import retrofit2.http.Header
 import retrofit2.http.Headers
 import retrofit2.http.POST
 
-interface PortalAuthServiceRx {
+interface NautaServiceRx {
     @Headers("User-Agent: SuitETECSA/1.0.0", "Content-Type: application/json")
     @GET("/captcha/captcha?")
     fun getCaptcha(): Single<CaptchaResponse>
