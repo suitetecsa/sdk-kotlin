@@ -81,51 +81,36 @@ import io.reactivex.rxjava3.disposables.Disposable;
 public class Example {
     
     private PortalAuthServiceRx service;
-    private Disposable disposable;
     private String idRequest;
 
     
 // Obtain captcha code in String format and then take it to Bitmap or Drawable
-    disposable =service.getCaptcha().subscribe(response ->{
+    Single<CaptchaResponse> captcha = service.getCaptcha();
+    captcha.subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(
+            response -> {
         idRequest = response.getIdRequest();
         String captchaContent = response.getData();
-
-    },throwable->{
-        if (throwable instanceof UnknownHostException) {
-        }
+    },
+    error -> {
+      // error 
     });
-
+    
 
     // connect after inserting user data
     LoginRequest request = new LoginRequest("usuario", " password", "USUARIO_PORTAL", idRequest, "captcha");
-    disposable = service.login(request).subscribe(response->{
-        if (response.getResult().equals("ok")) {
-            // Use in SDK 24 above
-            ((User) response.getUser())
-                    .getServices()
-                    .getNavServices()
-                    .forEach(this::saveNavServices);
-                    
-            // Use in SDK 23 and below
-            User user = (User) loginResponse.getUser();
-            List<NavService> navServices = user.getServices().getNavServices();
-            for (int i = 0; i < navServices.size(); i++) {
-                saveNavServices(navServices.get(i));
-            }
-            
-            // to obtain the other services it is the same procedure, 
-            // just change getNavServices() for the desired service
-        }
-    },error->{
-        if (error instanceof Exception e) {
-            e.printStackTrace();
-        }
+    Single<LoginResponse> loginUser = service.login(request);
+    loginUser.subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(
+                    response -> {
+                        // data login
+         },
+         error -> {
+        // error 
     });
     
-    
-    private void saveNavServices(NavService service) {
-     
-     }
 }
 ```
 
