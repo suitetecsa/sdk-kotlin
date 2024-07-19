@@ -36,8 +36,6 @@ moshi-kotlin-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-code
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
 mockwebserver = { group = "com.squareup.okhttp3", name = "mockwebserver", version.ref = "mockwebserver" }
 
-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 sonatype-central-upload = { id = "cl.franciscosolis.sonatype-central-upload", version.ref = "sonatype-central-upload" }
