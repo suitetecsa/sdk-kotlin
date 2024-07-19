@@ -24,6 +24,7 @@ mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", versio
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 rx-java = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rx-java" }
 
+
 retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2" }
 converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit2" }
 moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi-kotlin" }
