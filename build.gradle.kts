@@ -41,8 +41,6 @@ dependencies {
 
     implementation(libs.java.jwt)
 
-    implementation(libs.appcompat)
-
     ksp(libs.moshi.kotlin.codegen)
 
     testImplementation(libs.kotlinx.coroutines.test)
