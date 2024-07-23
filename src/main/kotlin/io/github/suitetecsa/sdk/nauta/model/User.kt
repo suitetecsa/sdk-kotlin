@@ -7,6 +7,7 @@ import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
+import io.github.suitetecsa.sdk.exception.InvalidSessionException
 
 @JsonClass(generateAdapter = true)
 data class User(
@@ -33,7 +34,7 @@ class UserAdapter : JsonAdapter<Any>() {
                     .add(Services::class.java, ServicesAdapter())
                     .build()
                     .adapter(User::class.java)
-                userAdapter.fromJson(reader)!!
+                    try { userAdapter.fromJson(reader)!! } catch (e: JsonDataException) { throw InvalidSessionException("") }
             }
             else -> throw JsonDataException("Unexpected token: ${reader.peek()}")
         }
