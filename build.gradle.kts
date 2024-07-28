@@ -46,7 +46,7 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.mockwebserver)
 
-    implementation("org.bouncycastle:bcprov-jdk15on:1.68")
+    implementation(libs.bcprov.jdk15on)
 }
 
 tasks.test {
