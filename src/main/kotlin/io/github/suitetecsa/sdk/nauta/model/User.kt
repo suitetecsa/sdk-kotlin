@@ -34,7 +34,11 @@ class UserAdapter : JsonAdapter<Any>() {
                     .add(Services::class.java, ServicesAdapter())
                     .build()
                     .adapter(User::class.java)
-                    try { userAdapter.fromJson(reader)!! } catch (e: JsonDataException) { throw InvalidSessionException("") }
+                    try {
+                        userAdapter.fromJson(reader)!!
+                    } catch (e: JsonDataException) {
+                        throw InvalidSessionException(e.message!!)
+                    }
             }
             else -> throw JsonDataException("Unexpected token: ${reader.peek()}")
         }
