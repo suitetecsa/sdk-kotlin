@@ -14,7 +14,7 @@ plugins {
 }
 
 group = "io.github.suitetecsa.sdk"
-version = "1.0.0-alpha03"
+version = "1.0.0-alpha04"
 
 repositories {
     mavenCentral()
@@ -47,9 +47,6 @@ dependencies {
     testImplementation(libs.mockwebserver)
 
     implementation(libs.bcprov.jdk15on)
-
-    implementation("org.slf4j:slf4j-api:2.0.7")
-    implementation("ch.qos.logback:logback-classic:1.4.11")
 }
 
 tasks.test {

@@ -8,7 +8,6 @@ import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 import io.github.suitetecsa.sdk.exception.InvalidSessionException
-import org.slf4j.LoggerFactory
 
 @JsonClass(generateAdapter = true)
 data class User(
@@ -20,7 +19,6 @@ data class User(
 )
 
 class UserAdapter : JsonAdapter<Any>() {
-    private val logger = LoggerFactory.getLogger(UserAdapter::class.java)
     override fun fromJson(reader: JsonReader): Any {
         // Verificar si el próximo token es un STRING o BEGIN_OBJECT
         return when (reader.peek()) {
@@ -39,7 +37,7 @@ class UserAdapter : JsonAdapter<Any>() {
                     try {
                         userAdapter.fromJson(reader)!!
                     } catch (e: JsonDataException) {
-                        logger.error("An error occurred", e)
+                        println("An error occurred :: ${e.message}")
                         throw InvalidSessionException("")
                     }
             }
