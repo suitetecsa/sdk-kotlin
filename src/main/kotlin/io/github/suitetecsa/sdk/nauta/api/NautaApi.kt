@@ -20,6 +20,7 @@ import io.github.suitetecsa.sdk.nauta.model.reset.ValidateUserRequest
 import io.github.suitetecsa.sdk.nauta.model.reset.ValidateUserRequestAdapter
 import io.github.suitetecsa.sdk.nauta.model.users.UsersResponse
 import io.github.suitetecsa.sdk.nauta.model.users.UsersResponseAdapter
+import io.github.suitetecsa.sdk.nauta.utils.CustomTrustManager
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -40,11 +41,13 @@ object NautaApi {
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://www.nauta.cu:5002")
         .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .client(CustomTrustManager.getCustomTrustClient())
         .build()
     private val retrofitRX = Retrofit.Builder()
         .baseUrl("https://www.nauta.cu:5002")
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+        .client(CustomTrustManager.getCustomTrustClient())
         .build()
 
     val nautaService: NautaService by lazy {
