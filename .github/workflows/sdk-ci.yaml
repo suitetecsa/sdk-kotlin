@@ -17,24 +17,16 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-  commit-lint:
+  check-for-cc:
     runs-on: ubuntu-latest
-    name: Validate all commits
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Conventional Commits Checker
-        uses: netodevel/convetional-commits-checker@v1.0.1
-        id: commits-check
-        with: # do not change the order of params
-          target-branch: ${{ github.event.pull_request.base.ref }}  #required
-          current-branch: ${{ github.event.pull_request.head.ref }} #required
-          pattern: '(feat|fix|ci|chore|docs|test|style|refactor): .{1,}$' #optional custom validation commit
+      - name: check-for-cc
+        id: check-for-cc
+        uses: agenthunt/conventional-commit-checker-action@v1.0.0
 
   lint:
     name: Lint
-    needs: [commit-lint]
+    needs: [check-for-cc]
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
@@ -56,7 +48,7 @@ jobs:
 
   test:
     name: Test
-    needs: [commit-lint]
+    needs: [check-for-cc]
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
