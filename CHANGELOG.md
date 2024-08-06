@@ -15,7 +15,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - añade un job "commit'lint" [`4d9f593`](https://github.com/suitetecsa/sdk-kotlin/commit/4d9f593)
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
+### Documentation
+- :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
+
 ### Chore
+- update agenthunt/conventional-commit-checker-action action to v2 [`5c8ee2f`](https://github.com/suitetecsa/sdk-kotlin/commit/5c8ee2f)
 - update smichard/conventional_changelog action to v2.0.6 [`24a42ff`](https://github.com/suitetecsa/sdk-kotlin/commit/24a42ff)
 - update actions/setup-java action to v4.2.2 [`cc4a9ba`](https://github.com/suitetecsa/sdk-kotlin/commit/cc4a9ba)
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
