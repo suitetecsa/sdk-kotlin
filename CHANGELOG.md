@@ -16,10 +16,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`3834085`](https://github.com/suitetecsa/sdk-kotlin/commit/3834085)
 - :robot: changelog file generated [`f40b4d7`](https://github.com/suitetecsa/sdk-kotlin/commit/f40b4d7)
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update plugin org.jetbrains.kotlin.jvm to v2.0.10 [`06e0b5e`](https://github.com/suitetecsa/sdk-kotlin/commit/06e0b5e)
 - update dependency com.google.devtools.ksp to v2.0.10-1.0.24 [`fa12d05`](https://github.com/suitetecsa/sdk-kotlin/commit/fa12d05)
 - update github/codeql-action action to v3.26.0 [`6a17b96`](https://github.com/suitetecsa/sdk-kotlin/commit/6a17b96)
 - update plugin org.jetbrains.kotlin.plugin.serialization to v2.0.10 [`7dadf93`](https://github.com/suitetecsa/sdk-kotlin/commit/7dadf93)
@@ -29,6 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #59 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`0285683`](https://github.com/suitetecsa/sdk-kotlin/commit/0285683)
 - Merge pull request #60 from suitetecsa/renovate/org.jetbrains.kotlin.plugin.serialization-2.x [`d4ec8bf`](https://github.com/suitetecsa/sdk-kotlin/commit/d4ec8bf)
 - Merge pull request #61 from suitetecsa/renovate/github-codeql-action-3.x [`2b88823`](https://github.com/suitetecsa/sdk-kotlin/commit/2b88823)
 - Merge pull request #62 from suitetecsa/renovate/devtools.ksp [`4c4c675`](https://github.com/suitetecsa/sdk-kotlin/commit/4c4c675)
