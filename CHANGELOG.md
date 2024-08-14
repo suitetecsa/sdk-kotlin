@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`cd7fb36`](https://github.com/suitetecsa/sdk-kotlin/commit/cd7fb36)
 - :robot: changelog file generated [`e0a10ef`](https://github.com/suitetecsa/sdk-kotlin/commit/e0a10ef)
 - :robot: changelog file generated [`4ed09e2`](https://github.com/suitetecsa/sdk-kotlin/commit/4ed09e2)
 - :robot: changelog file generated [`923cd70`](https://github.com/suitetecsa/sdk-kotlin/commit/923cd70)
@@ -24,6 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency gradle to v8.10 [`7ee324e`](https://github.com/suitetecsa/sdk-kotlin/commit/7ee324e)
 - update github/codeql-action action to v3.26.1 [`2462496`](https://github.com/suitetecsa/sdk-kotlin/commit/2462496)
 - update dependency io.reactivex.rxjava3:rxjava to v3.1.9 [`e1f766a`](https://github.com/suitetecsa/sdk-kotlin/commit/e1f766a)
 - update gradle/actions action to v4 [`48d1264`](https://github.com/suitetecsa/sdk-kotlin/commit/48d1264)
@@ -37,6 +39,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #66 from suitetecsa/renovate/gradle-8.x [`089941c`](https://github.com/suitetecsa/sdk-kotlin/commit/089941c)
 - Merge pull request #65 from suitetecsa/renovate/github-codeql-action-3.x [`6f00bec`](https://github.com/suitetecsa/sdk-kotlin/commit/6f00bec)
 - Merge pull request #64 from suitetecsa/renovate/rx.java [`b23ab00`](https://github.com/suitetecsa/sdk-kotlin/commit/b23ab00)
 - Merge pull request #63 from suitetecsa/renovate/gradle-actions-4.x [`4d882bc`](https://github.com/suitetecsa/sdk-kotlin/commit/4d882bc)
