@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`07bd7a5`](https://github.com/suitetecsa/sdk-kotlin/commit/07bd7a5)
 - :robot: changelog file generated [`24ea470`](https://github.com/suitetecsa/sdk-kotlin/commit/24ea470)
 - :robot: changelog file generated [`cd7fb36`](https://github.com/suitetecsa/sdk-kotlin/commit/cd7fb36)
 - :robot: changelog file generated [`e0a10ef`](https://github.com/suitetecsa/sdk-kotlin/commit/e0a10ef)
@@ -26,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update github/codeql-action action to v3.26.3 [`17a6569`](https://github.com/suitetecsa/sdk-kotlin/commit/17a6569)
 - update github/codeql-action action to v3.26.2 [`aa01417`](https://github.com/suitetecsa/sdk-kotlin/commit/aa01417)
 - update dependency gradle to v8.10 [`7ee324e`](https://github.com/suitetecsa/sdk-kotlin/commit/7ee324e)
 - update github/codeql-action action to v3.26.1 [`2462496`](https://github.com/suitetecsa/sdk-kotlin/commit/2462496)
@@ -41,6 +43,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #68 from suitetecsa/renovate/github-codeql-action-3.x [`5483dd0`](https://github.com/suitetecsa/sdk-kotlin/commit/5483dd0)
 - Merge pull request #67 from suitetecsa/renovate/github-codeql-action-3.x [`32a2862`](https://github.com/suitetecsa/sdk-kotlin/commit/32a2862)
 - Merge pull request #66 from suitetecsa/renovate/gradle-8.x [`089941c`](https://github.com/suitetecsa/sdk-kotlin/commit/089941c)
 - Merge pull request #65 from suitetecsa/renovate/github-codeql-action-3.x [`6f00bec`](https://github.com/suitetecsa/sdk-kotlin/commit/6f00bec)
