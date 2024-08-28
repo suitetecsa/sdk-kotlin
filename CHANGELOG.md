@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`6af3336`](https://github.com/suitetecsa/sdk-kotlin/commit/6af3336)
 - :robot: changelog file generated [`b4c9b6d`](https://github.com/suitetecsa/sdk-kotlin/commit/b4c9b6d)
 - :robot: changelog file generated [`ff9dd34`](https://github.com/suitetecsa/sdk-kotlin/commit/ff9dd34)
 - :robot: changelog file generated [`569da35`](https://github.com/suitetecsa/sdk-kotlin/commit/569da35)
@@ -32,6 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update dependency org.mockito:mockito-core to v5.13.0 [`e95f66c`](https://github.com/suitetecsa/sdk-kotlin/commit/e95f66c)
+- update gradle/actions action to v4.0.1 [`20c929c`](https://github.com/suitetecsa/sdk-kotlin/commit/20c929c)
 - update plugin org.jetbrains.kotlin.jvm to v2.0.20 [`e667330`](https://github.com/suitetecsa/sdk-kotlin/commit/e667330)
 - update github/codeql-action action to v3.26.5 [`71a9840`](https://github.com/suitetecsa/sdk-kotlin/commit/71a9840)
 - update dependency com.google.devtools.ksp to v2.0.20-1.0.24 [`2dc18a6`](https://github.com/suitetecsa/sdk-kotlin/commit/2dc18a6)
@@ -52,6 +54,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #73 from suitetecsa/renovate/gradle-actions-4.x [`0fc2041`](https://github.com/suitetecsa/sdk-kotlin/commit/0fc2041)
 - Merge pull request #74 from suitetecsa/renovate/mockito.core [`9b02ba9`](https://github.com/suitetecsa/sdk-kotlin/commit/9b02ba9)
 - Merge pull request #70 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`5f34ca8`](https://github.com/suitetecsa/sdk-kotlin/commit/5f34ca8)
 - Merge pull request #69 from suitetecsa/renovate/github-codeql-action-3.x [`2c6964d`](https://github.com/suitetecsa/sdk-kotlin/commit/2c6964d)
