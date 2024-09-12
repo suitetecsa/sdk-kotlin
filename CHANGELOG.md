@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`a043fea`](https://github.com/suitetecsa/sdk-kotlin/commit/a043fea)
 - :robot: changelog file generated [`6af3336`](https://github.com/suitetecsa/sdk-kotlin/commit/6af3336)
 - :robot: changelog file generated [`b4c9b6d`](https://github.com/suitetecsa/sdk-kotlin/commit/b4c9b6d)
 - :robot: changelog file generated [`ff9dd34`](https://github.com/suitetecsa/sdk-kotlin/commit/ff9dd34)
@@ -32,6 +33,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update actions/setup-java action to v4.3.0 [`f3165f5`](https://github.com/suitetecsa/sdk-kotlin/commit/f3165f5)
+- update dependency gradle to v8.10.1 [`f82b90a`](https://github.com/suitetecsa/sdk-kotlin/commit/f82b90a)
+- update dependency io.gitlab.arturbosch.detekt to v1.23.7 [`f0d6683`](https://github.com/suitetecsa/sdk-kotlin/commit/f0d6683)
+- update dependency com.google.devtools.ksp to v2.0.20-1.0.25 [`dbae05f`](https://github.com/suitetecsa/sdk-kotlin/commit/dbae05f)
 - update dependency org.mockito:mockito-core to v5.13.0 [`e95f66c`](https://github.com/suitetecsa/sdk-kotlin/commit/e95f66c)
 - update gradle/actions action to v4.0.1 [`20c929c`](https://github.com/suitetecsa/sdk-kotlin/commit/20c929c)
 - update plugin org.jetbrains.kotlin.jvm to v2.0.20 [`e667330`](https://github.com/suitetecsa/sdk-kotlin/commit/e667330)
@@ -54,6 +59,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #76 from suitetecsa/renovate/devtools.ksp [`c1d1065`](https://github.com/suitetecsa/sdk-kotlin/commit/c1d1065)
+- Merge pull request #77 from suitetecsa/renovate/detekt [`6bae5a6`](https://github.com/suitetecsa/sdk-kotlin/commit/6bae5a6)
+- Merge pull request #78 from suitetecsa/renovate/gradle-8.x [`c36d237`](https://github.com/suitetecsa/sdk-kotlin/commit/c36d237)
+- Merge pull request #79 from suitetecsa/renovate/actions-setup-java-4.x [`e902940`](https://github.com/suitetecsa/sdk-kotlin/commit/e902940)
 - Merge pull request #73 from suitetecsa/renovate/gradle-actions-4.x [`0fc2041`](https://github.com/suitetecsa/sdk-kotlin/commit/0fc2041)
 - Merge pull request #74 from suitetecsa/renovate/mockito.core [`9b02ba9`](https://github.com/suitetecsa/sdk-kotlin/commit/9b02ba9)
 - Merge pull request #70 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`5f34ca8`](https://github.com/suitetecsa/sdk-kotlin/commit/5f34ca8)
