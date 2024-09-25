@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`7dd0cb6`](https://github.com/suitetecsa/sdk-kotlin/commit/7dd0cb6)
 - :robot: changelog file generated [`ef0aad4`](https://github.com/suitetecsa/sdk-kotlin/commit/ef0aad4)
 - :robot: changelog file generated [`7d7d575`](https://github.com/suitetecsa/sdk-kotlin/commit/7d7d575)
 - :robot: changelog file generated [`a043fea`](https://github.com/suitetecsa/sdk-kotlin/commit/a043fea)
@@ -35,6 +36,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update github/codeql-action action to v3.26.9 [`f466d18`](https://github.com/suitetecsa/sdk-kotlin/commit/f466d18)
 - update github/codeql-action action to v3.26.8 [`034a986`](https://github.com/suitetecsa/sdk-kotlin/commit/034a986)
 - update dependency org.jetbrains.kotlinx:kotlinx-coroutines-test to v1.9.0 [`047888e`](https://github.com/suitetecsa/sdk-kotlin/commit/047888e)
 - update gradle/actions action to v4.1.0 [`b347ab6`](https://github.com/suitetecsa/sdk-kotlin/commit/b347ab6)
@@ -65,6 +67,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #85 from suitetecsa/renovate/github-codeql-action-3.x [`3963d89`](https://github.com/suitetecsa/sdk-kotlin/commit/3963d89)
 - Merge pull request #82 from suitetecsa/renovate/kotlinx.coroutines.test [`9944dd8`](https://github.com/suitetecsa/sdk-kotlin/commit/9944dd8)
 - Merge pull request #81 from suitetecsa/renovate/github-codeql-action-3.x [`dca3582`](https://github.com/suitetecsa/sdk-kotlin/commit/dca3582)
 - Merge pull request #80 from suitetecsa/renovate/gradle-actions-4.x [`f1c801f`](https://github.com/suitetecsa/sdk-kotlin/commit/f1c801f)
