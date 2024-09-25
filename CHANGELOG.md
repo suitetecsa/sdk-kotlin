@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`708209f`](https://github.com/suitetecsa/sdk-kotlin/commit/708209f)
 - :robot: changelog file generated [`7dd0cb6`](https://github.com/suitetecsa/sdk-kotlin/commit/7dd0cb6)
 - :robot: changelog file generated [`ef0aad4`](https://github.com/suitetecsa/sdk-kotlin/commit/ef0aad4)
 - :robot: changelog file generated [`7d7d575`](https://github.com/suitetecsa/sdk-kotlin/commit/7d7d575)
@@ -37,6 +38,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update github/codeql-action action to v3.26.9 [`f466d18`](https://github.com/suitetecsa/sdk-kotlin/commit/f466d18)
+- update actions/setup-java action to v4.4.0 [`3227aed`](https://github.com/suitetecsa/sdk-kotlin/commit/3227aed)
 - update github/codeql-action action to v3.26.8 [`034a986`](https://github.com/suitetecsa/sdk-kotlin/commit/034a986)
 - update dependency org.jetbrains.kotlinx:kotlinx-coroutines-test to v1.9.0 [`047888e`](https://github.com/suitetecsa/sdk-kotlin/commit/047888e)
 - update gradle/actions action to v4.1.0 [`b347ab6`](https://github.com/suitetecsa/sdk-kotlin/commit/b347ab6)
@@ -67,6 +69,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #84 from suitetecsa/renovate/actions-setup-java-4.x [`0de4214`](https://github.com/suitetecsa/sdk-kotlin/commit/0de4214)
 - Merge pull request #85 from suitetecsa/renovate/github-codeql-action-3.x [`3963d89`](https://github.com/suitetecsa/sdk-kotlin/commit/3963d89)
 - Merge pull request #82 from suitetecsa/renovate/kotlinx.coroutines.test [`9944dd8`](https://github.com/suitetecsa/sdk-kotlin/commit/9944dd8)
 - Merge pull request #81 from suitetecsa/renovate/github-codeql-action-3.x [`dca3582`](https://github.com/suitetecsa/sdk-kotlin/commit/dca3582)
