@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`210f4c8`](https://github.com/suitetecsa/sdk-kotlin/commit/210f4c8)
 - :robot: changelog file generated [`03f270b`](https://github.com/suitetecsa/sdk-kotlin/commit/03f270b)
 - :robot: changelog file generated [`7248a35`](https://github.com/suitetecsa/sdk-kotlin/commit/7248a35)
 - :robot: changelog file generated [`1a5ca20`](https://github.com/suitetecsa/sdk-kotlin/commit/1a5ca20)
@@ -40,6 +41,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency org.mockito:mockito-core to v5.14.1 [`d589339`](https://github.com/suitetecsa/sdk-kotlin/commit/d589339)
 - update dependency ubuntu to v24 [`0490ad0`](https://github.com/suitetecsa/sdk-kotlin/commit/0490ad0)
 - update actions/checkout action to v4.2.0 [`124995d`](https://github.com/suitetecsa/sdk-kotlin/commit/124995d)
 - update github/codeql-action action to v3.26.9 [`f466d18`](https://github.com/suitetecsa/sdk-kotlin/commit/f466d18)
@@ -75,6 +77,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #88 from suitetecsa/renovate/mockito.core [`655ecc4`](https://github.com/suitetecsa/sdk-kotlin/commit/655ecc4)
 - Merge pull request #87 from suitetecsa/renovate/ubuntu-24.x [`cdfa1e3`](https://github.com/suitetecsa/sdk-kotlin/commit/cdfa1e3)
 - Merge pull request #86 from suitetecsa/renovate/actions-checkout-4.x [`121c195`](https://github.com/suitetecsa/sdk-kotlin/commit/121c195)
 - Merge pull request #83 from suitetecsa/renovate/gradle-8.x [`25ca2c0`](https://github.com/suitetecsa/sdk-kotlin/commit/25ca2c0)
