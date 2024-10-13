@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`5df3a1f`](https://github.com/suitetecsa/sdk-kotlin/commit/5df3a1f)
 - :robot: changelog file generated [`a502e73`](https://github.com/suitetecsa/sdk-kotlin/commit/a502e73)
 - :robot: changelog file generated [`8825634`](https://github.com/suitetecsa/sdk-kotlin/commit/8825634)
 - :robot: changelog file generated [`6257465`](https://github.com/suitetecsa/sdk-kotlin/commit/6257465)
@@ -46,6 +47,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update plugin org.jetbrains.kotlin.plugin.serialization to v2.0.21 [`4117af4`](https://github.com/suitetecsa/sdk-kotlin/commit/4117af4)
+- update dependency com.google.devtools.ksp to v2.0.21-1.0.25 [`dd193f2`](https://github.com/suitetecsa/sdk-kotlin/commit/dd193f2)
 - update plugin org.jetbrains.kotlin.jvm to v2.0.21 [`87d828a`](https://github.com/suitetecsa/sdk-kotlin/commit/87d828a)
 - update dependency io.mockk:mockk to v1.13.13 [`10d35e5`](https://github.com/suitetecsa/sdk-kotlin/commit/10d35e5)
 - update github/codeql-action action to v3.26.12 [`6cf509c`](https://github.com/suitetecsa/sdk-kotlin/commit/6cf509c)
@@ -87,6 +90,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #95 from suitetecsa/renovate/devtools.ksp [`d223f5d`](https://github.com/suitetecsa/sdk-kotlin/commit/d223f5d)
+- Merge pull request #94 from suitetecsa/renovate/org.jetbrains.kotlin.plugin.serialization-2.x [`7048408`](https://github.com/suitetecsa/sdk-kotlin/commit/7048408)
 - Merge pull request #92 from suitetecsa/renovate/mockk [`32bd878`](https://github.com/suitetecsa/sdk-kotlin/commit/32bd878)
 - Merge pull request #93 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`bdfe13d`](https://github.com/suitetecsa/sdk-kotlin/commit/bdfe13d)
 - Merge pull request #91 from suitetecsa/renovate/actions-checkout-4.x [`620d2e2`](https://github.com/suitetecsa/sdk-kotlin/commit/620d2e2)
