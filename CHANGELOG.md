@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`468990a`](https://github.com/suitetecsa/sdk-kotlin/commit/468990a)
 - :robot: changelog file generated [`0f2e1a3`](https://github.com/suitetecsa/sdk-kotlin/commit/0f2e1a3)
 - :robot: changelog file generated [`cf4b9f3`](https://github.com/suitetecsa/sdk-kotlin/commit/cf4b9f3)
 - :robot: changelog file generated [`3e0de36`](https://github.com/suitetecsa/sdk-kotlin/commit/3e0de36)
@@ -54,7 +55,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency io.mockk:mockk to v1.13.16 [`47a84fc`](https://github.com/suitetecsa/sdk-kotlin/commit/47a84fc)
 - update smichard/conventional_changelog action to v2.0.10 [`ea9d204`](https://github.com/suitetecsa/sdk-kotlin/commit/ea9d204)
+- update dependency com.squareup.moshi:moshi-kotlin-codegen to v1.15.2 [`6823e4e`](https://github.com/suitetecsa/sdk-kotlin/commit/6823e4e)
 - update github/codeql-action action to v3.28.8 [`286287e`](https://github.com/suitetecsa/sdk-kotlin/commit/286287e)
 - update actions/setup-java action to v4.7.0 [`6f03423`](https://github.com/suitetecsa/sdk-kotlin/commit/6f03423)
 - update plugin org.jetbrains.kotlin.jvm to v2.1.10 [`3514fde`](https://github.com/suitetecsa/sdk-kotlin/commit/3514fde)
@@ -108,6 +111,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #107 from suitetecsa/renovate/moshi.kotlin.codegen [`4bc3ef9`](https://github.com/suitetecsa/sdk-kotlin/commit/4bc3ef9)
+- Merge pull request #108 from suitetecsa/renovate/mockk [`857acbf`](https://github.com/suitetecsa/sdk-kotlin/commit/857acbf)
 - Merge pull request #109 from suitetecsa/renovate/smichard-conventional_changelog-2.x [`5901a84`](https://github.com/suitetecsa/sdk-kotlin/commit/5901a84)
 - Merge pull request #106 from suitetecsa/renovate/moshi.kotlin [`5a498a8`](https://github.com/suitetecsa/sdk-kotlin/commit/5a498a8)
 - Merge pull request #105 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`06ee357`](https://github.com/suitetecsa/sdk-kotlin/commit/06ee357)
