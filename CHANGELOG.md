@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`3e0de36`](https://github.com/suitetecsa/sdk-kotlin/commit/3e0de36)
 - :robot: changelog file generated [`6d70281`](https://github.com/suitetecsa/sdk-kotlin/commit/6d70281)
 - :robot: changelog file generated [`c153743`](https://github.com/suitetecsa/sdk-kotlin/commit/c153743)
 - :robot: changelog file generated [`f7cc4a7`](https://github.com/suitetecsa/sdk-kotlin/commit/f7cc4a7)
@@ -53,8 +54,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Chore
 - update github/codeql-action action to v3.28.8 [`286287e`](https://github.com/suitetecsa/sdk-kotlin/commit/286287e)
 - update actions/setup-java action to v4.7.0 [`6f03423`](https://github.com/suitetecsa/sdk-kotlin/commit/6f03423)
+- update dependency gradle to v8.12.1 [`671c0ea`](https://github.com/suitetecsa/sdk-kotlin/commit/671c0ea)
 - update dependency org.mockito:mockito-core to v5.15.2 [`d70f871`](https://github.com/suitetecsa/sdk-kotlin/commit/d70f871)
 - update gradle/actions action to v4.2.2 [`7fc173e`](https://github.com/suitetecsa/sdk-kotlin/commit/7fc173e)
+- update dependency org.jsoup:jsoup to v1.18.3 [`8264631`](https://github.com/suitetecsa/sdk-kotlin/commit/8264631)
+- update dependency io.reactivex.rxjava3:rxjava to v3.1.10 [`2efa646`](https://github.com/suitetecsa/sdk-kotlin/commit/2efa646)
 - update actions/checkout action to v4.2.2 [`848be79`](https://github.com/suitetecsa/sdk-kotlin/commit/848be79)
 - update plugin org.jetbrains.kotlin.plugin.serialization to v2.0.21 [`4117af4`](https://github.com/suitetecsa/sdk-kotlin/commit/4117af4)
 - update dependency com.google.devtools.ksp to v2.0.21-1.0.25 [`dd193f2`](https://github.com/suitetecsa/sdk-kotlin/commit/dd193f2)
@@ -99,6 +103,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #104 from suitetecsa/renovate/jsoup [`3923bb5`](https://github.com/suitetecsa/sdk-kotlin/commit/3923bb5)
+- Merge pull request #103 from suitetecsa/renovate/rx.java [`4072030`](https://github.com/suitetecsa/sdk-kotlin/commit/4072030)
+- Merge pull request #101 from suitetecsa/renovate/gradle-8.x [`8c3cc1e`](https://github.com/suitetecsa/sdk-kotlin/commit/8c3cc1e)
 - Merge pull request #98 from suitetecsa/renovate/actions-checkout-4.x [`3546371`](https://github.com/suitetecsa/sdk-kotlin/commit/3546371)
 - Merge pull request #97 from suitetecsa/renovate/mockito.core [`17cb924`](https://github.com/suitetecsa/sdk-kotlin/commit/17cb924)
 - Merge pull request #100 from suitetecsa/renovate/actions-setup-java-4.x [`4ce636a`](https://github.com/suitetecsa/sdk-kotlin/commit/4ce636a)
