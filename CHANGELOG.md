@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`440b2b7`](https://github.com/suitetecsa/sdk-kotlin/commit/440b2b7)
 - :robot: changelog file generated [`f228909`](https://github.com/suitetecsa/sdk-kotlin/commit/f228909)
 - :robot: changelog file generated [`a1bced6`](https://github.com/suitetecsa/sdk-kotlin/commit/a1bced6)
 - :robot: changelog file generated [`186cc8e`](https://github.com/suitetecsa/sdk-kotlin/commit/186cc8e)
@@ -60,6 +61,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update plugin org.jetbrains.kotlin.plugin.serialization to v2.1.10 [`d008e9e`](https://github.com/suitetecsa/sdk-kotlin/commit/d008e9e)
 - update plugin org.gradle.toolchains.foojay-resolver-convention to v0.9.0 [`f5a025b`](https://github.com/suitetecsa/sdk-kotlin/commit/f5a025b)
 - update gradle/actions action to v4.3.0 [`aad3325`](https://github.com/suitetecsa/sdk-kotlin/commit/aad3325)
 - update dependency org.jetbrains.kotlinx:kotlinx-coroutines-test to v1.10.1 [`345c4b3`](https://github.com/suitetecsa/sdk-kotlin/commit/345c4b3)
@@ -121,6 +123,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #115 from suitetecsa/renovate/org.jetbrains.kotlin.plugin.serialization-2.x [`0f735ec`](https://github.com/suitetecsa/sdk-kotlin/commit/0f735ec)
 - Merge pull request #114 from suitetecsa/renovate/org.gradle.toolchains.foojay-resolver-convention-0.x [`c29a417`](https://github.com/suitetecsa/sdk-kotlin/commit/c29a417)
 - Merge pull request #113 from suitetecsa/renovate/gradle-actions-4.x [`543769e`](https://github.com/suitetecsa/sdk-kotlin/commit/543769e)
 - Merge pull request #112 from suitetecsa/renovate/kotlinx.coroutines.test [`5763266`](https://github.com/suitetecsa/sdk-kotlin/commit/5763266)
