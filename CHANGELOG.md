@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`0a237b3`](https://github.com/suitetecsa/sdk-kotlin/commit/0a237b3)
 - :robot: changelog file generated [`83a217c`](https://github.com/suitetecsa/sdk-kotlin/commit/83a217c)
 - :robot: changelog file generated [`468990a`](https://github.com/suitetecsa/sdk-kotlin/commit/468990a)
 - :robot: changelog file generated [`0f2e1a3`](https://github.com/suitetecsa/sdk-kotlin/commit/0f2e1a3)
@@ -56,6 +57,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency com.google.code.gson:gson to v2.12.1 [`32e76b6`](https://github.com/suitetecsa/sdk-kotlin/commit/32e76b6)
 - update dependency com.auth0:java-jwt to v4.5.0 [`358025d`](https://github.com/suitetecsa/sdk-kotlin/commit/358025d)
 - update dependency io.mockk:mockk to v1.13.16 [`47a84fc`](https://github.com/suitetecsa/sdk-kotlin/commit/47a84fc)
 - update smichard/conventional_changelog action to v2.0.10 [`ea9d204`](https://github.com/suitetecsa/sdk-kotlin/commit/ea9d204)
@@ -113,6 +115,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #111 from suitetecsa/renovate/gson [`f006285`](https://github.com/suitetecsa/sdk-kotlin/commit/f006285)
 - Merge pull request #110 from suitetecsa/renovate/java.jwt [`f7c55d2`](https://github.com/suitetecsa/sdk-kotlin/commit/f7c55d2)
 - Merge pull request #107 from suitetecsa/renovate/moshi.kotlin.codegen [`4bc3ef9`](https://github.com/suitetecsa/sdk-kotlin/commit/4bc3ef9)
 - Merge pull request #108 from suitetecsa/renovate/mockk [`857acbf`](https://github.com/suitetecsa/sdk-kotlin/commit/857acbf)
