@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`a1bced6`](https://github.com/suitetecsa/sdk-kotlin/commit/a1bced6)
 - :robot: changelog file generated [`186cc8e`](https://github.com/suitetecsa/sdk-kotlin/commit/186cc8e)
 - :robot: changelog file generated [`0a237b3`](https://github.com/suitetecsa/sdk-kotlin/commit/0a237b3)
 - :robot: changelog file generated [`83a217c`](https://github.com/suitetecsa/sdk-kotlin/commit/83a217c)
@@ -58,6 +59,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update gradle/actions action to v4.3.0 [`aad3325`](https://github.com/suitetecsa/sdk-kotlin/commit/aad3325)
 - update dependency org.jetbrains.kotlinx:kotlinx-coroutines-test to v1.10.1 [`345c4b3`](https://github.com/suitetecsa/sdk-kotlin/commit/345c4b3)
 - update dependency com.google.code.gson:gson to v2.12.1 [`32e76b6`](https://github.com/suitetecsa/sdk-kotlin/commit/32e76b6)
 - update dependency com.auth0:java-jwt to v4.5.0 [`358025d`](https://github.com/suitetecsa/sdk-kotlin/commit/358025d)
@@ -117,6 +119,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #113 from suitetecsa/renovate/gradle-actions-4.x [`543769e`](https://github.com/suitetecsa/sdk-kotlin/commit/543769e)
 - Merge pull request #112 from suitetecsa/renovate/kotlinx.coroutines.test [`5763266`](https://github.com/suitetecsa/sdk-kotlin/commit/5763266)
 - Merge pull request #111 from suitetecsa/renovate/gson [`f006285`](https://github.com/suitetecsa/sdk-kotlin/commit/f006285)
 - Merge pull request #110 from suitetecsa/renovate/java.jwt [`f7c55d2`](https://github.com/suitetecsa/sdk-kotlin/commit/f7c55d2)
