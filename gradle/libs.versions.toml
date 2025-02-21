@@ -1,5 +1,5 @@
 [versions]
-detekt = "1.23.7"
+detekt = "1.23.8"
 jsoup = "1.18.3"
 gson = "2.12.1"
 mockito-core = "5.15.2"
