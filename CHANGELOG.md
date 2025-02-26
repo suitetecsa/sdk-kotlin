@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`7c38590`](https://github.com/suitetecsa/sdk-kotlin/commit/7c38590)
 - :robot: changelog file generated [`9e07f33`](https://github.com/suitetecsa/sdk-kotlin/commit/9e07f33)
 - :robot: changelog file generated [`d7a0632`](https://github.com/suitetecsa/sdk-kotlin/commit/d7a0632)
 - :robot: changelog file generated [`2373128`](https://github.com/suitetecsa/sdk-kotlin/commit/2373128)
@@ -65,7 +66,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency gradle to v8.13 [`6f1ffe7`](https://github.com/suitetecsa/sdk-kotlin/commit/6f1ffe7)
 - update github/codeql-action action to v3.28.10 [`6d97945`](https://github.com/suitetecsa/sdk-kotlin/commit/6d97945)
+- update dependency io.gitlab.arturbosch.detekt to v1.23.8 [`45f389c`](https://github.com/suitetecsa/sdk-kotlin/commit/45f389c)
 - update dependency com.google.devtools.ksp to v2.1.10-1.0.30 [`b4d3c43`](https://github.com/suitetecsa/sdk-kotlin/commit/b4d3c43)
 - update dependency com.google.devtools.ksp to v2.1.10-1.0.29 [`d8f2207`](https://github.com/suitetecsa/sdk-kotlin/commit/d8f2207)
 - update github/codeql-action action to v3.28.9 [`76d96c8`](https://github.com/suitetecsa/sdk-kotlin/commit/76d96c8)
@@ -131,6 +134,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #118 from suitetecsa/renovate/detekt [`2eb391d`](https://github.com/suitetecsa/sdk-kotlin/commit/2eb391d)
+- Merge pull request #120 from suitetecsa/renovate/gradle-8.x [`eeb768f`](https://github.com/suitetecsa/sdk-kotlin/commit/eeb768f)
 - Merge pull request #119 from suitetecsa/renovate/github-codeql-action-3.x [`293738e`](https://github.com/suitetecsa/sdk-kotlin/commit/293738e)
 - Merge pull request #117 from suitetecsa/renovate/devtools.ksp [`0f8bc17`](https://github.com/suitetecsa/sdk-kotlin/commit/0f8bc17)
 - Merge pull request #99 from suitetecsa/renovate/devtools.ksp [`166dee5`](https://github.com/suitetecsa/sdk-kotlin/commit/166dee5)
