@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`c850ed7`](https://github.com/suitetecsa/sdk-kotlin/commit/c850ed7)
 - :robot: changelog file generated [`7c38590`](https://github.com/suitetecsa/sdk-kotlin/commit/7c38590)
 - :robot: changelog file generated [`9e07f33`](https://github.com/suitetecsa/sdk-kotlin/commit/9e07f33)
 - :robot: changelog file generated [`d7a0632`](https://github.com/suitetecsa/sdk-kotlin/commit/d7a0632)
@@ -66,6 +67,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency io.mockk:mockk to v1.13.17 [`b8db0cf`](https://github.com/suitetecsa/sdk-kotlin/commit/b8db0cf)
 - update dependency gradle to v8.13 [`6f1ffe7`](https://github.com/suitetecsa/sdk-kotlin/commit/6f1ffe7)
 - update github/codeql-action action to v3.28.10 [`6d97945`](https://github.com/suitetecsa/sdk-kotlin/commit/6d97945)
 - update dependency io.gitlab.arturbosch.detekt to v1.23.8 [`45f389c`](https://github.com/suitetecsa/sdk-kotlin/commit/45f389c)
@@ -134,6 +136,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #121 from suitetecsa/renovate/mockk [`984036e`](https://github.com/suitetecsa/sdk-kotlin/commit/984036e)
 - Merge pull request #118 from suitetecsa/renovate/detekt [`2eb391d`](https://github.com/suitetecsa/sdk-kotlin/commit/2eb391d)
 - Merge pull request #120 from suitetecsa/renovate/gradle-8.x [`eeb768f`](https://github.com/suitetecsa/sdk-kotlin/commit/eeb768f)
 - Merge pull request #119 from suitetecsa/renovate/github-codeql-action-3.x [`293738e`](https://github.com/suitetecsa/sdk-kotlin/commit/293738e)
