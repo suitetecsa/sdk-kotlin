@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`4087fde`](https://github.com/suitetecsa/sdk-kotlin/commit/4087fde)
 - :robot: changelog file generated [`66583c5`](https://github.com/suitetecsa/sdk-kotlin/commit/66583c5)
 - :robot: changelog file generated [`68992cc`](https://github.com/suitetecsa/sdk-kotlin/commit/68992cc)
 - :robot: changelog file generated [`0ae5d54`](https://github.com/suitetecsa/sdk-kotlin/commit/0ae5d54)
@@ -72,6 +73,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update github/codeql-action action to v3.28.12 [`50d05b3`](https://github.com/suitetecsa/sdk-kotlin/commit/50d05b3)
 - update dependency org.mockito:mockito-core to v5.16.1 [`d6fe3cc`](https://github.com/suitetecsa/sdk-kotlin/commit/d6fe3cc)
 - update github/codeql-action action to v3.28.11 [`18f6223`](https://github.com/suitetecsa/sdk-kotlin/commit/18f6223)
 - update dependency org.jsoup:jsoup to v1.19.1 [`cb938f6`](https://github.com/suitetecsa/sdk-kotlin/commit/cb938f6)
@@ -146,6 +148,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #128 from suitetecsa/renovate/github-codeql-action-3.x [`d610749`](https://github.com/suitetecsa/sdk-kotlin/commit/d610749)
 - Merge pull request #127 from suitetecsa/renovate/mockito.core [`8c1d033`](https://github.com/suitetecsa/sdk-kotlin/commit/8c1d033)
 - Merge pull request #125 from suitetecsa/renovate/github-codeql-action-3.x [`67a6e04`](https://github.com/suitetecsa/sdk-kotlin/commit/67a6e04)
 - Merge pull request #123 from suitetecsa/renovate/mockito.core [`eeb9d0e`](https://github.com/suitetecsa/sdk-kotlin/commit/eeb9d0e)
