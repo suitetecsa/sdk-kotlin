@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`938bff1`](https://github.com/suitetecsa/sdk-kotlin/commit/938bff1)
 - :robot: changelog file generated [`144d793`](https://github.com/suitetecsa/sdk-kotlin/commit/144d793)
 - :robot: changelog file generated [`ab11d9e`](https://github.com/suitetecsa/sdk-kotlin/commit/ab11d9e)
 - :robot: changelog file generated [`4087fde`](https://github.com/suitetecsa/sdk-kotlin/commit/4087fde)
@@ -75,6 +76,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency org.mockito:mockito-core to v5.17.0 [`9270462`](https://github.com/suitetecsa/sdk-kotlin/commit/9270462)
 - update gradle/actions action to v4.3.1 [`873f6e7`](https://github.com/suitetecsa/sdk-kotlin/commit/873f6e7)
 - update github/codeql-action action to v3.28.13 [`82bd3f5`](https://github.com/suitetecsa/sdk-kotlin/commit/82bd3f5)
 - update github/codeql-action action to v3.28.12 [`50d05b3`](https://github.com/suitetecsa/sdk-kotlin/commit/50d05b3)
@@ -152,6 +154,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #134 from suitetecsa/renovate/mockito.core [`b943afe`](https://github.com/suitetecsa/sdk-kotlin/commit/b943afe)
 - Merge pull request #133 from suitetecsa/renovate/gradle-actions-4.x [`e3d9e20`](https://github.com/suitetecsa/sdk-kotlin/commit/e3d9e20)
 - Merge pull request #132 from suitetecsa/renovate/github-codeql-action-3.x [`a2aab72`](https://github.com/suitetecsa/sdk-kotlin/commit/a2aab72)
 - Merge pull request #128 from suitetecsa/renovate/github-codeql-action-3.x [`d610749`](https://github.com/suitetecsa/sdk-kotlin/commit/d610749)
