@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`45cf7eb`](https://github.com/suitetecsa/sdk-kotlin/commit/45cf7eb)
 - :robot: changelog file generated [`a5bce78`](https://github.com/suitetecsa/sdk-kotlin/commit/a5bce78)
 - :robot: changelog file generated [`938bff1`](https://github.com/suitetecsa/sdk-kotlin/commit/938bff1)
 - :robot: changelog file generated [`144d793`](https://github.com/suitetecsa/sdk-kotlin/commit/144d793)
@@ -77,6 +78,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency org.jetbrains.kotlinx:kotlinx-coroutines-test to v1.10.2 (#136) [`ac357d8`](https://github.com/suitetecsa/sdk-kotlin/commit/ac357d8)
 - update github/codeql-action action to v3.28.15 (#135) [`0e030a1`](https://github.com/suitetecsa/sdk-kotlin/commit/0e030a1)
 - update dependency org.mockito:mockito-core to v5.17.0 [`9270462`](https://github.com/suitetecsa/sdk-kotlin/commit/9270462)
 - update gradle/actions action to v4.3.1 [`873f6e7`](https://github.com/suitetecsa/sdk-kotlin/commit/873f6e7)
