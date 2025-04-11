@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`4dd9361`](https://github.com/suitetecsa/sdk-kotlin/commit/4dd9361)
 - :robot: changelog file generated [`97589be`](https://github.com/suitetecsa/sdk-kotlin/commit/97589be)
 - :robot: changelog file generated [`4c68dfa`](https://github.com/suitetecsa/sdk-kotlin/commit/4c68dfa)
 - :robot: changelog file generated [`45cf7eb`](https://github.com/suitetecsa/sdk-kotlin/commit/45cf7eb)
@@ -80,6 +81,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update plugin org.gradle.toolchains.foojay-resolver-convention to v0.10.0 [`41defea`](https://github.com/suitetecsa/sdk-kotlin/commit/41defea)
 - update dependency io.mockk:mockk to v1.14.0 [`917d828`](https://github.com/suitetecsa/sdk-kotlin/commit/917d828)
 - update actions/setup-java action to v4.7.1 [`4f2dfe1`](https://github.com/suitetecsa/sdk-kotlin/commit/4f2dfe1)
 - update dependency org.jetbrains.kotlinx:kotlinx-coroutines-test to v1.10.2 (#136) [`ac357d8`](https://github.com/suitetecsa/sdk-kotlin/commit/ac357d8)
@@ -162,6 +164,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #139 from suitetecsa/renovate/org.gradle.toolchains.foojay-resolver-convention-0.x [`2e6ebd1`](https://github.com/suitetecsa/sdk-kotlin/commit/2e6ebd1)
 - Merge pull request #138 from suitetecsa/renovate/mockk [`5d1375b`](https://github.com/suitetecsa/sdk-kotlin/commit/5d1375b)
 - Merge pull request #137 from suitetecsa/renovate/actions-setup-java-4.x [`cefdca3`](https://github.com/suitetecsa/sdk-kotlin/commit/cefdca3)
 - Merge pull request #134 from suitetecsa/renovate/mockito.core [`b943afe`](https://github.com/suitetecsa/sdk-kotlin/commit/b943afe)
