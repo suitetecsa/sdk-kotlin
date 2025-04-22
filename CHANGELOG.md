@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## Unreleased changes
 
 ### Bug Fixes
+- handle new JSON token scenarios in Services parser [`c5d216c`](https://github.com/suitetecsa/sdk-kotlin/commit/c5d216c)
 - cambia main por master [`6390488`](https://github.com/suitetecsa/sdk-kotlin/commit/6390488)
 - remplaza commit-lint [`0173bca`](https://github.com/suitetecsa/sdk-kotlin/commit/0173bca)
 - optimize-workflows [`c9f3de5`](https://github.com/suitetecsa/sdk-kotlin/commit/c9f3de5)
@@ -16,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`5360f39`](https://github.com/suitetecsa/sdk-kotlin/commit/5360f39)
 - :robot: changelog file generated [`05a401f`](https://github.com/suitetecsa/sdk-kotlin/commit/05a401f)
 - :robot: changelog file generated [`81381f9`](https://github.com/suitetecsa/sdk-kotlin/commit/81381f9)
 - :robot: changelog file generated [`4dd9361`](https://github.com/suitetecsa/sdk-kotlin/commit/4dd9361)
@@ -168,6 +170,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge remote-tracking branch 'origin/master' [`f5b2bf0`](https://github.com/suitetecsa/sdk-kotlin/commit/f5b2bf0)
 - Merge pull request #131 from suitetecsa/renovate/devtools.ksp [`f91d6c5`](https://github.com/suitetecsa/sdk-kotlin/commit/f91d6c5)
 - Merge pull request #140 from suitetecsa/renovate/gson [`5fd1643`](https://github.com/suitetecsa/sdk-kotlin/commit/5fd1643)
 - Merge pull request #139 from suitetecsa/renovate/org.gradle.toolchains.foojay-resolver-convention-0.x [`2e6ebd1`](https://github.com/suitetecsa/sdk-kotlin/commit/2e6ebd1)
