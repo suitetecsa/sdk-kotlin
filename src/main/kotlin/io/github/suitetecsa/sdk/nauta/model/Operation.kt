@@ -15,6 +15,19 @@ private const val PARAMETERS_INDEX = 6
 private const val TYPE_INDEX = 7
 private const val URL_INDEX = 8
 
+/**
+ * Represents an operation that can be performed within the system.
+ *
+ * @property alterServiceProfile Defines the service profile to be altered by the operation.
+ * @property eCommerce Represents the e-commerce context or platform related to the operation.
+ * @property id Identifies the unique ID of the operation.
+ * @property method Indicates the HTTP method (e.g., GET, POST) used for the operation.
+ * @property mode Specifies the operational mode.
+ * @property operation Describes the name or type of the operation being performed.
+ * @property parameters A list of parameters required or involved in the operation.
+ * @property type Represents the type of operation as defined by the OperationType enum.
+ * @property url Specifies the URL endpoint associated with the operation.
+ */
 data class Operation(
     val alterServiceProfile: String,
     val eCommerce: String,
@@ -27,6 +40,41 @@ data class Operation(
     val url: String,
 )
 
+/**
+ * A custom adapter for serializing and deserializing `Operation` objects with Moshi.
+ *
+ * The `OperationAdapter` is designed to parse JSON data into an `Operation` object by handling
+ * complex structures, nested fields, and custom data mappings. It uses Moshi to facilitate
+ * this process, leveraging specific adapters for nested types such as `Parameter` and `OperationType`.
+ *
+ * The implemented functionality includes:
+ *
+ * - Deserialization (`fromJson`): Converts JSON data into an `Operation` object by mapping predefined
+ *   JSON field names to `Operation` properties and resolving nested objects through their
+ *   respective adapters.
+ * - Ignoring unknown or unused JSON fields to avoid potential mapping issues.
+ * - Assigning default values to certain properties when they are not present or parsed from the JSON.
+ *
+ * Serialization (`toJson`) is not supported and will throw an `UnsupportedOperationException` if attempted.
+ *
+ * Main JSON fields processed by this adapter include:
+ * - "alteraPerfilServicio": Represents the `alterServiceProfile` field.
+ * - "comercioElectronico": Represents the `eCommerce` field.
+ * - "id": Represents the `id` field.
+ * - "metodo": Represents the `method` field.
+ * - "modo": Represents the `mode` field.
+ * - "operacion": Represents the `operation` field.
+ * - "parametros": Represents the `parameters` field as a list of `Parameter` objects.
+ * - "tipo": Represents the `type` field as an `OperationType` enumeration.
+ * - "url": Represents the `url` field.
+ *
+ * The adapter ensures robust handling of missing, null, or unexpected data in the JSON structure.
+ *
+ * Known limitations:
+ * - Serialization is not implemented.
+ * - Specific constraints and assumptions, such as assigning default values for the `OperationType`
+ *   or non-nullable fields in the `Operation` model, are embedded in this adapter’s implementation.
+ */
 class OperationAdapter : JsonAdapter<Operation>() {
     private val options: JsonReader.Options = JsonReader.Options.of(
         "alteraPerfilServicio", "comercioElectronico", "id", "metodo", "modo", "operacion", "parametros", "tipo", "url"

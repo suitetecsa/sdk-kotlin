@@ -13,6 +13,17 @@ private const val OPERATIONS_INDEX = 4
 private const val PHONE_NUMBER_INDEX = 5
 private const val PORTAL_USER_INDEX = 6
 
+/**
+ * Represents a client with contact and notification details, as well as a list of associated operations.
+ *
+ * @property email The email address of the client.
+ * @property name The name of the client.
+ * @property mailNotifications Notification settings for email-based messages.
+ * @property mobileNotifications Notification settings for mobile-based messages.
+ * @property operations A list of operations available for the client.
+ * @property phoneNumber The phone number of the client.
+ * @property portalUser The portal user identifier linked to the client.
+ */
 data class Client(
     val email: String,
     val name: String,
@@ -23,6 +34,28 @@ data class Client(
     val portalUser: String,
 )
 
+/**
+ * A custom Moshi JsonAdapter implementation for serializing and deserializing instances of the `Client` class.
+ *
+ * This adapter handles JSON parsing for the `Client` data structure, defining how various fields
+ * within the JSON object map to properties of the `Client` class.
+ *
+ * The adapter is responsible for reading a JSON object, mapping its fields to the appropriate
+ * properties of the `Client` class, and constructing an instance of `Client`. It supports deserialization
+ * (from JSON to `Client`) but does not implement serialization (from `Client` to JSON).
+ *
+ * @constructor Creates a new instance of `ClientAdapter`.
+ *
+ * This implementation is designed to work with a specific JSON schema where:
+ * - The fields "email", "nombre", "notificaciones_mail", "notificaciones_movil", "operaciones",
+ *   "telefono", and "usuario_portal" map to the respective properties of the `Client` class.
+ * - The field "operaciones" represents a nested JSON object containing multiple operations.
+ *   Each operation is deserialized using its own custom adapter, `OperationAdapter`.
+ *
+ * @see Client
+ * @see Operation
+ * @see OperationAdapter
+ */
 class ClientAdapter : JsonAdapter<Client>() {
     private val options: JsonReader.Options = JsonReader.Options.of(
         "email",

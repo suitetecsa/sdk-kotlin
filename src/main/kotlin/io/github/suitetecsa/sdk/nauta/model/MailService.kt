@@ -7,12 +7,50 @@ import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
 
+/**
+ * Represents the mail service data structure.
+ *
+ * This class is a data model used for mapping JSON objects related to a mail service.
+ * It includes details about operations available in the service, the associated mail profile,
+ * and the type of product being referred to.
+ *
+ * @property operations A list of operations supported by the mail service. Each operation contains details
+ * such as its method, mode, and parameters required.
+ * @property profile The profile information related to the mail service. This includes details such as
+ * the associated email account, sale date, and currency used.
+ * @property productType The type of product related to the mail service.
+ */
 data class MailService(
     @Json(name = "operaciones") val operations: List<Operation>,
     @Json(name = "perfil") val profile: MailProfile,
     @Json(name = "tipoProducto") val productType: String
 )
 
+/**
+ * A custom JsonAdapter for deserializing JSON data to the `MailService` model.
+ *
+ * This adapter is responsible for parsing JSON objects containing information about mail services,
+ * including operations, profile details, and product types.
+ *
+ * The adapter defines specific behavior for reading and parsing the following fields:
+ * - 'operaciones': A list of operations, deserialized into `Operation` objects using a custom `OperationAdapter`.
+ * - 'perfil': Profile details, deserialized as a `MailProfile` object.
+ * - 'tipoProducto': The type of product, represented as a `String`.
+ *
+ * Unsupported operations:
+ * - Writing (serialization) JSON data (`toJson` method is not supported and will throw an exception).
+ *
+ * Behavior:
+ * - If any of the required fields (`operaciones`, `perfil`, or `tipoProducto`) are missing in the JSON data,
+ *   the adapter will throw a `JsonDataException`.
+ *
+ * Constructs used:
+ * - `JsonReader.Options` for optimizing field name matching during deserialization.
+ * - Moshi library for handling JSON parsing.
+ *
+ * Note:
+ * The adapter is specifically designed for reading JSON input and creating `MailService` objects.
+ */
 class MailServiceAdapter : JsonAdapter<MailService>() {
     private val options: JsonReader.Options = JsonReader.Options.of("operaciones", "perfil", "tipoProducto")
 
