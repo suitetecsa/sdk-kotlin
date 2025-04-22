@@ -17,6 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- add comprehensive class and method documentation [`80da63f`](https://github.com/suitetecsa/sdk-kotlin/commit/80da63f)
+- :robot: changelog file generated [`008aea8`](https://github.com/suitetecsa/sdk-kotlin/commit/008aea8)
 - :robot: changelog file generated [`6fc6faf`](https://github.com/suitetecsa/sdk-kotlin/commit/6fc6faf)
 - :robot: changelog file generated [`5360f39`](https://github.com/suitetecsa/sdk-kotlin/commit/5360f39)
 - :robot: changelog file generated [`05a401f`](https://github.com/suitetecsa/sdk-kotlin/commit/05a401f)
