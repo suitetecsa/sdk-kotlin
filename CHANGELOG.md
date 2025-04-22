@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`6fc6faf`](https://github.com/suitetecsa/sdk-kotlin/commit/6fc6faf)
 - :robot: changelog file generated [`5360f39`](https://github.com/suitetecsa/sdk-kotlin/commit/5360f39)
 - :robot: changelog file generated [`05a401f`](https://github.com/suitetecsa/sdk-kotlin/commit/05a401f)
 - :robot: changelog file generated [`81381f9`](https://github.com/suitetecsa/sdk-kotlin/commit/81381f9)
@@ -85,6 +86,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update plugin org.jetbrains.kotlin.jvm to v2.1.20 [`61d8b21`](https://github.com/suitetecsa/sdk-kotlin/commit/61d8b21)
+- update plugin org.jetbrains.kotlin.plugin.serialization to v2.1.20 [`22b8535`](https://github.com/suitetecsa/sdk-kotlin/commit/22b8535)
 - update dependency com.google.code.gson:gson to v2.13.0 [`ccdfb05`](https://github.com/suitetecsa/sdk-kotlin/commit/ccdfb05)
 - update plugin org.gradle.toolchains.foojay-resolver-convention to v0.10.0 [`41defea`](https://github.com/suitetecsa/sdk-kotlin/commit/41defea)
 - update dependency io.mockk:mockk to v1.14.0 [`917d828`](https://github.com/suitetecsa/sdk-kotlin/commit/917d828)
@@ -169,7 +172,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update actions/setup-java action to v4.2.2 [`cc4a9ba`](https://github.com/suitetecsa/sdk-kotlin/commit/cc4a9ba)
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
+### Refactor
+- update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
+
 ### Other
+- Merge pull request #129 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`92264aa`](https://github.com/suitetecsa/sdk-kotlin/commit/92264aa)
 - Merge remote-tracking branch 'origin/master' [`f5b2bf0`](https://github.com/suitetecsa/sdk-kotlin/commit/f5b2bf0)
 - Merge pull request #131 from suitetecsa/renovate/devtools.ksp [`f91d6c5`](https://github.com/suitetecsa/sdk-kotlin/commit/f91d6c5)
 - Merge pull request #140 from suitetecsa/renovate/gson [`5fd1643`](https://github.com/suitetecsa/sdk-kotlin/commit/5fd1643)
