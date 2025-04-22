@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`05a401f`](https://github.com/suitetecsa/sdk-kotlin/commit/05a401f)
 - :robot: changelog file generated [`81381f9`](https://github.com/suitetecsa/sdk-kotlin/commit/81381f9)
 - :robot: changelog file generated [`4dd9361`](https://github.com/suitetecsa/sdk-kotlin/commit/4dd9361)
 - :robot: changelog file generated [`97589be`](https://github.com/suitetecsa/sdk-kotlin/commit/97589be)
@@ -86,6 +87,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update plugin org.gradle.toolchains.foojay-resolver-convention to v0.10.0 [`41defea`](https://github.com/suitetecsa/sdk-kotlin/commit/41defea)
 - update dependency io.mockk:mockk to v1.14.0 [`917d828`](https://github.com/suitetecsa/sdk-kotlin/commit/917d828)
 - update actions/setup-java action to v4.7.1 [`4f2dfe1`](https://github.com/suitetecsa/sdk-kotlin/commit/4f2dfe1)
+- update dependency com.google.devtools.ksp to v2.1.20-2.0.0 [`85c31a5`](https://github.com/suitetecsa/sdk-kotlin/commit/85c31a5)
 - update dependency org.jetbrains.kotlinx:kotlinx-coroutines-test to v1.10.2 (#136) [`ac357d8`](https://github.com/suitetecsa/sdk-kotlin/commit/ac357d8)
 - update github/codeql-action action to v3.28.15 (#135) [`0e030a1`](https://github.com/suitetecsa/sdk-kotlin/commit/0e030a1)
 - update dependency org.mockito:mockito-core to v5.17.0 [`9270462`](https://github.com/suitetecsa/sdk-kotlin/commit/9270462)
@@ -166,6 +168,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update styfle/cancel-workflow-action action to v0.12.1 [`90ec86c`](https://github.com/suitetecsa/sdk-kotlin/commit/90ec86c)
 
 ### Other
+- Merge pull request #131 from suitetecsa/renovate/devtools.ksp [`f91d6c5`](https://github.com/suitetecsa/sdk-kotlin/commit/f91d6c5)
 - Merge pull request #140 from suitetecsa/renovate/gson [`5fd1643`](https://github.com/suitetecsa/sdk-kotlin/commit/5fd1643)
 - Merge pull request #139 from suitetecsa/renovate/org.gradle.toolchains.foojay-resolver-convention-0.x [`2e6ebd1`](https://github.com/suitetecsa/sdk-kotlin/commit/2e6ebd1)
 - Merge pull request #138 from suitetecsa/renovate/mockk [`5d1375b`](https://github.com/suitetecsa/sdk-kotlin/commit/5d1375b)
