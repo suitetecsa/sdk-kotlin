@@ -10,7 +10,6 @@ import io.github.suitetecsa.sdk.nauta.model.users.UsersRequest
 import io.github.suitetecsa.sdk.nauta.model.users.UsersResponse
 import io.github.suitetecsa.sdk.nauta.model.users.UsersResponseAdapter
 import io.github.suitetecsa.sdk.nauta.utils.NautaUtils
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -54,7 +53,6 @@ class NautaServiceTest {
         mockWebServer.shutdown()
     }
 
-    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `test get captcha Ok`() = runTest {
         enqueueResponse("captcha.json")
@@ -69,7 +67,6 @@ class NautaServiceTest {
         MatcherAssert.assertThat(data.idRequest, CoreMatchers.`is`("e411473c64b6a7916fe96ef8e6b73e46f2010675"))
     }
 
-    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `test login Ok`() = runTest {
         enqueueResponse("login.json")
@@ -91,7 +88,48 @@ class NautaServiceTest {
         MatcherAssert.assertThat((data.user as User).client.name, CoreMatchers.`is`("Pepito Peres"))
         MatcherAssert.assertThat((data.user as User).client.phoneNumber, CoreMatchers.`is`("51234567"))
         MatcherAssert.assertThat((data.user as User).client.email, CoreMatchers.`is`("pepito@gmail.com"))
-        MatcherAssert.assertThat((data.user as User).client.operations[0].url, CoreMatchers.`is`("queryPagosOnLine"))
+    }
+
+    @Test
+    fun `test login failure when error captcha`() = runTest {
+        enqueueResponse("error_captcha.json")
+        val data = service.login(
+            LoginRequest(
+                username = "username",
+                password = "password",
+                idRequest = "e411473c64b6a7916fe96ef8e6b73e46f2010675",
+                captchaCode = "HSPK"
+            )
+        )
+        val request = mockWebServer.takeRequest()
+
+        MatcherAssert.assertThat(request.method, CoreMatchers.`is`("POST"))
+        MatcherAssert.assertThat(request.path, CoreMatchers.`is`("/login"))
+        MatcherAssert.assertThat(request.headers["User-Agent"], CoreMatchers.`is`("SuitETECSA/1.0.0"))
+        MatcherAssert.assertThat(request.headers["Content-Type"], CoreMatchers.`is`("application/json"))
+
+        MatcherAssert.assertThat(data.token, CoreMatchers.`is`(""))
+        MatcherAssert.assertThat(data.user, CoreMatchers.`is`(""))
+        MatcherAssert.assertThat(data.result, CoreMatchers.`is`("errorCaptcha"))
+    }
+
+    @Test
+    fun `test users Ok`() = runTest {
+        enqueueResponse("users.json")
+        val passwordApp = NautaUtils.createPasswordApp()
+        val data = service.users("Bearer Token", UsersRequest("", ""), passwordApp)
+        val request = mockWebServer.takeRequest()
+
+        MatcherAssert.assertThat(request.method, CoreMatchers.`is`("POST"))
+        MatcherAssert.assertThat(request.path, CoreMatchers.`is`("/users"))
+        MatcherAssert.assertThat(request.headers["User-Agent"], CoreMatchers.`is`("SuitETECSA/1.0.0"))
+        MatcherAssert.assertThat(request.headers["Content-Type"], CoreMatchers.`is`("application/json"))
+        MatcherAssert.assertThat(request.headers["usernameApp"], CoreMatchers.`is`("portal"))
+        MatcherAssert.assertThat(request.headers["Authorization"], CoreMatchers.`is`("Bearer Token"))
+        MatcherAssert.assertThat(request.headers["passwordApp"], CoreMatchers.`is`(passwordApp))
+
+        assertTrue(data.user is User)
+        MatcherAssert.assertThat(data.result, CoreMatchers.`is`("ok"))
         MatcherAssert.assertThat(
             (data.user as User).services.navServices[0].productType,
             CoreMatchers.`is`("NAVEGACION")
@@ -126,7 +164,6 @@ class NautaServiceTest {
         )
     }
 
-    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `test get users not updated`() = runTest {
         enqueueResponse("users_not_updated.json")
@@ -144,7 +181,7 @@ class NautaServiceTest {
 
         assertTrue(data.user is User)
         MatcherAssert.assertThat(data.result, CoreMatchers.`is`("ok"))
-        MatcherAssert.assertThat((data.user as User).updatedServices, CoreMatchers.`is`("false"))
+        MatcherAssert.assertThat((data.user as User).completed, CoreMatchers.`is`("false"))
         MatcherAssert.assertThat((data.user as User).services.mobileServices.size, CoreMatchers.`is`(0))
     }
 

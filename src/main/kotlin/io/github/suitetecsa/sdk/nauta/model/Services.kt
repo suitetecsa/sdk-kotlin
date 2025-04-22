@@ -1,9 +1,6 @@
 package io.github.suitetecsa.sdk.nauta.model
 
-import com.squareup.moshi.JsonAdapter
-import com.squareup.moshi.JsonReader
-import com.squareup.moshi.JsonWriter
-import com.squareup.moshi.Moshi
+import com.squareup.moshi.*
 
 private const val MAIL_SERVICES_INDEX = 0
 private const val NAV_SERVICES_INDEX = 1
@@ -42,49 +39,65 @@ class ServicesAdapter : JsonAdapter<Services>() {
         val mobileServices = mutableListOf<MobileService>()
         val fixedTelephony = mutableListOf<FixedTelephony>()
 
-        reader.beginObject()
-        while (reader.hasNext()) {
-            when (reader.selectName(options)) {
-                MAIL_SERVICES_INDEX -> {
-                    reader.beginObject()
-                    while (reader.hasNext()) {
-                        reader.skipName()
-                        val mailService = mailServiceAdapter.fromJson(reader)
-                        mailService?.let { mailServices.add(it) }
-                    }
-                    reader.endObject()
-                }
-                NAV_SERVICES_INDEX -> {
-                    reader.beginObject()
-                    while (reader.hasNext()) {
-                        reader.skipName()
-                        val navService = navServiceAdapter.fromJson(reader)
-                        navService?.let { navServices.add(it) }
-                    }
-                    reader.endObject()
-                }
-                MOBILE_SERVICES_INDEX -> {
-                    reader.beginObject()
-                    while (reader.hasNext()) {
-                        reader.skipName()
-                        val mobileService = mobileServiceAdapter.fromJson(reader)
-                        mobileService?.let { mobileServices.add(it) }
-                    }
-                    reader.endObject()
-                }
-                FIXED_TELEPHONY_SERVICES_INDEX -> {
-                    reader.beginObject()
-                    while (reader.hasNext()) {
-                        reader.skipName()
-                        val telephony = fixedTelephonyAdapter.fromJson(reader)
-                        telephony?.let { fixedTelephony.add(it) }
-                    }
-                    reader.endObject()
-                }
-                else -> reader.skipValue()
+        when (reader.peek()) {
+            JsonReader.Token.STRING -> {
+                reader.nextString()
+                return Services(emptyList(), emptyList(), emptyList(), emptyList())
             }
+
+            JsonReader.Token.BEGIN_OBJECT -> {
+                reader.beginObject()
+                while (reader.hasNext()) {
+                    when (reader.selectName(options)) {
+                        MAIL_SERVICES_INDEX -> {
+                            reader.beginObject()
+                            while (reader.hasNext()) {
+                                reader.skipName()
+                                val mailService = mailServiceAdapter.fromJson(reader)
+                                mailService?.let { mailServices.add(it) }
+                            }
+                            reader.endObject()
+                        }
+
+                        NAV_SERVICES_INDEX -> {
+                            reader.beginObject()
+                            while (reader.hasNext()) {
+                                reader.skipName()
+                                val navService = navServiceAdapter.fromJson(reader)
+                                navService?.let { navServices.add(it) }
+                            }
+                            reader.endObject()
+                        }
+
+                        MOBILE_SERVICES_INDEX -> {
+                            reader.beginObject()
+                            while (reader.hasNext()) {
+                                reader.skipName()
+                                val mobileService = mobileServiceAdapter.fromJson(reader)
+                                mobileService?.let { mobileServices.add(it) }
+                            }
+                            reader.endObject()
+                        }
+
+                        FIXED_TELEPHONY_SERVICES_INDEX -> {
+                            reader.beginObject()
+                            while (reader.hasNext()) {
+                                reader.skipName()
+                                val telephony = fixedTelephonyAdapter.fromJson(reader)
+                                telephony?.let { fixedTelephony.add(it) }
+                            }
+                            reader.endObject()
+                        }
+
+                        else -> reader.skipValue()
+                    }
+                }
+                reader.endObject()
+            }
+
+            else -> throw JsonDataException("Unexpected token: ${reader.peek()}")
         }
-        reader.endObject()
+
         return Services(mailServices, navServices, mobileServices, fixedTelephony)
     }
 

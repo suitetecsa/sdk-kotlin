@@ -2,21 +2,64 @@
   "resp": {
     "user": {
       "cliente": {
-        "nombre": "Pepito Peres",
+        "nombre": "Pepito Perez",
         "telefono": "51234567",
-        "email": "pepito@nauta.cu",
+        "email": "pepitop@nauta.cu",
         "notificaciones_mail": "true",
-        "notificaciones_movil": "false",
+        "notificaciones_movil": "true",
         "usuario_portal": "+5351234567",
         "operaciones": {
-          "Pagos electrónicos en el portal": {
-            "operacion": "Pagos electrónicos en el portal",
-            "url": "queryPagosOnLine",
+          "Recargar cualquier cuenta en Línea": {
+            "operacion": "Recargar cualquier cuenta en Línea",
+            "url": "recargaOtraCuentaOnline",
+            "tipo": "RECARGA",
+            "comercioElectronico": "true",
+            "metodo": "POST",
+            "modo": "ASINCRONICO",
+            "id": "recharge_online_any_account",
+            "alteraPerfilServicio": "NO",
+            "parametros": {
+              "Número": {
+                "nombre": "Número",
+                "parametro": "numero",
+                "valor": "",
+                "tipo": "STRING",
+                "orden": "1"
+              },
+              "Saldo": {
+                "nombre": "Saldo",
+                "parametro": "monto",
+                "valor": "",
+                "tipo": "MONEY",
+                "orden": "2"
+              },
+              "Cuenta de acceso": {
+                "nombre": "Cuenta de acceso",
+                "parametro": "accessLogin",
+                "valor": "",
+                "tipo": "STRING",
+                "orden": "1"
+              },
+              "Pasarela": {
+                "nombre": "Pasarela",
+                "parametro": "pasarela",
+                "valor": "",
+                "tipo": "SELECT",
+                "orden": "3",
+                "valores": {
+                  "TRANSFERMOVIL": "Transfermóvil"
+                }
+              }
+            }
+          },
+          "Operaciones realizadas en el portal": {
+            "operacion": "Operaciones realizadas en el portal",
+            "url": "queryOperations",
             "tipo": "CONSULTA",
             "comercioElectronico": "false",
             "metodo": "GET",
             "modo": "ASINCRONICO",
-            "id": "query_pago_operaciones",
+            "id": "query_operations",
             "alteraPerfilServicio": "NO",
             "parametros": {
               "Cliente Id": {
@@ -46,46 +89,6 @@
                 "valor": "0",
                 "tipo": "NUMERIC",
                 "orden": "4"
-              }
-            }
-          },
-          "Crear cuenta de navegación (@nauta.com.cu)": {
-            "operacion": "Crear cuenta de navegación (@nauta.com.cu)",
-            "url": "crearCuentaAcceso",
-            "tipo": "ALTA",
-            "comercioElectronico": "false",
-            "metodo": "POST",
-            "modo": "ASINCRONICO",
-            "id": "create_cta_permanente",
-            "alteraPerfilServicio": "NO",
-            "parametros": {
-              "Tipo de servicio": {
-                "nombre": "Tipo de servicio",
-                "parametro": "especificacionProductoId",
-                "valor": "100",
-                "tipo": "STRING",
-                "orden": "4"
-              },
-              "Cuenta de navegación": {
-                "nombre": "Cuenta de navegación",
-                "parametro": "cuenta",
-                "valor": "",
-                "tipo": "CUENTA_ACCESO",
-                "orden": "1"
-              },
-              "Contraseña": {
-                "nombre": "Contraseña",
-                "parametro": "password",
-                "valor": "",
-                "tipo": "NEWPASSWORD",
-                "orden": "2"
-              },
-              "Cliente": {
-                "nombre": "Cliente",
-                "parametro": "clienteId",
-                "valor": "a008f7e3-e631-47cc-9f52-8718ef8cbbff",
-                "tipo": "STRING",
-                "orden": "3"
               }
             }
           },
@@ -129,14 +132,200 @@
               }
             }
           },
-          "Operaciones realizadas en el portal": {
-            "operacion": "Operaciones realizadas en el portal",
-            "url": "queryOperations",
+          "Crear cuenta de navegación (@nauta.com.cu)": {
+            "operacion": "Crear cuenta de navegación (@nauta.com.cu)",
+            "url": "crearCuentaAcceso",
+            "tipo": "ALTA",
+            "comercioElectronico": "false",
+            "metodo": "POST",
+            "modo": "ASINCRONICO",
+            "id": "create_cta_permanente",
+            "alteraPerfilServicio": "NO",
+            "parametros": {
+              "Tipo de servicio": {
+                "nombre": "Tipo de servicio",
+                "parametro": "especificacionProductoId",
+                "valor": "100",
+                "tipo": "STRING",
+                "orden": "4"
+              },
+              "Cuenta de navegación": {
+                "nombre": "Cuenta de navegación",
+                "parametro": "cuenta",
+                "valor": "",
+                "tipo": "CUENTA_ACCESO",
+                "orden": "1"
+              },
+              "Contraseña": {
+                "nombre": "Contraseña",
+                "parametro": "password",
+                "valor": "",
+                "tipo": "NEWPASSWORD",
+                "orden": "2"
+              },
+              "Cliente": {
+                "nombre": "Cliente",
+                "parametro": "clienteId",
+                "valor": "a008f7e3-e631-47cc-9f52-8718ef8cbbff",
+                "tipo": "STRING",
+                "orden": "3"
+              }
+            }
+          },
+          "Listar Demandas Nauta Hogar": {
+            "operacion": "Listar Demandas Nauta Hogar",
+            "url": "consultarDemandaServicioNautaHogar",
+            "tipo": "CONSULTA",
+            "comercioElectronico": "false",
+            "metodo": "GEST",
+            "modo": "SINCRONICO",
+            "id": "listardemanda_nh",
+            "alteraPerfilServicio": "NO",
+            "parametros": {
+              "Cliente": {
+                "nombre": "Cliente",
+                "parametro": "clienteId",
+                "valor": "a008f7e3-e631-47cc-9f52-8718ef8cbbff",
+                "tipo": "STRING",
+                "orden": "1"
+              }
+            }
+          },
+          "Pagar cualquier Nauta Hogar en línea": {
+            "operacion": "Pagar cualquier Nauta Hogar en línea",
+            "url": "pagoOnlineCMNH",
+            "tipo": "RECARGA",
+            "comercioElectronico": "true",
+            "metodo": "POST",
+            "modo": "ASINCRONICO",
+            "id": "pagar_cm_online_otra_cuenta",
+            "alteraPerfilServicio": "SIMPLE",
+            "parametros": {
+              "Saldo": {
+                "nombre": "Saldo",
+                "parametro": "monto",
+                "valor": "",
+                "tipo": "MONEY",
+                "orden": "2"
+              },
+              "Cuenta de acceso": {
+                "nombre": "Cuenta de acceso",
+                "parametro": "cuentaAcceso",
+                "valor": "",
+                "tipo": "CUENTA_ACCESO",
+                "orden": "1"
+              },
+              "Pasarela": {
+                "nombre": "Pasarela",
+                "parametro": "pasarela",
+                "valor": "",
+                "tipo": "SELECT",
+                "orden": "3",
+                "valores": {
+                  "TRANSFERMOVIL": "Transfermóvil"
+                }
+              }
+            }
+          },
+          "Crear Demanda Nauta Hogar": {
+            "operacion": "Crear Demanda Nauta Hogar",
+            "url": "demandarServicioNautaHogar",
+            "tipo": "MODIFICACION",
+            "comercioElectronico": "false",
+            "metodo": "POST",
+            "modo": "SINCRONICO",
+            "id": "demandar_nh",
+            "alteraPerfilServicio": "NO",
+            "parametros": {
+              "Teléfono de servicio": {
+                "nombre": "Teléfono de servicio",
+                "parametro": "telefonoServicio",
+                "valor": "",
+                "tipo": "TELEFONO_FIJO",
+                "orden": "2"
+              },
+              "Teléfono de contacto": {
+                "nombre": "Teléfono de contacto",
+                "parametro": "telefonoContacto",
+                "valor": "",
+                "tipo": "STRING",
+                "orden": "4"
+              },
+              "Cliente": {
+                "nombre": "Cliente",
+                "parametro": "clienteId",
+                "valor": "a008f7e3-e631-47cc-9f52-8718ef8cbbff",
+                "tipo": "STRING",
+                "orden": "1"
+              },
+              "Dirección": {
+                "nombre": "Dirección",
+                "parametro": "direccion",
+                "valor": "",
+                "tipo": "STRING",
+                "orden": "3"
+              },
+              "Correo de contacto": {
+                "nombre": "Correo de contacto",
+                "parametro": "correoContacto",
+                "valor": "",
+                "tipo": "STRING",
+                "orden": "5"
+              },
+              "Oferta": {
+                "nombre": "Oferta",
+                "parametro": "ofertaId",
+                "valor": "",
+                "tipo": "SELECT_PKG",
+                "orden": "6",
+                "valores": {
+                  "um-32-0917-20-horas": {
+                    "ofertaId": "um-32-0917-20-horas",
+                    "nombre": "1 MB - 30 Hrs.",
+                    "precio": 25000,
+                    "moneda": "CUP",
+                    "info": "1 MB x 512 KB 30 Horas"
+                  },
+                  "um-32-0917-2020": {
+                    "ofertaId": "um-32-0917-2020",
+                    "nombre": "1 MB - 40 Hrs.",
+                    "precio": 30000,
+                    "moneda": "CUP",
+                    "info": "1 MB x 512 KB 40 Horas"
+                  },
+                  "um-108-60-33-0917-residencial": {
+                    "ofertaId": "um-108-60-33-0917-residencial",
+                    "nombre": "2 MB - 60 Hrs.",
+                    "precio": 50000,
+                    "moneda": "CUP",
+                    "info": "2 MB x 512 KB 60 Horas"
+                  },
+                  "um-108-60-20-residencial": {
+                    "ofertaId": "um-108-60-20-residencial",
+                    "nombre": "3 MB - 60 Hrs.",
+                    "precio": 87500,
+                    "moneda": "CUP",
+                    "info": "3 MB x 1 MB 60 Horas"
+                  },
+                  "um-19-120": {
+                    "ofertaId": "um-19-120",
+                    "nombre": "4 MB - 120 Hrs.",
+                    "precio": 137500,
+                    "moneda": "CUP",
+                    "info": "4 MB x 1 MB 120 Horas"
+                  }
+                }
+              }
+            }
+          },
+          "Pagos electrónicos en el portal": {
+            "operacion": "Pagos electrónicos en el portal",
+            "url": "queryPagosOnLine",
             "tipo": "CONSULTA",
             "comercioElectronico": "false",
             "metodo": "GET",
             "modo": "ASINCRONICO",
-            "id": "query_operations",
+            "id": "query_pago_operaciones",
             "alteraPerfilServicio": "NO",
             "parametros": {
               "Cliente Id": {
@@ -173,9 +362,9 @@
       },
       "Servicios": {
         "Navegación": {
-          "pepito.peres@nauta.com.cu": {
+          "pepito.perez@nauta.com.cu": {
             "perfil": {
-              "Cuenta de acceso": "pepito.peres@nauta.com.cu",
+              "Cuenta de acceso": "pepito.perez@nauta.com.cu",
               "Fecha de venta": "17-07-2015",
               "Estado": "HABILITADO",
               "Fecha de bloqueo": "30-11-2037",
@@ -202,7 +391,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "cuenta",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -235,7 +424,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -261,20 +450,20 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
                   "Mes": {
                     "nombre": "Mes",
                     "parametro": "mes",
-                    "valor": "12",
+                    "valor": "4",
                     "tipo": "SELECT",
                     "orden": "2",
                     "valores": {
-                      "10": "Octubre",
-                      "11": "Noviembre",
-                      "12": "Diciembre"
+                      "2": "Febrero",
+                      "3": "Marzo",
+                      "4": "Abril"
                     }
                   },
                   "pagina": {
@@ -306,20 +495,20 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
                   "Mes": {
                     "nombre": "Mes",
                     "parametro": "mes",
-                    "valor": "12",
+                    "valor": "4",
                     "tipo": "SELECT",
                     "orden": "2",
                     "valores": {
-                      "10": "Octubre",
-                      "11": "Noviembre",
-                      "12": "Diciembre"
+                      "2": "Febrero",
+                      "3": "Marzo",
+                      "4": "Abril"
                     }
                   },
                   "pagina": {
@@ -351,20 +540,20 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
                   "Mes": {
                     "nombre": "Mes",
                     "parametro": "mes",
-                    "valor": "12",
+                    "valor": "4",
                     "tipo": "SELECT",
                     "orden": "2",
                     "valores": {
-                      "10": "Octubre",
-                      "11": "Noviembre",
-                      "12": "Diciembre"
+                      "2": "Febrero",
+                      "3": "Marzo",
+                      "4": "Abril"
                     }
                   },
                   "pagina": {
@@ -396,7 +585,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "cuentaAcceso",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -432,7 +621,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -458,7 +647,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "cuenta",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -491,7 +680,7 @@
                   "Cuenta Origen": {
                     "nombre": "Cuenta Origen",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.com.cu",
+                    "valor": "pepito.perez@nauta.com.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -520,9 +709,9 @@
               }
             }
           },
-          "pepito.peres@nauta.co.cu": {
+          "pepito.perez@nauta.co.cu": {
             "perfil": {
-              "Cuenta de acceso": "pepito.peres@nauta.co.cu",
+              "Cuenta de acceso": "pepito.perez@nauta.co.cu",
               "Fecha de venta": "04-01-2020",
               "Estado": "HABILITADO",
               "Fecha de bloqueo": "30-11-2037",
@@ -532,7 +721,7 @@
               "Bonificación por disfrutar": "00:00:00",
               "Moneda": "CUP",
               "id": "200631643772",
-              "saldo": "0.12"
+              "saldo": "0.00"
             },
             "tipoProducto": "NAVEGACION",
             "operaciones": {
@@ -549,7 +738,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "cuenta",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -582,7 +771,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -608,20 +797,20 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
                   "Mes": {
                     "nombre": "Mes",
                     "parametro": "mes",
-                    "valor": "12",
+                    "valor": "4",
                     "tipo": "SELECT",
                     "orden": "2",
                     "valores": {
-                      "10": "Octubre",
-                      "11": "Noviembre",
-                      "12": "Diciembre"
+                      "2": "Febrero",
+                      "3": "Marzo",
+                      "4": "Abril"
                     }
                   },
                   "pagina": {
@@ -653,20 +842,20 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
                   "Mes": {
                     "nombre": "Mes",
                     "parametro": "mes",
-                    "valor": "12",
+                    "valor": "4",
                     "tipo": "SELECT",
                     "orden": "2",
                     "valores": {
-                      "10": "Octubre",
-                      "11": "Noviembre",
-                      "12": "Diciembre"
+                      "2": "Febrero",
+                      "3": "Marzo",
+                      "4": "Abril"
                     }
                   },
                   "pagina": {
@@ -698,20 +887,20 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
                   "Mes": {
                     "nombre": "Mes",
                     "parametro": "mes",
-                    "valor": "12",
+                    "valor": "4",
                     "tipo": "SELECT",
                     "orden": "2",
                     "valores": {
-                      "10": "Octubre",
-                      "11": "Noviembre",
-                      "12": "Diciembre"
+                      "2": "Febrero",
+                      "3": "Marzo",
+                      "4": "Abril"
                     }
                   },
                   "pagina": {
@@ -743,7 +932,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "cuentaAcceso",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -779,7 +968,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -805,7 +994,7 @@
                   "Cuenta de acceso": {
                     "nombre": "Cuenta de acceso",
                     "parametro": "cuenta",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -838,7 +1027,7 @@
                   "Cuenta Origen": {
                     "nombre": "Cuenta Origen",
                     "parametro": "accessLogin",
-                    "valor": "pepito.peres@nauta.co.cu",
+                    "valor": "pepito.perez@nauta.co.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -869,10 +1058,10 @@
           }
         },
         "Correo Nauta": {
-          "pepito@nauta.cu": {
+          "pepitop@nauta.cu": {
             "perfil": {
               "Fecha de venta": "17-07-2015",
-              "Cuenta de correo": "pepito@nauta.cu",
+              "Cuenta de correo": "pepitop@nauta.cu",
               "Moneda": "CUP",
               "id": "15065092244"
             },
@@ -891,7 +1080,7 @@
                   "Cuenta de correo": {
                     "nombre": "Cuenta de correo",
                     "parametro": "cuenta",
-                    "valor": "pepito@nauta.cu",
+                    "valor": "pepitop@nauta.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -924,7 +1113,7 @@
                   "Cuenta de correo": {
                     "nombre": "Cuenta de correo",
                     "parametro": "cuenta",
-                    "valor": "pepito@nauta.cu",
+                    "valor": "pepitop@nauta.cu",
                     "tipo": "STRING",
                     "orden": "1"
                   },
@@ -946,12 +1135,11 @@
               }
             }
           }
-        },
-        "Telefonía fija": {}
+        }
       },
-      "servicios_actualizados": "false",
+      "servicios_actualizados": "true",
       "completado": "false",
-      "fechaActualizacion": "2023-12-12 19:28:58"
+      "fechaActualizacion": "2025-04-22 12:55:30"
     },
     "resultado": "ok"
   }
