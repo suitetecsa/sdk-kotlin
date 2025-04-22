@@ -14,7 +14,7 @@ plugins {
 }
 
 group = "io.github.suitetecsa.sdk"
-version = "1.0.0-alpha04"
+version = "1.0.0-alpha.5"
 
 repositories {
     mavenCentral()
