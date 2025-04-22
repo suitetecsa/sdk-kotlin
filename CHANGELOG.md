@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`2744ad5`](https://github.com/suitetecsa/sdk-kotlin/commit/2744ad5)
 - add comprehensive class and method documentation [`80da63f`](https://github.com/suitetecsa/sdk-kotlin/commit/80da63f)
 - :robot: changelog file generated [`008aea8`](https://github.com/suitetecsa/sdk-kotlin/commit/008aea8)
 - :robot: changelog file generated [`6fc6faf`](https://github.com/suitetecsa/sdk-kotlin/commit/6fc6faf)
@@ -88,6 +89,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- bump version to 1.0.0-alpha.5 [`309faac`](https://github.com/suitetecsa/sdk-kotlin/commit/309faac)
 - update plugin org.jetbrains.kotlin.jvm to v2.1.20 [`61d8b21`](https://github.com/suitetecsa/sdk-kotlin/commit/61d8b21)
 - update plugin org.jetbrains.kotlin.plugin.serialization to v2.1.20 [`22b8535`](https://github.com/suitetecsa/sdk-kotlin/commit/22b8535)
 - update dependency com.google.code.gson:gson to v2.13.0 [`ccdfb05`](https://github.com/suitetecsa/sdk-kotlin/commit/ccdfb05)
