@@ -1,6 +1,10 @@
 package io.github.suitetecsa.sdk.nauta.model
 
-import com.squareup.moshi.*
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.JsonDataException
+import com.squareup.moshi.JsonReader
+import com.squareup.moshi.JsonWriter
+import com.squareup.moshi.Moshi
 
 private const val MAIL_SERVICES_INDEX = 0
 private const val NAV_SERVICES_INDEX = 1
