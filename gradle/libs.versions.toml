@@ -1,7 +1,7 @@
 [versions]
 detekt = "1.23.8"
 jsoup = "1.19.1"
-gson = "2.13.0"
+gson = "2.13.1"
 mockito-core = "5.17.0"
 mockito-kotlin = "5.4.0"
 mockk = "1.14.0"
