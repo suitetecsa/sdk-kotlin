@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`9a2cdbf`](https://github.com/suitetecsa/sdk-kotlin/commit/9a2cdbf)
 - :robot: changelog file generated [`061b34b`](https://github.com/suitetecsa/sdk-kotlin/commit/061b34b)
 - :robot: changelog file generated [`2744ad5`](https://github.com/suitetecsa/sdk-kotlin/commit/2744ad5)
 - add comprehensive class and method documentation [`80da63f`](https://github.com/suitetecsa/sdk-kotlin/commit/80da63f)
@@ -90,6 +91,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency com.google.code.gson:gson to v2.13.1 [`6a1f2e1`](https://github.com/suitetecsa/sdk-kotlin/commit/6a1f2e1)
 - update github/codeql-action action to v3.28.16 [`368016f`](https://github.com/suitetecsa/sdk-kotlin/commit/368016f)
 - bump version to 1.0.0-alpha.5 [`309faac`](https://github.com/suitetecsa/sdk-kotlin/commit/309faac)
 - update plugin org.jetbrains.kotlin.jvm to v2.1.20 [`61d8b21`](https://github.com/suitetecsa/sdk-kotlin/commit/61d8b21)
@@ -182,6 +184,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #142 from suitetecsa/renovate/gson [`942b2aa`](https://github.com/suitetecsa/sdk-kotlin/commit/942b2aa)
 - Merge pull request #141 from suitetecsa/renovate/github-codeql-action-3.x [`2aa290b`](https://github.com/suitetecsa/sdk-kotlin/commit/2aa290b)
 - Merge pull request #129 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`92264aa`](https://github.com/suitetecsa/sdk-kotlin/commit/92264aa)
 - Merge remote-tracking branch 'origin/master' [`f5b2bf0`](https://github.com/suitetecsa/sdk-kotlin/commit/f5b2bf0)
