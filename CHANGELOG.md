@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`2a88785`](https://github.com/suitetecsa/sdk-kotlin/commit/2a88785)
 - :robot: changelog file generated [`a6a3630`](https://github.com/suitetecsa/sdk-kotlin/commit/a6a3630)
 - :robot: changelog file generated [`0730a74`](https://github.com/suitetecsa/sdk-kotlin/commit/0730a74)
 - :robot: changelog file generated [`b9c9d6f`](https://github.com/suitetecsa/sdk-kotlin/commit/b9c9d6f)
@@ -94,6 +95,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update github/codeql-action action to v3.28.17 [`ff56b3b`](https://github.com/suitetecsa/sdk-kotlin/commit/ff56b3b)
 - update dependency com.google.devtools.ksp to v2.1.20-2.0.1 [`ebb6b5b`](https://github.com/suitetecsa/sdk-kotlin/commit/ebb6b5b)
 - update dependency org.jsoup:jsoup to v1.20.1 [`24fa9f3`](https://github.com/suitetecsa/sdk-kotlin/commit/24fa9f3)
 - update dependency io.mockk:mockk to v1.14.2 [`e5e11ef`](https://github.com/suitetecsa/sdk-kotlin/commit/e5e11ef)
@@ -190,6 +192,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #147 from suitetecsa/renovate/github-codeql-action-3.x [`ce51b26`](https://github.com/suitetecsa/sdk-kotlin/commit/ce51b26)
 - Merge pull request #146 from suitetecsa/renovate/devtools.ksp [`0f5deda`](https://github.com/suitetecsa/sdk-kotlin/commit/0f5deda)
 - Merge pull request #145 from suitetecsa/renovate/jsoup [`c846c75`](https://github.com/suitetecsa/sdk-kotlin/commit/c846c75)
 - Merge pull request #144 from suitetecsa/renovate/mockk [`bef1ccf`](https://github.com/suitetecsa/sdk-kotlin/commit/bef1ccf)
