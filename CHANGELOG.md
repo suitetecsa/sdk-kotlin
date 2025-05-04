@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`a6a3630`](https://github.com/suitetecsa/sdk-kotlin/commit/a6a3630)
 - :robot: changelog file generated [`0730a74`](https://github.com/suitetecsa/sdk-kotlin/commit/0730a74)
 - :robot: changelog file generated [`b9c9d6f`](https://github.com/suitetecsa/sdk-kotlin/commit/b9c9d6f)
 - :robot: changelog file generated [`9a2cdbf`](https://github.com/suitetecsa/sdk-kotlin/commit/9a2cdbf)
@@ -93,6 +94,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency com.google.devtools.ksp to v2.1.20-2.0.1 [`ebb6b5b`](https://github.com/suitetecsa/sdk-kotlin/commit/ebb6b5b)
 - update dependency org.jsoup:jsoup to v1.20.1 [`24fa9f3`](https://github.com/suitetecsa/sdk-kotlin/commit/24fa9f3)
 - update dependency io.mockk:mockk to v1.14.2 [`e5e11ef`](https://github.com/suitetecsa/sdk-kotlin/commit/e5e11ef)
 - update dependency com.google.code.gson:gson to v2.13.1 [`6a1f2e1`](https://github.com/suitetecsa/sdk-kotlin/commit/6a1f2e1)
@@ -188,6 +190,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #146 from suitetecsa/renovate/devtools.ksp [`0f5deda`](https://github.com/suitetecsa/sdk-kotlin/commit/0f5deda)
 - Merge pull request #145 from suitetecsa/renovate/jsoup [`c846c75`](https://github.com/suitetecsa/sdk-kotlin/commit/c846c75)
 - Merge pull request #144 from suitetecsa/renovate/mockk [`bef1ccf`](https://github.com/suitetecsa/sdk-kotlin/commit/bef1ccf)
 - Merge pull request #142 from suitetecsa/renovate/gson [`942b2aa`](https://github.com/suitetecsa/sdk-kotlin/commit/942b2aa)
