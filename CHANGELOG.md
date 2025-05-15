@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`817fd08`](https://github.com/suitetecsa/sdk-kotlin/commit/817fd08)
 - :robot: changelog file generated [`3442739`](https://github.com/suitetecsa/sdk-kotlin/commit/3442739)
 - :robot: changelog file generated [`2a88785`](https://github.com/suitetecsa/sdk-kotlin/commit/2a88785)
 - :robot: changelog file generated [`a6a3630`](https://github.com/suitetecsa/sdk-kotlin/commit/a6a3630)
@@ -96,6 +97,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update plugin org.jetbrains.kotlin.jvm to v2.1.21 [`370231f`](https://github.com/suitetecsa/sdk-kotlin/commit/370231f)
 - update github/codeql-action action to v3.28.17 [`ff56b3b`](https://github.com/suitetecsa/sdk-kotlin/commit/ff56b3b)
 - update dependency com.google.devtools.ksp to v2.1.20-2.0.1 [`ebb6b5b`](https://github.com/suitetecsa/sdk-kotlin/commit/ebb6b5b)
 - update dependency org.jsoup:jsoup to v1.20.1 [`24fa9f3`](https://github.com/suitetecsa/sdk-kotlin/commit/24fa9f3)
@@ -194,6 +196,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #148 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`3d49c84`](https://github.com/suitetecsa/sdk-kotlin/commit/3d49c84)
 - Merge pull request #143 from suitetecsa/renovate/gradle-8.x [`82a9bd2`](https://github.com/suitetecsa/sdk-kotlin/commit/82a9bd2)
 - Merge pull request #147 from suitetecsa/renovate/github-codeql-action-3.x [`ce51b26`](https://github.com/suitetecsa/sdk-kotlin/commit/ce51b26)
 - Merge pull request #146 from suitetecsa/renovate/devtools.ksp [`0f5deda`](https://github.com/suitetecsa/sdk-kotlin/commit/0f5deda)
