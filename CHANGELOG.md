@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`a3ba4d0`](https://github.com/suitetecsa/sdk-kotlin/commit/a3ba4d0)
 - :robot: changelog file generated [`59bc461`](https://github.com/suitetecsa/sdk-kotlin/commit/59bc461)
 - :robot: changelog file generated [`275f656`](https://github.com/suitetecsa/sdk-kotlin/commit/275f656)
 - :robot: changelog file generated [`05cf914`](https://github.com/suitetecsa/sdk-kotlin/commit/05cf914)
@@ -102,6 +103,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update retrofit2 to v3 [`babd672`](https://github.com/suitetecsa/sdk-kotlin/commit/babd672)
+- update dependency org.mockito:mockito-core to v5.18.0 [`399e678`](https://github.com/suitetecsa/sdk-kotlin/commit/399e678)
 - update gradle/actions action to v4.4.0 [`c98dc8e`](https://github.com/suitetecsa/sdk-kotlin/commit/c98dc8e)
 - update github/codeql-action action to v3.28.18 [`22fbdbc`](https://github.com/suitetecsa/sdk-kotlin/commit/22fbdbc)
 - update retrofit2 to v2.12.0 [`9d660ae`](https://github.com/suitetecsa/sdk-kotlin/commit/9d660ae)
@@ -206,6 +209,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #152 from suitetecsa/renovate/major-retrofit2 [`360f888`](https://github.com/suitetecsa/sdk-kotlin/commit/360f888)
+- Merge pull request #156 from suitetecsa/renovate/mockito.core [`dc3d1c8`](https://github.com/suitetecsa/sdk-kotlin/commit/dc3d1c8)
 - Merge pull request #154 from suitetecsa/renovate/gradle-actions-4.x [`424e487`](https://github.com/suitetecsa/sdk-kotlin/commit/424e487)
 - Merge pull request #153 from suitetecsa/renovate/github-codeql-action-3.x [`3efebd8`](https://github.com/suitetecsa/sdk-kotlin/commit/3efebd8)
 - Merge pull request #151 from suitetecsa/renovate/retrofit2 [`4cabf1d`](https://github.com/suitetecsa/sdk-kotlin/commit/4cabf1d)
