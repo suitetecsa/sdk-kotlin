@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`05cf914`](https://github.com/suitetecsa/sdk-kotlin/commit/05cf914)
 - :robot: changelog file generated [`256fde3`](https://github.com/suitetecsa/sdk-kotlin/commit/256fde3)
 - :robot: changelog file generated [`583c262`](https://github.com/suitetecsa/sdk-kotlin/commit/583c262)
 - :robot: changelog file generated [`817fd08`](https://github.com/suitetecsa/sdk-kotlin/commit/817fd08)
@@ -99,6 +100,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update retrofit2 to v2.12.0 [`9d660ae`](https://github.com/suitetecsa/sdk-kotlin/commit/9d660ae)
 - update plugin org.jetbrains.kotlin.plugin.serialization to v2.1.21 [`a2e58d6`](https://github.com/suitetecsa/sdk-kotlin/commit/a2e58d6)
 - update dependency com.google.devtools.ksp to v2.1.21-2.0.1 [`4f58d0f`](https://github.com/suitetecsa/sdk-kotlin/commit/4f58d0f)
 - update plugin org.jetbrains.kotlin.jvm to v2.1.21 [`370231f`](https://github.com/suitetecsa/sdk-kotlin/commit/370231f)
@@ -200,6 +202,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #151 from suitetecsa/renovate/retrofit2 [`4cabf1d`](https://github.com/suitetecsa/sdk-kotlin/commit/4cabf1d)
 - Merge pull request #149 from suitetecsa/renovate/org.jetbrains.kotlin.plugin.serialization-2.x [`d4b6085`](https://github.com/suitetecsa/sdk-kotlin/commit/d4b6085)
 - Merge pull request #150 from suitetecsa/renovate/devtools.ksp [`bfb554b`](https://github.com/suitetecsa/sdk-kotlin/commit/bfb554b)
 - Merge pull request #148 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`3d49c84`](https://github.com/suitetecsa/sdk-kotlin/commit/3d49c84)
