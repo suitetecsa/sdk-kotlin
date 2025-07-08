@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`cd677b8`](https://github.com/suitetecsa/sdk-kotlin/commit/cd677b8)
 - :robot: changelog file generated [`75ef129`](https://github.com/suitetecsa/sdk-kotlin/commit/75ef129)
 - :robot: changelog file generated [`0ddb810`](https://github.com/suitetecsa/sdk-kotlin/commit/0ddb810)
 - :robot: changelog file generated [`1359a4f`](https://github.com/suitetecsa/sdk-kotlin/commit/1359a4f)
@@ -110,6 +111,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update dependency com.squareup.okhttp3:mockwebserver to v5.1.0 [`6937e5a`](https://github.com/suitetecsa/sdk-kotlin/commit/6937e5a)
+- update dependency io.reactivex.rxjava3:rxjava to v3.1.11 [`4ce2ddf`](https://github.com/suitetecsa/sdk-kotlin/commit/4ce2ddf)
 - update dependency gradle to v8.14.3 [`8c52177`](https://github.com/suitetecsa/sdk-kotlin/commit/8c52177)
 - update dependency com.squareup.okhttp3:mockwebserver to v5 [`26993b4`](https://github.com/suitetecsa/sdk-kotlin/commit/26993b4)
 - update github/codeql-action action to v3.29.2 [`f45dee5`](https://github.com/suitetecsa/sdk-kotlin/commit/f45dee5)
@@ -221,6 +223,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #168 from suitetecsa/renovate/rx.java [`e5a6f1a`](https://github.com/suitetecsa/sdk-kotlin/commit/e5a6f1a)
 - Merge pull request #169 from suitetecsa/renovate/mockwebserver [`70bff84`](https://github.com/suitetecsa/sdk-kotlin/commit/70bff84)
 - Merge pull request #159 from suitetecsa/renovate/gradle-8.x [`2d0da0e`](https://github.com/suitetecsa/sdk-kotlin/commit/2d0da0e)
 - Merge pull request #167 from suitetecsa/renovate/major-mockwebserver [`2748f1f`](https://github.com/suitetecsa/sdk-kotlin/commit/2748f1f)
