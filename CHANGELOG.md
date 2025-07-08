@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`75ef129`](https://github.com/suitetecsa/sdk-kotlin/commit/75ef129)
 - :robot: changelog file generated [`0ddb810`](https://github.com/suitetecsa/sdk-kotlin/commit/0ddb810)
 - :robot: changelog file generated [`1359a4f`](https://github.com/suitetecsa/sdk-kotlin/commit/1359a4f)
 - :robot: changelog file generated [`87e4b79`](https://github.com/suitetecsa/sdk-kotlin/commit/87e4b79)
@@ -108,6 +109,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency com.squareup.okhttp3:mockwebserver to v5.1.0 [`6937e5a`](https://github.com/suitetecsa/sdk-kotlin/commit/6937e5a)
 - update dependency gradle to v8.14.3 [`8c52177`](https://github.com/suitetecsa/sdk-kotlin/commit/8c52177)
 - update dependency com.squareup.okhttp3:mockwebserver to v5 [`26993b4`](https://github.com/suitetecsa/sdk-kotlin/commit/26993b4)
 - update github/codeql-action action to v3.29.2 [`f45dee5`](https://github.com/suitetecsa/sdk-kotlin/commit/f45dee5)
@@ -219,6 +221,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #169 from suitetecsa/renovate/mockwebserver [`70bff84`](https://github.com/suitetecsa/sdk-kotlin/commit/70bff84)
 - Merge pull request #159 from suitetecsa/renovate/gradle-8.x [`2d0da0e`](https://github.com/suitetecsa/sdk-kotlin/commit/2d0da0e)
 - Merge pull request #167 from suitetecsa/renovate/major-mockwebserver [`2748f1f`](https://github.com/suitetecsa/sdk-kotlin/commit/2748f1f)
 - Merge pull request #162 from suitetecsa/renovate/github-codeql-action-3.x [`239a728`](https://github.com/suitetecsa/sdk-kotlin/commit/239a728)
