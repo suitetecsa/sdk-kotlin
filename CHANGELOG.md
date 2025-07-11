@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`2d538d2`](https://github.com/suitetecsa/sdk-kotlin/commit/2d538d2)
 - :robot: changelog file generated [`cd677b8`](https://github.com/suitetecsa/sdk-kotlin/commit/cd677b8)
 - :robot: changelog file generated [`75ef129`](https://github.com/suitetecsa/sdk-kotlin/commit/75ef129)
 - :robot: changelog file generated [`0ddb810`](https://github.com/suitetecsa/sdk-kotlin/commit/0ddb810)
@@ -110,6 +111,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency io.mockk:mockk to v1.14.4 [`60dcb4b`](https://github.com/suitetecsa/sdk-kotlin/commit/60dcb4b)
 - update dependency com.squareup.okhttp3:mockwebserver to v5.1.0 [`6937e5a`](https://github.com/suitetecsa/sdk-kotlin/commit/6937e5a)
 - update dependency io.reactivex.rxjava3:rxjava to v3.1.11 [`4ce2ddf`](https://github.com/suitetecsa/sdk-kotlin/commit/4ce2ddf)
 - update dependency gradle to v8.14.3 [`8c52177`](https://github.com/suitetecsa/sdk-kotlin/commit/8c52177)
@@ -223,6 +225,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #163 from suitetecsa/renovate/mockk [`a3c0b06`](https://github.com/suitetecsa/sdk-kotlin/commit/a3c0b06)
 - Merge pull request #168 from suitetecsa/renovate/rx.java [`e5a6f1a`](https://github.com/suitetecsa/sdk-kotlin/commit/e5a6f1a)
 - Merge pull request #169 from suitetecsa/renovate/mockwebserver [`70bff84`](https://github.com/suitetecsa/sdk-kotlin/commit/70bff84)
 - Merge pull request #159 from suitetecsa/renovate/gradle-8.x [`2d0da0e`](https://github.com/suitetecsa/sdk-kotlin/commit/2d0da0e)
