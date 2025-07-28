@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`ca183cc`](https://github.com/suitetecsa/sdk-kotlin/commit/ca183cc)
 - :robot: changelog file generated [`4e280e3`](https://github.com/suitetecsa/sdk-kotlin/commit/4e280e3)
 - :robot: changelog file generated [`76c0688`](https://github.com/suitetecsa/sdk-kotlin/commit/76c0688)
 - :robot: changelog file generated [`2d538d2`](https://github.com/suitetecsa/sdk-kotlin/commit/2d538d2)
@@ -120,6 +121,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update dependency gradle to v8.14.3 [`8c52177`](https://github.com/suitetecsa/sdk-kotlin/commit/8c52177)
 - update dependency com.squareup.okhttp3:mockwebserver to v5 [`26993b4`](https://github.com/suitetecsa/sdk-kotlin/commit/26993b4)
 - update github/codeql-action action to v3.29.2 [`f45dee5`](https://github.com/suitetecsa/sdk-kotlin/commit/f45dee5)
+- update plugin org.jetbrains.kotlin.jvm to v2.2.0 [`e55c584`](https://github.com/suitetecsa/sdk-kotlin/commit/e55c584)
 - update dependency org.jsoup:jsoup to v1.21.1 [`5ed39f8`](https://github.com/suitetecsa/sdk-kotlin/commit/5ed39f8)
 - update github/codeql-action action to v3.28.19 [`f917aa4`](https://github.com/suitetecsa/sdk-kotlin/commit/f917aa4)
 - update retrofit2 to v3 [`babd672`](https://github.com/suitetecsa/sdk-kotlin/commit/babd672)
@@ -229,6 +231,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #165 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`63be76e`](https://github.com/suitetecsa/sdk-kotlin/commit/63be76e)
 - Merge pull request #164 from suitetecsa/renovate/jsoup [`d4fb2b1`](https://github.com/suitetecsa/sdk-kotlin/commit/d4fb2b1)
 - Merge pull request #161 from suitetecsa/renovate/gradle-actions-4.x [`3e3d724`](https://github.com/suitetecsa/sdk-kotlin/commit/3e3d724)
 - Merge pull request #163 from suitetecsa/renovate/mockk [`a3c0b06`](https://github.com/suitetecsa/sdk-kotlin/commit/a3c0b06)
