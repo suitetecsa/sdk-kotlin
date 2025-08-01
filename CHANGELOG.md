@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`48291c8`](https://github.com/suitetecsa/sdk-kotlin/commit/48291c8)
 - :robot: changelog file generated [`46d0284`](https://github.com/suitetecsa/sdk-kotlin/commit/46d0284)
 - :robot: changelog file generated [`d1fac60`](https://github.com/suitetecsa/sdk-kotlin/commit/d1fac60)
 - :robot: changelog file generated [`ca183cc`](https://github.com/suitetecsa/sdk-kotlin/commit/ca183cc)
@@ -117,6 +118,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update dependency org.mockito.kotlin:mockito-kotlin to v6 [`97e69d6`](https://github.com/suitetecsa/sdk-kotlin/commit/97e69d6)
+- update github/codeql-action action to v3.29.5 [`318d91e`](https://github.com/suitetecsa/sdk-kotlin/commit/318d91e)
 - update gradle/actions action to v4.4.1 [`fd11387`](https://github.com/suitetecsa/sdk-kotlin/commit/fd11387)
 - update dependency io.mockk:mockk to v1.14.5 [`d459915`](https://github.com/suitetecsa/sdk-kotlin/commit/d459915)
 - update dependency io.mockk:mockk to v1.14.4 [`60dcb4b`](https://github.com/suitetecsa/sdk-kotlin/commit/60dcb4b)
@@ -235,6 +237,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #172 from suitetecsa/renovate/github-codeql-action-3.x [`473aba2`](https://github.com/suitetecsa/sdk-kotlin/commit/473aba2)
 - Merge pull request #171 from suitetecsa/renovate/major-mockito.kotlin [`426b2ef`](https://github.com/suitetecsa/sdk-kotlin/commit/426b2ef)
 - Merge pull request #170 from suitetecsa/renovate/mockk [`2ef34a6`](https://github.com/suitetecsa/sdk-kotlin/commit/2ef34a6)
 - Merge pull request #165 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`63be76e`](https://github.com/suitetecsa/sdk-kotlin/commit/63be76e)
