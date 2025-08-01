@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`d1fac60`](https://github.com/suitetecsa/sdk-kotlin/commit/d1fac60)
 - :robot: changelog file generated [`ca183cc`](https://github.com/suitetecsa/sdk-kotlin/commit/ca183cc)
 - :robot: changelog file generated [`4e280e3`](https://github.com/suitetecsa/sdk-kotlin/commit/4e280e3)
 - :robot: changelog file generated [`76c0688`](https://github.com/suitetecsa/sdk-kotlin/commit/76c0688)
@@ -115,6 +116,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update gradle/actions action to v4.4.1 [`fd11387`](https://github.com/suitetecsa/sdk-kotlin/commit/fd11387)
+- update dependency io.mockk:mockk to v1.14.5 [`d459915`](https://github.com/suitetecsa/sdk-kotlin/commit/d459915)
 - update dependency io.mockk:mockk to v1.14.4 [`60dcb4b`](https://github.com/suitetecsa/sdk-kotlin/commit/60dcb4b)
 - update dependency com.squareup.okhttp3:mockwebserver to v5.1.0 [`6937e5a`](https://github.com/suitetecsa/sdk-kotlin/commit/6937e5a)
 - update dependency io.reactivex.rxjava3:rxjava to v3.1.11 [`4ce2ddf`](https://github.com/suitetecsa/sdk-kotlin/commit/4ce2ddf)
@@ -231,6 +233,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #170 from suitetecsa/renovate/mockk [`2ef34a6`](https://github.com/suitetecsa/sdk-kotlin/commit/2ef34a6)
 - Merge pull request #165 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`63be76e`](https://github.com/suitetecsa/sdk-kotlin/commit/63be76e)
 - Merge pull request #164 from suitetecsa/renovate/jsoup [`d4fb2b1`](https://github.com/suitetecsa/sdk-kotlin/commit/d4fb2b1)
 - Merge pull request #161 from suitetecsa/renovate/gradle-actions-4.x [`3e3d724`](https://github.com/suitetecsa/sdk-kotlin/commit/3e3d724)
