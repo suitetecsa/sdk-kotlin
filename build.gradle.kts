@@ -6,7 +6,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "2.2.0"
-    kotlin("plugin.serialization") version "2.1.21"
+    kotlin("plugin.serialization") version "2.2.10"
     alias(libs.plugins.detekt)
     alias(libs.plugins.sonatype.central.upload)
     alias(libs.plugins.devtools.ksp)
