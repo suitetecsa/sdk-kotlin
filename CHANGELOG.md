@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`411a49e`](https://github.com/suitetecsa/sdk-kotlin/commit/411a49e)
 - :robot: changelog file generated [`d343df5`](https://github.com/suitetecsa/sdk-kotlin/commit/d343df5)
 - :robot: changelog file generated [`da35b28`](https://github.com/suitetecsa/sdk-kotlin/commit/da35b28)
 - :robot: changelog file generated [`c17b0b7`](https://github.com/suitetecsa/sdk-kotlin/commit/c17b0b7)
@@ -120,6 +121,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update github/codeql-action action to v3.29.10 [`a3c992f`](https://github.com/suitetecsa/sdk-kotlin/commit/a3c992f)
 - update dependency com.google.devtools.ksp to v2.2.10-2.0.2 [`5753573`](https://github.com/suitetecsa/sdk-kotlin/commit/5753573)
 - update plugin org.jetbrains.kotlin.plugin.serialization to v2.2.10 [`67cf3a4`](https://github.com/suitetecsa/sdk-kotlin/commit/67cf3a4)
 - update gradle/actions action to v4.4.2 [`734748d`](https://github.com/suitetecsa/sdk-kotlin/commit/734748d)
@@ -243,6 +245,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #175 from suitetecsa/renovate/github-codeql-action-3.x [`13bd9db`](https://github.com/suitetecsa/sdk-kotlin/commit/13bd9db)
 - Merge pull request #174 from suitetecsa/renovate/gradle-actions-4.x [`63dc891`](https://github.com/suitetecsa/sdk-kotlin/commit/63dc891)
 - Merge pull request #166 from suitetecsa/renovate/org.jetbrains.kotlin.plugin.serialization-2.x [`061a7ee`](https://github.com/suitetecsa/sdk-kotlin/commit/061a7ee)
 - Merge pull request #160 from suitetecsa/renovate/devtools.ksp [`0b6b55d`](https://github.com/suitetecsa/sdk-kotlin/commit/0b6b55d)
