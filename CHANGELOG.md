@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`0c9dd71`](https://github.com/suitetecsa/sdk-kotlin/commit/0c9dd71)
 - :robot: changelog file generated [`2f760d1`](https://github.com/suitetecsa/sdk-kotlin/commit/2f760d1)
 - :robot: changelog file generated [`09b4439`](https://github.com/suitetecsa/sdk-kotlin/commit/09b4439)
 - :robot: changelog file generated [`b197ccc`](https://github.com/suitetecsa/sdk-kotlin/commit/b197ccc)
@@ -125,6 +126,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update github/codeql-action action to v3.33.0 [`f7092b9`](https://github.com/suitetecsa/sdk-kotlin/commit/f7092b9)
 - update actions/setup-java action to v5 [`9c425f2`](https://github.com/suitetecsa/sdk-kotlin/commit/9c425f2)
 - update plugin org.jetbrains.kotlin.jvm to v2.2.10 [`fbc982f`](https://github.com/suitetecsa/sdk-kotlin/commit/fbc982f)
 - update github/codeql-action action to v3.29.10 [`a3c992f`](https://github.com/suitetecsa/sdk-kotlin/commit/a3c992f)
@@ -253,6 +255,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #181 from suitetecsa/renovate/github-codeql-action-3.x [`87b57a4`](https://github.com/suitetecsa/sdk-kotlin/commit/87b57a4)
 - Merge pull request #180 from suitetecsa/renovate/actions-setup-java-5.x [`1561755`](https://github.com/suitetecsa/sdk-kotlin/commit/1561755)
 - Merge pull request #178 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`82de9ea`](https://github.com/suitetecsa/sdk-kotlin/commit/82de9ea)
 - Merge pull request #179 from suitetecsa/renovate/mockito.core [`cd03ba4`](https://github.com/suitetecsa/sdk-kotlin/commit/cd03ba4)
