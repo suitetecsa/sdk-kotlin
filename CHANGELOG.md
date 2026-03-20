@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`36a4242`](https://github.com/suitetecsa/sdk-kotlin/commit/36a4242)
 - :robot: changelog file generated [`0f306ca`](https://github.com/suitetecsa/sdk-kotlin/commit/0f306ca)
 - :robot: changelog file generated [`d6ec3d1`](https://github.com/suitetecsa/sdk-kotlin/commit/d6ec3d1)
 - :robot: changelog file generated [`0c9dd71`](https://github.com/suitetecsa/sdk-kotlin/commit/0c9dd71)
@@ -129,8 +130,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update plugin org.jetbrains.kotlin.plugin.serialization to v2.3.20 [`68c7732`](https://github.com/suitetecsa/sdk-kotlin/commit/68c7732)
+- update actions/checkout action to v5.0.1 [`05024b1`](https://github.com/suitetecsa/sdk-kotlin/commit/05024b1)
 - update github/codeql-action action to v3.33.0 [`f7092b9`](https://github.com/suitetecsa/sdk-kotlin/commit/f7092b9)
 - update plugin org.jetbrains.kotlin.jvm to v2.3.20 [`d07b962`](https://github.com/suitetecsa/sdk-kotlin/commit/d07b962)
+- update dependency com.google.devtools.ksp to v2.3.6 [`1958d3b`](https://github.com/suitetecsa/sdk-kotlin/commit/1958d3b)
 - update actions/setup-java action to v5 [`9c425f2`](https://github.com/suitetecsa/sdk-kotlin/commit/9c425f2)
 - update dependency org.jsoup:jsoup to v1.22.1 [`5bf7fee`](https://github.com/suitetecsa/sdk-kotlin/commit/5bf7fee)
 - update gradle/actions action to v4.4.4 [`426f4c4`](https://github.com/suitetecsa/sdk-kotlin/commit/426f4c4)
@@ -261,6 +264,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #188 from suitetecsa/renovate/actions-checkout-5.x [`3b6ae8c`](https://github.com/suitetecsa/sdk-kotlin/commit/3b6ae8c)
+- Merge pull request #186 from suitetecsa/renovate/devtools.ksp [`ffb01c8`](https://github.com/suitetecsa/sdk-kotlin/commit/ffb01c8)
 - Merge pull request #185 from suitetecsa/renovate/org.jetbrains.kotlin.plugin.serialization-2.x [`def3aaf`](https://github.com/suitetecsa/sdk-kotlin/commit/def3aaf)
 - Merge pull request #184 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`afec8b7`](https://github.com/suitetecsa/sdk-kotlin/commit/afec8b7)
 - Merge pull request #183 from suitetecsa/renovate/gradle-actions-4.x [`d85c2a9`](https://github.com/suitetecsa/sdk-kotlin/commit/d85c2a9)
