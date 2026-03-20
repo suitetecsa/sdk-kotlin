@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`75aa533`](https://github.com/suitetecsa/sdk-kotlin/commit/75aa533)
 - :robot: changelog file generated [`36a4242`](https://github.com/suitetecsa/sdk-kotlin/commit/36a4242)
 - :robot: changelog file generated [`0f306ca`](https://github.com/suitetecsa/sdk-kotlin/commit/0f306ca)
 - :robot: changelog file generated [`d6ec3d1`](https://github.com/suitetecsa/sdk-kotlin/commit/d6ec3d1)
@@ -130,6 +131,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update plugin org.jetbrains.kotlin.plugin.serialization to v2.3.20 [`68c7732`](https://github.com/suitetecsa/sdk-kotlin/commit/68c7732)
+- update dependency com.google.code.gson:gson to v2.13.2 [`39bda34`](https://github.com/suitetecsa/sdk-kotlin/commit/39bda34)
+- update agenthunt/conventional-commit-checker-action action to v2.0.1 [`f8bb31c`](https://github.com/suitetecsa/sdk-kotlin/commit/f8bb31c)
 - update actions/checkout action to v5.0.1 [`05024b1`](https://github.com/suitetecsa/sdk-kotlin/commit/05024b1)
 - update github/codeql-action action to v3.33.0 [`f7092b9`](https://github.com/suitetecsa/sdk-kotlin/commit/f7092b9)
 - update plugin org.jetbrains.kotlin.jvm to v2.3.20 [`d07b962`](https://github.com/suitetecsa/sdk-kotlin/commit/d07b962)
@@ -264,6 +267,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #187 from suitetecsa/renovate/gson [`95d7c90`](https://github.com/suitetecsa/sdk-kotlin/commit/95d7c90)
+- Merge pull request #189 from suitetecsa/renovate/agenthunt-conventional-commit-checker-action-2.x [`240027f`](https://github.com/suitetecsa/sdk-kotlin/commit/240027f)
 - Merge pull request #188 from suitetecsa/renovate/actions-checkout-5.x [`3b6ae8c`](https://github.com/suitetecsa/sdk-kotlin/commit/3b6ae8c)
 - Merge pull request #186 from suitetecsa/renovate/devtools.ksp [`ffb01c8`](https://github.com/suitetecsa/sdk-kotlin/commit/ffb01c8)
 - Merge pull request #185 from suitetecsa/renovate/org.jetbrains.kotlin.plugin.serialization-2.x [`def3aaf`](https://github.com/suitetecsa/sdk-kotlin/commit/def3aaf)
