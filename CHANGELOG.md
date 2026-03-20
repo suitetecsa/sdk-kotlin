@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`0f306ca`](https://github.com/suitetecsa/sdk-kotlin/commit/0f306ca)
 - :robot: changelog file generated [`d6ec3d1`](https://github.com/suitetecsa/sdk-kotlin/commit/d6ec3d1)
 - :robot: changelog file generated [`0c9dd71`](https://github.com/suitetecsa/sdk-kotlin/commit/0c9dd71)
 - :robot: changelog file generated [`2f760d1`](https://github.com/suitetecsa/sdk-kotlin/commit/2f760d1)
@@ -127,6 +128,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update plugin org.jetbrains.kotlin.plugin.serialization to v2.3.20 [`68c7732`](https://github.com/suitetecsa/sdk-kotlin/commit/68c7732)
 - update github/codeql-action action to v3.33.0 [`f7092b9`](https://github.com/suitetecsa/sdk-kotlin/commit/f7092b9)
 - update plugin org.jetbrains.kotlin.jvm to v2.3.20 [`d07b962`](https://github.com/suitetecsa/sdk-kotlin/commit/d07b962)
 - update actions/setup-java action to v5 [`9c425f2`](https://github.com/suitetecsa/sdk-kotlin/commit/9c425f2)
@@ -259,6 +261,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #185 from suitetecsa/renovate/org.jetbrains.kotlin.plugin.serialization-2.x [`def3aaf`](https://github.com/suitetecsa/sdk-kotlin/commit/def3aaf)
 - Merge pull request #184 from suitetecsa/renovate/org.jetbrains.kotlin.jvm-2.x [`afec8b7`](https://github.com/suitetecsa/sdk-kotlin/commit/afec8b7)
 - Merge pull request #183 from suitetecsa/renovate/gradle-actions-4.x [`d85c2a9`](https://github.com/suitetecsa/sdk-kotlin/commit/d85c2a9)
 - Merge pull request #182 from suitetecsa/renovate/jsoup [`327029a`](https://github.com/suitetecsa/sdk-kotlin/commit/327029a)
