@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`83165af`](https://github.com/suitetecsa/sdk-kotlin/commit/83165af)
 - :robot: changelog file generated [`ac42a71`](https://github.com/suitetecsa/sdk-kotlin/commit/ac42a71)
 - :robot: changelog file generated [`224be76`](https://github.com/suitetecsa/sdk-kotlin/commit/224be76)
 - :robot: changelog file generated [`668f984`](https://github.com/suitetecsa/sdk-kotlin/commit/668f984)
@@ -135,6 +136,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update plugin org.gradle.toolchains.foojay-resolver-convention to v1 [`5588ec1`](https://github.com/suitetecsa/sdk-kotlin/commit/5588ec1)
 - update dependency org.mockito.kotlin:mockito-kotlin to v6.3.0 [`5689623`](https://github.com/suitetecsa/sdk-kotlin/commit/5689623)
 - update dependency gradle to v9 [`9b93942`](https://github.com/suitetecsa/sdk-kotlin/commit/9b93942)
 - update styfle/cancel-workflow-action action to v0.13.1 [`a14e65a`](https://github.com/suitetecsa/sdk-kotlin/commit/a14e65a)
@@ -283,6 +285,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #155 from suitetecsa/renovate/org.gradle.toolchains.foojay-resolver-convention-1.x [`6213d0f`](https://github.com/suitetecsa/sdk-kotlin/commit/6213d0f)
 - Merge pull request #173 from suitetecsa/renovate/gradle-9.x [`89fdadd`](https://github.com/suitetecsa/sdk-kotlin/commit/89fdadd)
 - Update sdk-ci.yaml to fix Java toolchain issue [`3e88a86`](https://github.com/suitetecsa/sdk-kotlin/commit/3e88a86)
 - Merge pull request #197 from suitetecsa/renovate/mockito.kotlin [`81b75c7`](https://github.com/suitetecsa/sdk-kotlin/commit/81b75c7)
