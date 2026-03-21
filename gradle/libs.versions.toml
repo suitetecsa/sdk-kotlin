@@ -2,7 +2,7 @@
 detekt = "1.23.8"
 jsoup = "1.22.1"
 gson = "2.13.2"
-mockito-core = "5.19.0"
+mockito-core = "5.23.0"
 mockito-kotlin = "6.0.0"
 mockk = "1.14.9"
 rx-java = "3.1.11"
