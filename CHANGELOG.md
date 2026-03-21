@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`734045e`](https://github.com/suitetecsa/sdk-kotlin/commit/734045e)
 - :robot: changelog file generated [`4138eb9`](https://github.com/suitetecsa/sdk-kotlin/commit/4138eb9)
 - :robot: changelog file generated [`75aa533`](https://github.com/suitetecsa/sdk-kotlin/commit/75aa533)
 - :robot: changelog file generated [`36a4242`](https://github.com/suitetecsa/sdk-kotlin/commit/36a4242)
@@ -131,6 +132,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency org.mockito:mockito-core to v5.23.0 [`b75f690`](https://github.com/suitetecsa/sdk-kotlin/commit/b75f690)
+- update dependency com.squareup.okhttp3:mockwebserver to v5.3.2 [`dd41e84`](https://github.com/suitetecsa/sdk-kotlin/commit/dd41e84)
+- update smichard/conventional_changelog action to v2.0.11 [`0c9a5e3`](https://github.com/suitetecsa/sdk-kotlin/commit/0c9a5e3)
 - update dependency io.mockk:mockk to v1.14.9 [`1e997a6`](https://github.com/suitetecsa/sdk-kotlin/commit/1e997a6)
 - update dependency gradle to v8.14.4 [`922a551`](https://github.com/suitetecsa/sdk-kotlin/commit/922a551)
 - update dependency com.auth0:java-jwt to v4.5.1 [`864acb3`](https://github.com/suitetecsa/sdk-kotlin/commit/864acb3)
@@ -271,6 +275,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #196 from suitetecsa/renovate/mockito.core [`b505143`](https://github.com/suitetecsa/sdk-kotlin/commit/b505143)
+- Merge pull request #195 from suitetecsa/renovate/mockwebserver [`4f736b9`](https://github.com/suitetecsa/sdk-kotlin/commit/4f736b9)
+- Merge pull request #194 from suitetecsa/renovate/smichard-conventional_changelog-2.x [`5ef6c1d`](https://github.com/suitetecsa/sdk-kotlin/commit/5ef6c1d)
 - Merge pull request #192 from suitetecsa/renovate/mockk [`f30d488`](https://github.com/suitetecsa/sdk-kotlin/commit/f30d488)
 - Merge pull request #191 from suitetecsa/renovate/gradle-8.x [`e35466c`](https://github.com/suitetecsa/sdk-kotlin/commit/e35466c)
 - Merge pull request #190 from suitetecsa/renovate/java.jwt [`c49c40d`](https://github.com/suitetecsa/sdk-kotlin/commit/c49c40d)
