@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`4138eb9`](https://github.com/suitetecsa/sdk-kotlin/commit/4138eb9)
 - :robot: changelog file generated [`75aa533`](https://github.com/suitetecsa/sdk-kotlin/commit/75aa533)
 - :robot: changelog file generated [`36a4242`](https://github.com/suitetecsa/sdk-kotlin/commit/36a4242)
 - :robot: changelog file generated [`0f306ca`](https://github.com/suitetecsa/sdk-kotlin/commit/0f306ca)
@@ -130,6 +131,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update dependency io.mockk:mockk to v1.14.9 [`1e997a6`](https://github.com/suitetecsa/sdk-kotlin/commit/1e997a6)
+- update dependency gradle to v8.14.4 [`922a551`](https://github.com/suitetecsa/sdk-kotlin/commit/922a551)
+- update dependency com.auth0:java-jwt to v4.5.1 [`864acb3`](https://github.com/suitetecsa/sdk-kotlin/commit/864acb3)
 - update plugin org.jetbrains.kotlin.plugin.serialization to v2.3.20 [`68c7732`](https://github.com/suitetecsa/sdk-kotlin/commit/68c7732)
 - update dependency com.google.code.gson:gson to v2.13.2 [`39bda34`](https://github.com/suitetecsa/sdk-kotlin/commit/39bda34)
 - update agenthunt/conventional-commit-checker-action action to v2.0.1 [`f8bb31c`](https://github.com/suitetecsa/sdk-kotlin/commit/f8bb31c)
@@ -267,6 +271,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #192 from suitetecsa/renovate/mockk [`f30d488`](https://github.com/suitetecsa/sdk-kotlin/commit/f30d488)
+- Merge pull request #191 from suitetecsa/renovate/gradle-8.x [`e35466c`](https://github.com/suitetecsa/sdk-kotlin/commit/e35466c)
+- Merge pull request #190 from suitetecsa/renovate/java.jwt [`c49c40d`](https://github.com/suitetecsa/sdk-kotlin/commit/c49c40d)
 - Merge pull request #187 from suitetecsa/renovate/gson [`95d7c90`](https://github.com/suitetecsa/sdk-kotlin/commit/95d7c90)
 - Merge pull request #189 from suitetecsa/renovate/agenthunt-conventional-commit-checker-action-2.x [`240027f`](https://github.com/suitetecsa/sdk-kotlin/commit/240027f)
 - Merge pull request #188 from suitetecsa/renovate/actions-checkout-5.x [`3b6ae8c`](https://github.com/suitetecsa/sdk-kotlin/commit/3b6ae8c)
