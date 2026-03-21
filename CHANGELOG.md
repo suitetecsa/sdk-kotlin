@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`ac42a71`](https://github.com/suitetecsa/sdk-kotlin/commit/ac42a71)
 - :robot: changelog file generated [`224be76`](https://github.com/suitetecsa/sdk-kotlin/commit/224be76)
 - :robot: changelog file generated [`668f984`](https://github.com/suitetecsa/sdk-kotlin/commit/668f984)
 - :robot: changelog file generated [`734045e`](https://github.com/suitetecsa/sdk-kotlin/commit/734045e)
@@ -135,6 +136,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update dependency org.mockito.kotlin:mockito-kotlin to v6.3.0 [`5689623`](https://github.com/suitetecsa/sdk-kotlin/commit/5689623)
+- update dependency gradle to v9 [`9b93942`](https://github.com/suitetecsa/sdk-kotlin/commit/9b93942)
 - update styfle/cancel-workflow-action action to v0.13.1 [`a14e65a`](https://github.com/suitetecsa/sdk-kotlin/commit/a14e65a)
 - update dependency io.reactivex.rxjava3:rxjava to v3.1.12 [`49e5fbc`](https://github.com/suitetecsa/sdk-kotlin/commit/49e5fbc)
 - update github/codeql-action action to v3.34.1 [`c3af0cd`](https://github.com/suitetecsa/sdk-kotlin/commit/c3af0cd)
@@ -281,6 +283,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #173 from suitetecsa/renovate/gradle-9.x [`89fdadd`](https://github.com/suitetecsa/sdk-kotlin/commit/89fdadd)
+- Update sdk-ci.yaml to fix Java toolchain issue [`3e88a86`](https://github.com/suitetecsa/sdk-kotlin/commit/3e88a86)
 - Merge pull request #197 from suitetecsa/renovate/mockito.kotlin [`81b75c7`](https://github.com/suitetecsa/sdk-kotlin/commit/81b75c7)
 - Merge pull request #199 from suitetecsa/renovate/styfle-cancel-workflow-action-0.x [`9964068`](https://github.com/suitetecsa/sdk-kotlin/commit/9964068)
 - Merge pull request #198 from suitetecsa/renovate/github-codeql-action-3.x [`60a2807`](https://github.com/suitetecsa/sdk-kotlin/commit/60a2807)
