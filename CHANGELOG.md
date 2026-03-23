@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`194b6a9`](https://github.com/suitetecsa/sdk-kotlin/commit/194b6a9)
 - :robot: changelog file generated [`4b8ae7b`](https://github.com/suitetecsa/sdk-kotlin/commit/4b8ae7b)
 - :robot: changelog file generated [`83165af`](https://github.com/suitetecsa/sdk-kotlin/commit/83165af)
 - :robot: changelog file generated [`ac42a71`](https://github.com/suitetecsa/sdk-kotlin/commit/ac42a71)
@@ -137,6 +138,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update gradle/actions action to v5 [`3179889`](https://github.com/suitetecsa/sdk-kotlin/commit/3179889)
+- update github/codeql-action action to v4 [`5ab1d43`](https://github.com/suitetecsa/sdk-kotlin/commit/5ab1d43)
 - update actions/checkout action to v6 [`e7470b5`](https://github.com/suitetecsa/sdk-kotlin/commit/e7470b5)
 - update plugin org.gradle.toolchains.foojay-resolver-convention to v1 [`5588ec1`](https://github.com/suitetecsa/sdk-kotlin/commit/5588ec1)
 - update dependency org.mockito.kotlin:mockito-kotlin to v6.3.0 [`5689623`](https://github.com/suitetecsa/sdk-kotlin/commit/5689623)
@@ -287,6 +290,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #202 from suitetecsa/renovate/gradle-actions-5.x [`fc628af`](https://github.com/suitetecsa/sdk-kotlin/commit/fc628af)
+- Merge pull request #201 from suitetecsa/renovate/github-codeql-action-4.x [`f7e7d7e`](https://github.com/suitetecsa/sdk-kotlin/commit/f7e7d7e)
 - Merge pull request #200 from suitetecsa/renovate/actions-checkout-6.x [`df43aff`](https://github.com/suitetecsa/sdk-kotlin/commit/df43aff)
 - Merge pull request #155 from suitetecsa/renovate/org.gradle.toolchains.foojay-resolver-convention-1.x [`6213d0f`](https://github.com/suitetecsa/sdk-kotlin/commit/6213d0f)
 - Merge pull request #173 from suitetecsa/renovate/gradle-9.x [`89fdadd`](https://github.com/suitetecsa/sdk-kotlin/commit/89fdadd)
