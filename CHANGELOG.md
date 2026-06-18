@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`9190136`](https://github.com/suitetecsa/sdk-kotlin/commit/9190136)
 - :robot: changelog file generated [`12deecd`](https://github.com/suitetecsa/sdk-kotlin/commit/12deecd)
 - :robot: changelog file generated [`eec08ed`](https://github.com/suitetecsa/sdk-kotlin/commit/eec08ed)
 - :robot: changelog file generated [`c51e3fc`](https://github.com/suitetecsa/sdk-kotlin/commit/c51e3fc)
@@ -147,6 +148,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update gson to v2.14.0 [`afd57da`](https://github.com/suitetecsa/sdk-kotlin/commit/afd57da)
 - update actions/setup-java action to v5.3.0 [`3d18b6f`](https://github.com/suitetecsa/sdk-kotlin/commit/3d18b6f)
 - update actions/checkout action to v6.0.3 [`08726c0`](https://github.com/suitetecsa/sdk-kotlin/commit/08726c0)
 - update github/codeql-action action to v4.36.2 [`4013c2c`](https://github.com/suitetecsa/sdk-kotlin/commit/4013c2c)
@@ -312,6 +314,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #212 from suitetecsa/renovate/gson [`471a37c`](https://github.com/suitetecsa/sdk-kotlin/commit/471a37c)
 - Merge pull request #214 from suitetecsa/renovate/java.jwt [`a3aa6c3`](https://github.com/suitetecsa/sdk-kotlin/commit/a3aa6c3)
 - Merge pull request #215 from suitetecsa/renovate/kotlinx.coroutines.test [`b971fde`](https://github.com/suitetecsa/sdk-kotlin/commit/b971fde)
 - Merge pull request #217 from suitetecsa/renovate/actions-checkout-6.x [`a547beb`](https://github.com/suitetecsa/sdk-kotlin/commit/a547beb)
