@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`c51e3fc`](https://github.com/suitetecsa/sdk-kotlin/commit/c51e3fc)
 - :robot: changelog file generated [`c419926`](https://github.com/suitetecsa/sdk-kotlin/commit/c419926)
 - :robot: changelog file generated [`e7a6a0d`](https://github.com/suitetecsa/sdk-kotlin/commit/e7a6a0d)
 - :robot: changelog file generated [`b0b77c2`](https://github.com/suitetecsa/sdk-kotlin/commit/b0b77c2)
@@ -146,6 +147,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Chore
 - update github/codeql-action action to v4.36.2 [`4013c2c`](https://github.com/suitetecsa/sdk-kotlin/commit/4013c2c)
 - update dependency com.google.devtools.ksp to v2.3.9 [`aa301ac`](https://github.com/suitetecsa/sdk-kotlin/commit/aa301ac)
+- update dependency gradle to v9.5.1 [`cacc4ea`](https://github.com/suitetecsa/sdk-kotlin/commit/cacc4ea)
 - update dependency org.jsoup:jsoup to v1.22.2 [`59a0ebb`](https://github.com/suitetecsa/sdk-kotlin/commit/59a0ebb)
 - update gradle/actions action to v6.1.0 [`c73c81c`](https://github.com/suitetecsa/sdk-kotlin/commit/c73c81c)
 - update github/codeql-action action to v4.35.1 [`c7aef82`](https://github.com/suitetecsa/sdk-kotlin/commit/c7aef82)
@@ -303,6 +305,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #213 from suitetecsa/renovate/gradle-9.x [`b01d7a9`](https://github.com/suitetecsa/sdk-kotlin/commit/b01d7a9)
 - Merge pull request #209 from suitetecsa/renovate/devtools.ksp [`fd55297`](https://github.com/suitetecsa/sdk-kotlin/commit/fd55297)
 - Merge pull request #208 from suitetecsa/renovate/jsoup [`00a234f`](https://github.com/suitetecsa/sdk-kotlin/commit/00a234f)
 - Merge pull request #207 from suitetecsa/renovate/github-codeql-action-4.x [`653d6bb`](https://github.com/suitetecsa/sdk-kotlin/commit/653d6bb)
