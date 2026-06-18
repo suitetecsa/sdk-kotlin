@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`12deecd`](https://github.com/suitetecsa/sdk-kotlin/commit/12deecd)
 - :robot: changelog file generated [`eec08ed`](https://github.com/suitetecsa/sdk-kotlin/commit/eec08ed)
 - :robot: changelog file generated [`c51e3fc`](https://github.com/suitetecsa/sdk-kotlin/commit/c51e3fc)
 - :robot: changelog file generated [`c419926`](https://github.com/suitetecsa/sdk-kotlin/commit/c419926)
@@ -147,10 +148,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Chore
 - update actions/setup-java action to v5.3.0 [`3d18b6f`](https://github.com/suitetecsa/sdk-kotlin/commit/3d18b6f)
+- update actions/checkout action to v6.0.3 [`08726c0`](https://github.com/suitetecsa/sdk-kotlin/commit/08726c0)
 - update github/codeql-action action to v4.36.2 [`4013c2c`](https://github.com/suitetecsa/sdk-kotlin/commit/4013c2c)
 - update dependency io.mockk:mockk to v1.14.11 [`d8b1767`](https://github.com/suitetecsa/sdk-kotlin/commit/d8b1767)
 - update dependency com.google.devtools.ksp to v2.3.9 [`aa301ac`](https://github.com/suitetecsa/sdk-kotlin/commit/aa301ac)
 - update dependency gradle to v9.5.1 [`cacc4ea`](https://github.com/suitetecsa/sdk-kotlin/commit/cacc4ea)
+- update dependency org.jetbrains.kotlinx:kotlinx-coroutines-test to v1.11.0 [`91ff00c`](https://github.com/suitetecsa/sdk-kotlin/commit/91ff00c)
+- update dependency com.auth0:java-jwt to v4.5.2 [`1f26b48`](https://github.com/suitetecsa/sdk-kotlin/commit/1f26b48)
 - update dependency org.jsoup:jsoup to v1.22.2 [`59a0ebb`](https://github.com/suitetecsa/sdk-kotlin/commit/59a0ebb)
 - update gradle/actions action to v6.1.0 [`c73c81c`](https://github.com/suitetecsa/sdk-kotlin/commit/c73c81c)
 - update github/codeql-action action to v4.35.1 [`c7aef82`](https://github.com/suitetecsa/sdk-kotlin/commit/c7aef82)
@@ -308,6 +312,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #214 from suitetecsa/renovate/java.jwt [`a3aa6c3`](https://github.com/suitetecsa/sdk-kotlin/commit/a3aa6c3)
+- Merge pull request #215 from suitetecsa/renovate/kotlinx.coroutines.test [`b971fde`](https://github.com/suitetecsa/sdk-kotlin/commit/b971fde)
+- Merge pull request #217 from suitetecsa/renovate/actions-checkout-6.x [`a547beb`](https://github.com/suitetecsa/sdk-kotlin/commit/a547beb)
 - Merge pull request #218 from suitetecsa/renovate/actions-setup-java-5.x [`e351943`](https://github.com/suitetecsa/sdk-kotlin/commit/e351943)
 - Merge pull request #216 from suitetecsa/renovate/mockk [`5b08333`](https://github.com/suitetecsa/sdk-kotlin/commit/5b08333)
 - Merge pull request #213 from suitetecsa/renovate/gradle-9.x [`b01d7a9`](https://github.com/suitetecsa/sdk-kotlin/commit/b01d7a9)
