@@ -1,6 +1,6 @@
 [versions]
 detekt = "1.23.8"
-jsoup = "1.22.1"
+jsoup = "1.22.2"
 gson = "2.13.2"
 mockito-core = "5.23.0"
 mockito-kotlin = "6.3.0"
