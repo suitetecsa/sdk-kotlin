@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`eec08ed`](https://github.com/suitetecsa/sdk-kotlin/commit/eec08ed)
 - :robot: changelog file generated [`c51e3fc`](https://github.com/suitetecsa/sdk-kotlin/commit/c51e3fc)
 - :robot: changelog file generated [`c419926`](https://github.com/suitetecsa/sdk-kotlin/commit/c419926)
 - :robot: changelog file generated [`e7a6a0d`](https://github.com/suitetecsa/sdk-kotlin/commit/e7a6a0d)
@@ -145,7 +146,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update actions/setup-java action to v5.3.0 [`3d18b6f`](https://github.com/suitetecsa/sdk-kotlin/commit/3d18b6f)
 - update github/codeql-action action to v4.36.2 [`4013c2c`](https://github.com/suitetecsa/sdk-kotlin/commit/4013c2c)
+- update dependency io.mockk:mockk to v1.14.11 [`d8b1767`](https://github.com/suitetecsa/sdk-kotlin/commit/d8b1767)
 - update dependency com.google.devtools.ksp to v2.3.9 [`aa301ac`](https://github.com/suitetecsa/sdk-kotlin/commit/aa301ac)
 - update dependency gradle to v9.5.1 [`cacc4ea`](https://github.com/suitetecsa/sdk-kotlin/commit/cacc4ea)
 - update dependency org.jsoup:jsoup to v1.22.2 [`59a0ebb`](https://github.com/suitetecsa/sdk-kotlin/commit/59a0ebb)
@@ -305,6 +308,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #218 from suitetecsa/renovate/actions-setup-java-5.x [`e351943`](https://github.com/suitetecsa/sdk-kotlin/commit/e351943)
+- Merge pull request #216 from suitetecsa/renovate/mockk [`5b08333`](https://github.com/suitetecsa/sdk-kotlin/commit/5b08333)
 - Merge pull request #213 from suitetecsa/renovate/gradle-9.x [`b01d7a9`](https://github.com/suitetecsa/sdk-kotlin/commit/b01d7a9)
 - Merge pull request #209 from suitetecsa/renovate/devtools.ksp [`fd55297`](https://github.com/suitetecsa/sdk-kotlin/commit/fd55297)
 - Merge pull request #208 from suitetecsa/renovate/jsoup [`00a234f`](https://github.com/suitetecsa/sdk-kotlin/commit/00a234f)
