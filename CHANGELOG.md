@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - add generate_changelog [`970c0bd`](https://github.com/suitetecsa/sdk-kotlin/commit/970c0bd)
 
 ### Documentation
+- :robot: changelog file generated [`211269a`](https://github.com/suitetecsa/sdk-kotlin/commit/211269a)
 - :robot: changelog file generated [`9190136`](https://github.com/suitetecsa/sdk-kotlin/commit/9190136)
 - :robot: changelog file generated [`12deecd`](https://github.com/suitetecsa/sdk-kotlin/commit/12deecd)
 - :robot: changelog file generated [`eec08ed`](https://github.com/suitetecsa/sdk-kotlin/commit/eec08ed)
@@ -148,6 +149,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - :robot: changelog file generated [`bb691bd`](https://github.com/suitetecsa/sdk-kotlin/commit/bb691bd)
 
 ### Chore
+- update mockwebserver to v5.4.0 [`c316be6`](https://github.com/suitetecsa/sdk-kotlin/commit/c316be6)
+- update gradle/actions action to v6.2.0 [`1ecee96`](https://github.com/suitetecsa/sdk-kotlin/commit/1ecee96)
 - update gson to v2.14.0 [`afd57da`](https://github.com/suitetecsa/sdk-kotlin/commit/afd57da)
 - update actions/setup-java action to v5.3.0 [`3d18b6f`](https://github.com/suitetecsa/sdk-kotlin/commit/3d18b6f)
 - update actions/checkout action to v6.0.3 [`08726c0`](https://github.com/suitetecsa/sdk-kotlin/commit/08726c0)
@@ -314,6 +317,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - update Moshi imports in Services.kt [`fa17ed9`](https://github.com/suitetecsa/sdk-kotlin/commit/fa17ed9)
 
 ### Other
+- Merge pull request #220 from suitetecsa/renovate/mockwebserver [`5ef87dc`](https://github.com/suitetecsa/sdk-kotlin/commit/5ef87dc)
+- Merge pull request #219 from suitetecsa/renovate/gradle-actions-6.x [`720cfa7`](https://github.com/suitetecsa/sdk-kotlin/commit/720cfa7)
 - Merge pull request #212 from suitetecsa/renovate/gson [`471a37c`](https://github.com/suitetecsa/sdk-kotlin/commit/471a37c)
 - Merge pull request #214 from suitetecsa/renovate/java.jwt [`a3aa6c3`](https://github.com/suitetecsa/sdk-kotlin/commit/a3aa6c3)
 - Merge pull request #215 from suitetecsa/renovate/kotlinx.coroutines.test [`b971fde`](https://github.com/suitetecsa/sdk-kotlin/commit/b971fde)
